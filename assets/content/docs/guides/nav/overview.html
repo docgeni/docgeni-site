@@ -1,0 +1,34 @@
+<h2>概念</h2><p><code>Docgeni</code> 中，不管是头部导航，左侧菜单，还是具体的文档，统一叫 <code>NavigationItem</code>, 存储在一个树形结构中。那么为了更好的理解，我们把这些对象稍微做了一些区分。</p>
+<ul>
+<li><code>Channel</code>: 频道，一级导航，如果是 <code>full</code> 模式其实就是在头部导航栏，每个频道都会有个独立的路由</li>
+<li><code>Category</code>: 类别，属于一个 <code>Channel</code>，没有内容和路由，在菜单中仅仅会展示成一个分组</li>
+<li><code>DocItem</code>: 文档，一般属于某个 <code>Channel</code> 或者 <code>Category</code></li>
+<li><code>ComponentDocItem</code>: 组件的文档，和 <code>DocItem</code> 类似，但是展示的属性不同</li>
+</ul>
+<p>如下示例中，<code>guides</code>是一个<code>Channel</code>，<code>intro</code>是一个<code>Category</code>，<code>getting-started</code>，是一个<code>DocItem</code>。</p>
+<pre class="language-json"><code class="language-json">...
+<span class="token punctuation">{</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"guides"</span><span class="token punctuation">,</span>
+  <span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"guides"</span><span class="token punctuation">,</span>
+  <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"指南"</span><span class="token punctuation">,</span>
+  <span class="token property">"subtitle"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"items"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"intro"</span><span class="token punctuation">,</span>
+      <span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"intro"</span><span class="token punctuation">,</span>
+      <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"介绍"</span><span class="token punctuation">,</span>
+      <span class="token property">"subtitle"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+      <span class="token property">"items"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"getting-started"</span><span class="token punctuation">,</span>
+          <span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+          <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"快速开始"</span><span class="token punctuation">,</span>
+          <span class="token property">"subtitle"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+          <span class="token property">"contentPath"</span><span class="token operator">:</span> <span class="token string">"/docs/guides/intro/getting-started.html"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        ...
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    ...
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>

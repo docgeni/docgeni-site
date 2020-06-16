@@ -1,0 +1,48 @@
+<h2>name</h2><ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>组件库的名称。</p>
+<h2>abbrName</h2><ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>组件库的名称缩写，Angular 组件库一般都会有一个缩写，比如组件库叫 <code>ngx-tethys</code>，一般会起一个缩写的名字<code>thy</code>用于选择器、名称前缀。如：<code>ThyButtonModule</code>，那么写组件的示例也会使用此缩写，Docgeni 会根据此缩写自动生成示例代码。</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thy-button</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thy-button</span><span class="token punctuation">></span></span></code></pre>
+<h2>rootDir</h2><ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>组件类库的源代码跟路径，<code>Docgeni</code> 会自定把配置的根目录下的所有文件夹当作一个组件，自动查找组件下的文档和示例，默认文档存放的文件夹为 <code>doc</code>, 示例为 <code>examples</code></p>
+<h2>exclude</h2><ul>
+<li>类型：<code>string | Array&lt;string&gt;</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p><code>Docgeni</code> 默认会把 <code>rootDir</code> 下所有的文件夹当作组件进行扫描，如果很确定某些文件夹不是组件，可以手动设置排除。支持 <code>glob</code> 格式。</p>
+<h2>include</h2><ul>
+<li>类型：<code>string | Array&lt;string&gt;</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p><code>Docgeni</code> 默认只会扫描 <code>rootDir</code> 下的一级文件夹当作组件，如果你的组件库比较特殊，某个深层的文件夹也需要生成组件文档，可以通过 include 单独配置。</p>
+<p>如配置：<code>include: &#39;common&#39;</code>, <code>Docgeni</code> 会查找 common 文件夹下的所有一级文件夹，按照组件的规则匹配文档和示例。</p>
+<h2>docDir</h2><ul>
+<li>类型：<code>string?</code></li>
+<li>默认：<code>doc</code></li>
+</ul>
+<p>组件的文档目录，<code>Docgeni</code> 会根据配置的<code>locales</code>查找<code>{localeKey}.md</code>文件，当作组件的文档，会展示在组件的概览中。</p>
+<pre><code>├── doc
+│   ├── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>md
+│   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>md</code></pre><h2>examplesDir</h2><ul>
+<li>类型：<code>string?</code></li>
+<li>默认：<code>examples</code></li>
+</ul>
+<p>组件示例根目录，<code>Docgeni</code> 会把该目录下的每一个一级文件夹当作一个示例。</p>
+<pre><code>├── examples
+│   ├── basic
+│   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   └── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   ├── advance
+│   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   └── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts</code></pre>

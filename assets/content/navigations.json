@@ -1,0 +1,337 @@
+{
+  "en-us": [
+    {
+      "id": "guides",
+      "path": "guides",
+      "title": "Guides",
+      "subtitle": "",
+      "items": [
+        {
+          "id": "intro",
+          "path": "intro",
+          "title": "Introduce",
+          "subtitle": "",
+          "items": [
+            {
+              "id": "index",
+              "path": "",
+              "title": "Introduce",
+              "subtitle": "",
+              "contentPath": "/docs/en-us/guides/intro/index.html"
+            },
+            {
+              "id": "motivation",
+              "path": "motivation",
+              "title": "Motivation",
+              "subtitle": "",
+              "contentPath": "/docs/en-us/guides/intro/motivation.html"
+            },
+            {
+              "id": "getting-started",
+              "path": "getting-started",
+              "title": "Getting Started",
+              "subtitle": "",
+              "contentPath": "/docs/en-us/guides/intro/getting-started.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Components",
+      "path": "components",
+      "lib": "alib",
+      "items": [
+        {
+          "id": "general",
+          "title": "General",
+          "items": [
+            {
+              "id": "button",
+              "title": "Button",
+              "subtitle": "",
+              "path": "button",
+              "importSpecifier": "alib/button",
+              "examples": [
+                "alib-button-basic-example",
+                "alib-button-advance-title-example",
+                "alib-button-advance-example"
+              ],
+              "overview": true
+            },
+            {
+              "id": "foo",
+              "title": "Foo",
+              "subtitle": "测试",
+              "path": "foo",
+              "importSpecifier": "alib/foo",
+              "examples": [
+                "alib-foo-advance-example",
+                "alib-foo-basic-example"
+              ],
+              "overview": true
+            }
+          ]
+        },
+        {
+          "id": "layout",
+          "title": "Layout",
+          "items": [
+            {
+              "id": "layout",
+              "title": "Layout",
+              "subtitle": "布局",
+              "path": "layout",
+              "importSpecifier": "alib/layout",
+              "examples": [
+                "alib-layout-advance-example",
+                "alib-layout-basic-example"
+              ],
+              "overview": true
+            }
+          ]
+        },
+        {
+          "id": "zoo",
+          "title": "Zoo",
+          "subtitle": "",
+          "path": "zoo",
+          "importSpecifier": "alib/common-zoo",
+          "examples": [
+            "alib-common-zoo-basic-example"
+          ],
+          "overview": true
+        },
+        {
+          "id": "bar",
+          "title": "Bar",
+          "subtitle": "",
+          "path": "bar",
+          "importSpecifier": "alib/bar",
+          "examples": [
+            "alib-bar-basic-example"
+          ],
+          "overview": false
+        }
+      ]
+    },
+    {
+      "title": "GitHub",
+      "path": "https://github.com/docgeni/docgeni",
+      "isExternal": true
+    },
+    {
+      "title": "Changelog",
+      "path": "https://github.com/docgeni/docgeni",
+      "isExternal": true
+    }
+  ],
+  "zh-cn": [
+    {
+      "id": "guides",
+      "path": "guides",
+      "title": "指南",
+      "subtitle": "",
+      "items": [
+        {
+          "id": "intro",
+          "path": "intro",
+          "title": "介绍",
+          "subtitle": "",
+          "items": [
+            {
+              "id": "index",
+              "path": "",
+              "title": "介绍",
+              "subtitle": "",
+              "contentPath": "/docs/guides/intro/index.html"
+            },
+            {
+              "id": "motivation",
+              "path": "motivation",
+              "title": "动机",
+              "subtitle": "",
+              "contentPath": "/docs/guides/intro/motivation.html"
+            },
+            {
+              "id": "getting-started",
+              "path": "getting-started",
+              "title": "快速开始",
+              "subtitle": "",
+              "contentPath": "/docs/guides/intro/getting-started.html"
+            }
+          ]
+        },
+        {
+          "id": "nav",
+          "path": "nav",
+          "title": "导航",
+          "subtitle": "",
+          "items": [
+            {
+              "id": "overview",
+              "path": "overview",
+              "title": "概念",
+              "subtitle": "",
+              "contentPath": "/docs/guides/nav/overview.html"
+            },
+            {
+              "id": "nav",
+              "path": "nav",
+              "title": "导航菜单的生成",
+              "subtitle": "",
+              "contentPath": "/docs/guides/nav/nav.html"
+            },
+            {
+              "id": "lib-nav",
+              "path": "lib-nav",
+              "title": "类库导航的生成",
+              "subtitle": "",
+              "contentPath": "/docs/guides/nav/lib-nav.html"
+            }
+          ]
+        },
+        {
+          "id": "components",
+          "path": "components",
+          "title": "组件",
+          "subtitle": "",
+          "items": [
+            {
+              "id": "docs",
+              "path": "docs",
+              "title": "组件文档",
+              "subtitle": "",
+              "contentPath": "/docs/guides/components/docs.html"
+            }
+          ]
+        },
+        {
+          "id": "others",
+          "path": "others",
+          "title": "其他用法",
+          "subtitle": "",
+          "items": [
+            {
+              "id": "locales",
+              "path": "locales",
+              "title": "多语言",
+              "subtitle": "",
+              "contentPath": "/docs/guides/others/locales.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "configuration",
+      "path": "configuration",
+      "title": "配置",
+      "subtitle": "",
+      "items": [
+        {
+          "id": "index",
+          "path": "configuration",
+          "title": "配置",
+          "subtitle": "",
+          "contentPath": "/docs/configuration/index.html"
+        },
+        {
+          "id": "lib",
+          "path": "lib",
+          "title": "类库配置",
+          "subtitle": "",
+          "contentPath": "/docs/configuration/lib.html"
+        }
+      ]
+    },
+    {
+      "title": "组件",
+      "path": "components",
+      "lib": "alib",
+      "items": [
+        {
+          "id": "general",
+          "title": "通用",
+          "items": [
+            {
+              "id": "button",
+              "title": "Button",
+              "subtitle": "按钮",
+              "path": "button",
+              "importSpecifier": "alib/button",
+              "examples": [
+                "alib-button-basic-example",
+                "alib-button-advance-title-example",
+                "alib-button-advance-example"
+              ],
+              "overview": true
+            },
+            {
+              "id": "foo",
+              "title": "Foo",
+              "subtitle": "测试",
+              "path": "foo",
+              "importSpecifier": "alib/foo",
+              "examples": [
+                "alib-foo-advance-example",
+                "alib-foo-basic-example"
+              ],
+              "overview": true
+            }
+          ]
+        },
+        {
+          "id": "layout",
+          "title": "布局",
+          "items": [
+            {
+              "id": "layout",
+              "title": "Layout",
+              "subtitle": "布局",
+              "path": "layout",
+              "importSpecifier": "alib/layout",
+              "examples": [
+                "alib-layout-advance-example",
+                "alib-layout-basic-example"
+              ],
+              "overview": true
+            }
+          ]
+        },
+        {
+          "id": "zoo",
+          "title": "Zoo",
+          "subtitle": "",
+          "path": "zoo",
+          "importSpecifier": "alib/common-zoo",
+          "examples": [
+            "alib-common-zoo-basic-example"
+          ],
+          "overview": true
+        },
+        {
+          "id": "bar",
+          "title": "Bar",
+          "subtitle": "",
+          "path": "bar",
+          "importSpecifier": "alib/bar",
+          "examples": [
+            "alib-bar-basic-example"
+          ],
+          "overview": false
+        }
+      ]
+    },
+    {
+      "title": "GitHub",
+      "path": "https://github.com/docgeni/docgeni",
+      "isExternal": true
+    },
+    {
+      "title": "更新日志",
+      "path": "https://github.com/docgeni/docgeni",
+      "isExternal": true
+    }
+  ]
+}

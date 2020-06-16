@@ -1,0 +1,84 @@
+<p><code>Docgeni</code>会动态识别每个类库下的子文件夹，每个子文件夹相当于一个组件，每个组件包含对应的文档和示例。
+组件的文件夹结构如下：</p>
+<pre><code>├── button
+│   ├── button<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   ├── button<span class="token punctuation">.</span>module<span class="token punctuation">.</span>ts
+│   ├── doc
+│   │   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>md
+│   │   └── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>md
+│   ├── examples
+│   │   ├── advance
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   ├── basic
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   │   └── index<span class="token punctuation">.</span>md
+│   │   └── module<span class="token punctuation">.</span>ts
+│   ├── index<span class="token punctuation">.</span>ts</code></pre><h2>文档</h2><p><code>doc</code> 文件夹下存放每个多语言对应的组件文档，会展示在组件的概览中。</p>
+<h2>示例</h2><p><code>examples</code> 文件夹存放当前组件的所有示例，每个类型的示例以独立文件夹的方式存在，<code>Docgeni</code>会按照约定的命名识别示例组件。</p>
+<ul>
+<li>module.ts 为当前组件所有示例的入口模块，命名规则按照<code>类库缩写+组件名+ExamplesModule</code> 如：<code>AlibButtonExamplesModule</code></li>
+<li>示例名为文件夹的名称，并以 - 分割多个单词，示例入口组件文件命名规则为<code>示例名.component.ts</code> 如：<code>basic.component.ts</code></li>
+<li>对应组件的命名规则为<code>类库缩写+组件名+示例名+ExampleComponent</code> 如：<code>AlibButtonBasicExampleComponent</code></li>
+</ul>
+<h2>在文档中使用示例</h2><p><code>Docgeni</code>会给每个示例生成一个唯一的 Key, 命名规则为：<code>类库缩写-组件名-示例名-example</code>，如：<code>alib-button-basic-example</code></p>
+<p>那么不管是在普通的文档中还是在组件的文档中，都可以按照下面的语法在Markdown中引入某个示例，name为示例的唯一key。</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>example</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alib-button-basic-example<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>运行效果：
+<example name="alib-button-basic-example" ></example></p>
+<p>默认的示例是包裹在一个示例容器中，并可以查看示例的源代码，<code>Docgeni</code>支持<code>inline</code>模式引入示例：</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>example</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alib-button-basic-example<span class="token punctuation">"</span></span> <span class="token attr-name">inline</span> <span class="token punctuation">/></span></span></code></pre>
+<p>运行效果：
+<example name="alib-button-basic-example" inline></example></p>
+<h2>示例的配置</h2><p>某个组件下可能有很多示例，每个示例会有示例的标题，排序等字段，如果需要自定义配置，需要在对应的示例文件夹下创建一个<code>index.md</code>文件，并配置 FrontMatter：</p>
+<pre class="language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+title: Button Base
+<span class="token title important">order: 1
+<span class="token punctuation">---</span></span></code></pre>
+<h2>新建一个示例</h2><p>下面介绍一下如何为按钮新增一个展示<code>loading</code>状态的示例：</p>
+<ol>
+<li>在<code>button/examples</code>文件夹下新增一个<code>loading</code>文件夹，并新增响应的示例组件</li>
+</ol>
+<pre><code>├── button
+│   ├── examples
+│   │   ├── loading
+│   │   │   ├── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   └── module<span class="token punctuation">.</span>ts</code></pre><ol start="2">
+<li><code>loading.component.ts</code> 文件的代码如下：</li>
+</ol>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">'alib-button-loading-example'</span><span class="token punctuation">,</span>
+    templateUrl<span class="token punctuation">:</span> <span class="token string">'./loading.component.html'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonLoadingExampleComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ol start="3">
+<li>修改 <code>button/examples/module.ts</code> 引入<code>AlibButtonLoadingExampleComponent</code>组件</li>
+</ol>
+<pre><code><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+import { AlibButtonLoadingExampleComponent } from <span class="token string">'./loading/loading.component'</span><span class="token comment" spellcheck="true">;</span>
+
+<span class="token keyword">const</span> COMPONENTS <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  AlibButtonLoadingExampleComponent
+<span class="token punctuation">]</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span>{
+    declarations<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>CommonModule<span class="token punctuation">,</span> AlibButtonModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    entryComponents<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    exports<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+}<span class="token punctuation">)</span>
+export class AlibButtonExamplesModule {}
+</code></pre><p>这里需要注意的是：所有的示例在运行时都是动态加载的，在没有开启Ivy渲染引擎的情况下需要在<code>entryComponents</code>中导入。</p>
