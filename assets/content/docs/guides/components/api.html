@@ -1,0 +1,90 @@
+
+        <h2 id="支持格式" class="docs-header-link">
+          <span header-link="支持格式"></span>
+          支持格式
+        </h2>
+      <p>组件目录下的<code>api</code>文件夹下存放每个多语言对应的组件API文档，会展示在组件的API中，<code>Docgeni</code>会根据配置的<code>locales</code>查找<code>{localeKey}.&lt;json|yaml|yml|js|config.js&gt;</code>文件，目前支持以下三种格式：</p>
+<ul>
+<li><code>json</code>格式，以<code>.json</code>后缀命名</li>
+<li><code>yaml</code>格式，以<code>.yaml</code>或者<code>yml</code>后缀命名</li>
+<li><code>js</code>格式，以<code>.js</code>或者<code>.config.js</code>后缀命名</li>
+</ul>
+
+        <h2 id="api-配置" class="docs-header-link">
+          <span header-link="api-配置"></span>
+          API 配置
+        </h2>
+      <p>不管是哪种格式，组件模块会包含多个组件或者指令，所以API的配置是一个数组，数组中的每一项代表一个组件或者一个指令。</p>
+<p>JS 格式示例如下：</p>
+<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token string">'directive'</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">'alibButton'</span><span class="token punctuation">,</span>
+    description<span class="token punctuation">:</span> <span class="token string">'按钮组件，支持 alibButton 指令和 alib-button 组件两种形式'</span><span class="token punctuation">,</span>
+    properties<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alibType'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+            <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'primary'</span><span class="token punctuation">,</span>
+            description<span class="token punctuation">:</span> <span class="token string">'按钮的类型，支持 \`primary | info | warning | danger\`'</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alibSize'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+            <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'null'</span><span class="token punctuation">,</span> 
+            description<span class="token punctuation">:</span> <span class="token string">'按钮的大小，支持 \`sm | md | lg\`'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<p>YAML 格式示例如下：</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> directive
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> alibButton
+  <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'按钮组件，支持 alibButton 指令和 alib-button 组件两种形式'</span>
+  <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> alibType
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> 按钮的类型，支持 `primary <span class="token punctuation">|</span> info <span class="token punctuation">|</span> warning <span class="token punctuation">|</span> danger`
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> primary
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> alibSize
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> '按钮的大小，支持 \`sm <span class="token punctuation">|</span> md <span class="token punctuation">|</span> lg\`'alib<span class="token punctuation">-</span>button 时，只能使用该参数控制类型
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> md</code></pre>
+<p>JSON格式示例如下：</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"directive"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibButton"</span><span class="token punctuation">,</span>
+    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"按钮组件，支持 alibButton 指令和 alib-button 组件两种形式"</span><span class="token punctuation">,</span>
+    <span class="token property">"properties"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibType"</span><span class="token punctuation">,</span>
+        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+        <span class="token property">"default"</span><span class="token operator">:</span> <span class="token string">"primary"</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> "按钮的类型，支持 `primary | info | warning | danger`"
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibSize"</span><span class="token punctuation">,</span>
+        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+        <span class="token property">"default"</span><span class="token operator">:</span> <span class="token string">"null"</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> "按钮的大小，支持 `sm | md | lg`"
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span></code></pre>
+
+        <h2 id="参数说明" class="docs-header-link">
+          <span header-link="参数说明"></span>
+          参数说明
+        </h2>
+      <ul>
+<li><code>type</code>: 件的类型，目前支持<code>directive</code>和<code>component</code></li>
+<li><code>name</code>: 组件的名称</li>
+<li><code>description</code>: 组件的描述，支持 Markdown 语法</li>
+<li><code>properties</code>: 组件的属性列表</li>
+<li><code>properties.name</code>: 属性名称</li>
+<li><code>properties.type</code>: 属性类型</li>
+<li><code>properties.default</code>: 属性的默认值</li>
+<li><code>properties.description</code>: 属性的描述，支持 Markdown 语法</li>
+</ul>
