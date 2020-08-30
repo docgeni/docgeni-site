@@ -1,0 +1,59 @@
+
+        <h2 id="类库频道" class="docs-header-link">
+          <span header-link="类库频道"></span>
+          类库频道
+        </h2>
+      <p>类库通常就是<code>Angular</code>的组件库，<code>Docgeni</code>会把组件的文档和普通的页面文档严格区分开，展示形式也会有很大的不同。
+对于类库文档来说，所属频道必须要手动通过 <code>navs</code> 配置：</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    navs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'组件'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'components'</span><span class="token punctuation">,</span>
+            lib<span class="token punctuation">:</span> <span class="token string">'alib'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    libs<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> <span class="token string">'alib'</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span><span class="token punctuation">.</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">]</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></code></pre>
+
+        <h2 id="类库配置" class="docs-header-link">
+          <span header-link="类库配置"></span>
+          类库配置
+        </h2>
+      <p><code>Docgeni</code>中可以同时支持多个类库文档，比如Angular官方的<a href="https://material.angular.io/">Material</a>其实就是包含 <code>CDK</code> 和<code>Components</code>两个类库的，所以多余类库的配置存放在<code>libs</code>数组中。</p>
+<p><code>Docgeni</code>会自动扫描该类库的<code>rootDir</code>，每个文件夹当作一个组件，每个组件会生成一个组件文档，具体的配置可以查看类库配置</p>
+<pre class="language-json"><code class="language-json">...
+<span class="token punctuation">{</span>
+    name<span class="token operator">:</span> 'alib'<span class="token punctuation">,</span>
+    rootDir<span class="token operator">:</span> './packages/a-lib'
+    ...
+<span class="token punctuation">}</span></code></pre>
+
+        <h2 id="组件的分类" class="docs-header-link">
+          <span header-link="组件的分类"></span>
+          组件的分类
+        </h2>
+      <p>对于组件库来说，如果有很多组件，需要一个分类把这些组件区分开，对于普通文档来说，我们通过文件夹区分分类，但是对于组件库来说按照文件夹区分不是一个好的选择，所以<code>Docgeni</code>提供了配置的方式配置分类，每个分类会设置一个唯一的 id 作为分类的 key，在对应的组件文档中通过设置名为category的FrontMatter配置上分类的id即可。</p>
+<pre class="language-json"><code class="language-json">...
+<span class="token punctuation">{</span>
+    name<span class="token operator">:</span> 'alib'<span class="token punctuation">,</span>
+    rootDir<span class="token operator">:</span> './packages/a-lib'<span class="token punctuation">,</span>
+    categories<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> 'general'<span class="token punctuation">,</span>
+        title<span class="token operator">:</span> '通用'
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> 'layout'<span class="token punctuation">,</span>
+        title<span class="token operator">:</span> '布局'
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
