@@ -1,0 +1,400 @@
+{
+  "navs": [
+    {
+      "id": "guides",
+      "path": "guides",
+      "channelPath": "guides",
+      "title": "Guides",
+      "items": [
+        {
+          "id": "guides/intro",
+          "path": "guides/intro",
+          "channelPath": "guides",
+          "title": "Introduce",
+          "items": [
+            {
+              "id": "index",
+              "path": "intro",
+              "channelPath": "guides",
+              "title": "Introduce",
+              "order": 10,
+              "contentPath": "docs/en-us/guides/intro/index.html"
+            },
+            {
+              "id": "getting-started",
+              "path": "intro/getting-started",
+              "channelPath": "guides",
+              "title": "Getting Started",
+              "order": 30,
+              "contentPath": "docs/en-us/guides/intro/getting-started.html"
+            }
+          ],
+          "order": 10
+        },
+        {
+          "id": "guides/basic",
+          "path": "guides/basic",
+          "channelPath": "guides",
+          "title": "Basic",
+          "items": [
+            {
+              "id": "route-nav-menu",
+              "path": "basic/route-nav-menu",
+              "channelPath": "guides",
+              "title": "Route Navigation & Menu",
+              "order": 20,
+              "contentPath": "docs/en-us/guides/basic/route-nav-menu.html"
+            },
+            {
+              "id": "lib-nav",
+              "path": "basic/lib-nav",
+              "channelPath": "guides",
+              "title": "Libraries Navigation & Menu",
+              "order": 30,
+              "contentPath": "docs/en-us/guides/basic/lib-nav.html"
+            },
+            {
+              "id": "component",
+              "path": "basic/component",
+              "channelPath": "guides",
+              "title": "Overview & API & Examples",
+              "order": 40,
+              "contentPath": "docs/en-us/guides/basic/component.html"
+            }
+          ],
+          "order": 15
+        },
+        {
+          "id": "guides/advance",
+          "path": "guides/advance",
+          "channelPath": "guides",
+          "title": "Advanced",
+          "items": [
+            {
+              "id": "customize",
+              "path": "advance/customize",
+              "channelPath": "guides",
+              "title": "Customize Site",
+              "order": 20,
+              "contentPath": "docs/en-us/guides/advance/customize.html"
+            },
+            {
+              "id": "locales",
+              "path": "advance/locales",
+              "channelPath": "guides",
+              "title": "Multi-language",
+              "order": 100,
+              "contentPath": "docs/en-us/guides/advance/locales.html"
+            }
+          ],
+          "order": 40
+        },
+        {
+          "id": "faq",
+          "path": "faq",
+          "channelPath": "guides",
+          "title": "FAQ",
+          "order": 9007199254740991,
+          "contentPath": "docs/en-us/guides/faq.html"
+        }
+      ],
+      "order": 20
+    },
+    {
+      "id": "configuration",
+      "path": "configuration",
+      "channelPath": "configuration",
+      "title": "Configuration",
+      "items": [
+        {
+          "id": "global",
+          "path": "global",
+          "channelPath": "configuration",
+          "title": "Global Configuration",
+          "order": 30,
+          "contentPath": "docs/en-us/configuration/global.html"
+        },
+        {
+          "id": "lib",
+          "path": "lib",
+          "channelPath": "configuration",
+          "title": "Lab Configuration",
+          "order": 30,
+          "contentPath": "docs/en-us/configuration/lib.html"
+        },
+        {
+          "id": "front-matter",
+          "path": "front-matter",
+          "channelPath": "configuration",
+          "title": "Front Matter",
+          "order": 40,
+          "contentPath": "docs/en-us/configuration/front-matter.html"
+        }
+      ],
+      "order": 30
+    },
+    {
+      "title": "Components",
+      "path": "components",
+      "lib": "alib",
+      "items": [
+        {
+          "id": "general",
+          "title": "General",
+          "items": [
+            {
+              "id": "button",
+              "title": "Button",
+              "subtitle": "",
+              "path": "button",
+              "importSpecifier": "alib/button",
+              "examples": [
+                "alib-button-basic-example",
+                "alib-button-advance-title-example",
+                "alib-button-advance-example"
+              ],
+              "overview": true,
+              "api": true,
+              "order": 1,
+              "category": "general"
+            },
+            {
+              "id": "foo",
+              "title": "Foo",
+              "subtitle": "测试",
+              "path": "foo",
+              "importSpecifier": "alib/foo",
+              "examples": [
+                "alib-foo-advance-example",
+                "alib-foo-basic-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 2,
+              "category": "general"
+            }
+          ]
+        },
+        {
+          "id": "layout",
+          "title": "Layout",
+          "items": [
+            {
+              "id": "layout",
+              "title": "Layout",
+              "subtitle": "布局",
+              "path": "layout",
+              "importSpecifier": "alib/layout",
+              "examples": [
+                "alib-layout-advance-example",
+                "alib-layout-basic-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layout"
+            }
+          ]
+        },
+        {
+          "id": "zoo",
+          "title": "Zoo",
+          "subtitle": "",
+          "path": "zoo",
+          "importSpecifier": "alib/zoo",
+          "examples": [
+            "alib-zoo-basic-example"
+          ],
+          "overview": true,
+          "api": false,
+          "order": 9007199254740991
+        },
+        {
+          "id": "bar",
+          "title": "Bar",
+          "subtitle": "",
+          "path": "bar",
+          "importSpecifier": "alib/bar",
+          "examples": [
+            "alib-bar-basic-example"
+          ],
+          "overview": false,
+          "api": true,
+          "order": 9007199254740991
+        }
+      ]
+    },
+    {
+      "title": "GitHub",
+      "path": "https://github.com/docgeni/docgeni",
+      "isExternal": true
+    },
+    {
+      "title": "Changelog",
+      "path": "https://github.com/docgeni/docgeni/blob/master/CHANGELOG.md",
+      "isExternal": true
+    }
+  ],
+  "docs": [
+    {
+      "id": "front-matter",
+      "path": "front-matter",
+      "channelPath": "configuration",
+      "title": "Front Matter",
+      "order": 40,
+      "contentPath": "docs/en-us/configuration/front-matter.html"
+    },
+    {
+      "id": "global",
+      "path": "global",
+      "channelPath": "configuration",
+      "title": "Global Configuration",
+      "order": 30,
+      "contentPath": "docs/en-us/configuration/global.html"
+    },
+    {
+      "id": "lib",
+      "path": "lib",
+      "channelPath": "configuration",
+      "title": "Lab Configuration",
+      "order": 30,
+      "contentPath": "docs/en-us/configuration/lib.html"
+    },
+    {
+      "id": "customize",
+      "path": "advance/customize",
+      "channelPath": "guides",
+      "title": "Customize Site",
+      "order": 20,
+      "contentPath": "docs/en-us/guides/advance/customize.html"
+    },
+    {
+      "id": "locales",
+      "path": "advance/locales",
+      "channelPath": "guides",
+      "title": "Multi-language",
+      "order": 100,
+      "contentPath": "docs/en-us/guides/advance/locales.html"
+    },
+    {
+      "id": "component",
+      "path": "basic/component",
+      "channelPath": "guides",
+      "title": "Overview & API & Examples",
+      "order": 40,
+      "contentPath": "docs/en-us/guides/basic/component.html"
+    },
+    {
+      "id": "lib-nav",
+      "path": "basic/lib-nav",
+      "channelPath": "guides",
+      "title": "Libraries Navigation & Menu",
+      "order": 30,
+      "contentPath": "docs/en-us/guides/basic/lib-nav.html"
+    },
+    {
+      "id": "route-nav-menu",
+      "path": "basic/route-nav-menu",
+      "channelPath": "guides",
+      "title": "Route Navigation & Menu",
+      "order": 20,
+      "contentPath": "docs/en-us/guides/basic/route-nav-menu.html"
+    },
+    {
+      "id": "faq",
+      "path": "faq",
+      "channelPath": "guides",
+      "title": "FAQ",
+      "order": 9007199254740991,
+      "contentPath": "docs/en-us/guides/faq.html"
+    },
+    {
+      "id": "getting-started",
+      "path": "intro/getting-started",
+      "channelPath": "guides",
+      "title": "Getting Started",
+      "order": 30,
+      "contentPath": "docs/en-us/guides/intro/getting-started.html"
+    },
+    {
+      "id": "index",
+      "path": "intro",
+      "channelPath": "guides",
+      "title": "Introduce",
+      "order": 10,
+      "contentPath": "docs/en-us/guides/intro/index.html"
+    },
+    {
+      "id": "zoo",
+      "title": "Zoo",
+      "subtitle": "",
+      "path": "zoo",
+      "importSpecifier": "alib/zoo",
+      "examples": [
+        "alib-zoo-basic-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 9007199254740991
+    },
+    {
+      "id": "bar",
+      "title": "Bar",
+      "subtitle": "",
+      "path": "bar",
+      "importSpecifier": "alib/bar",
+      "examples": [
+        "alib-bar-basic-example"
+      ],
+      "overview": false,
+      "api": true,
+      "order": 9007199254740991
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "subtitle": "",
+      "path": "button",
+      "importSpecifier": "alib/button",
+      "examples": [
+        "alib-button-basic-example",
+        "alib-button-advance-title-example",
+        "alib-button-advance-example"
+      ],
+      "overview": true,
+      "api": true,
+      "order": 1,
+      "category": "general"
+    },
+    {
+      "id": "foo",
+      "title": "Foo",
+      "subtitle": "测试",
+      "path": "foo",
+      "importSpecifier": "alib/foo",
+      "examples": [
+        "alib-foo-advance-example",
+        "alib-foo-basic-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 2,
+      "category": "general"
+    },
+    {
+      "id": "layout",
+      "title": "Layout",
+      "subtitle": "布局",
+      "path": "layout",
+      "importSpecifier": "alib/layout",
+      "examples": [
+        "alib-layout-advance-example",
+        "alib-layout-basic-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layout"
+    }
+  ]
+}
