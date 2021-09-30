@@ -1,0 +1,24 @@
+
+        <h2 id="how-to-deploy-to-a-non-root-directory-of-domain-" class="docs-header-link">
+          <span header-link="how-to-deploy-to-a-non-root-directory-of-domain-"></span>
+          How to deploy to a non-root directory of domain?
+        </h2>
+      <p>By passing in <code>base-href</code> when executing the build command, or by configuring the <code>baseHref</code> attribute in the configuration.</p>
+<div class="dg-paragraph"><code>docgeni build --prod --base-href=/xxx/</code></div>
+
+        <h2 id="does-docgeni-support-other-frameworks-" class="docs-header-link">
+          <span header-link="does-docgeni-support-other-frameworks-"></span>
+          Does Docgeni support other frameworks?
+        </h2>
+      <p>Sorry, it is not supported yet. Docgeni is currently a document generation tool tailored for the Angular framework.</p>
+
+        <h2 id="a-new-<code>zh-cn-md</code>-is-created-under-the-component-<code>doc</code>-folder,-but-the-component-does-not-show-in-the-document-" class="docs-header-link">
+          <span header-link="a-new-<code>zh-cn-md</code>-is-created-under-the-component-<code>doc</code>-folder,-but-the-component-does-not-show-in-the-document-"></span>
+          A new <code>zh-cn.md</code> is created under the component <code>doc</code> folder, but the component does not show in the document?
+        </h2>
+      <p>Docgeni will scan the first-level folders under the library <code>rootDir</code> and <code>include</code> as a component. The <code>doc</code> folder under each component stores component documents with multiple languages as the key. For more reference <a href="configuration/lib#rootdir">Lib Configuration</a>.</p>
+<ul>
+<li>Confirm whether the component is included in <code>rootDir</code> or <code>include</code></li>
+<li>Confirm whether the <a href="configuration/lib#docdir">docDir</a> specifies another folder</li>
+<li>Confirm whether <a href="configuration/global#defaultlocale">defaultLocal</a> (default language) is <code>zh-cn</code></li>
+</ul>
