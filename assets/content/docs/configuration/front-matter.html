@@ -1,0 +1,90 @@
+
+        <h2 id="title" class="docs-header-link">
+          <span header-link="title"></span>
+          title
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>文件夹名，文件名</code></li>
+</ul>
+<p>频道、类别、页面或者组件的标题，默认会使用<code>titleCase</code>命名转换文件夹名或者文件名。</p>
+
+        <h2 id="subtitle" class="docs-header-link">
+          <span header-link="subtitle"></span>
+          subtitle
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>频道、类别、页面或者组件的子标题，会显示在标题后面。</p>
+
+        <h2 id="order" class="docs-header-link">
+          <span header-link="order"></span>
+          order
+        </h2>
+      <ul>
+<li>类型：<code>number</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>频道、类别、页面或者组件的排序，按照数字升序。</p>
+
+        <h2 id="path" class="docs-header-link">
+          <span header-link="path"></span>
+          path
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>文件夹名、文件名</code></li>
+</ul>
+<p>频道、页面的路由，默认会使用<code>paramCase</code>命名转换文件夹名或者文件名，文档实际访问路由会带上分类和频道的 path。</p>
+
+        <h2 id="hidden" class="docs-header-link">
+          <span header-link="hidden"></span>
+          hidden
+        </h2>
+      <ul>
+<li>类型：<code>boolean</code></li>
+<li>默认：<code>false</code></li>
+</ul>
+<p>是否隐藏当前频道、类别、组件或者页面，一般用于草稿中的文档。</p>
+
+        <h2 id="name" class="docs-header-link">
+          <span header-link="name"></span>
+          name
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>文件夹名</code></li>
+</ul>
+<p>组件的名称，根据此名称生成组件名，一般无需设置。</p>
+
+        <h2 id="category" class="docs-header-link">
+          <span header-link="category"></span>
+          category
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>组件的所属类别，需要和对应类库配置的 <code>categories</code> id 属性对应。</p>
+
+        <h2 id="toc-<label>1-1-0+</label>" class="docs-header-link">
+          <span header-link="toc-<label>1-1-0+</label>"></span>
+          toc <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>类型：<code>content | menu | hidden | false</code></li>
+<li>默认：<code>content</code></li>
+</ul>
+<p>文档目录显示方式，值为<code>content</code>表示在内容区域右侧显示，值为<code>menu</code>时会将当前路由的目录展示在左侧菜单中，其他值表示不显示目录，默认为 <a href="/configuration/global#toc">全局配置</a>。</p>
+
+        <h2 id="label-<label>1-1-0+</label>" class="docs-header-link">
+          <span header-link="label-<label>1-1-0+</label>"></span>
+          label <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>组件的标签，如果是新组件，设置为<code>new</code>，如果组件已经被遗弃，设置为<code>deprecated</code>，如果组件是实验组件，设置为<code>experimental</code>，可以被设置成为任意在类库中配置的 id，配置标签参考：<a href="configuration/lib#labels">labels</a>。</p>
