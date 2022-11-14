@@ -1,0 +1,59 @@
+
+        <h1 id="configure-multi-languages" class="docs-header-link">
+          <span header-link="configure-multi-languages"></span>
+          Configure multi-languages
+        </h1>
+      <p>The supported multi-languages and default languages are configured through the <code>locales</code> and <code>defaultLocale</code> fields.</p>
+<pre><code><div>{
+  locales<span class="token punctuation">:</span> <span class="token punctuation">[</span> { key<span class="token punctuation">:</span> <span class="token string">'en-us'</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">'English'</span>}<span class="token punctuation">,</span> { key<span class="token punctuation">:</span> <span class="token string">'zh-cn'</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">'中文'</span>} <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  defaultLocale<span class="token punctuation">:</span> <span class="token string">'zh-cn'</span>
+}</div></code></pre>
+        <h1 id="multilingual-documentation" class="docs-header-link">
+          <span header-link="multilingual-documentation"></span>
+          Multilingual documentation
+        </h1>
+      <p>All pages in the <code>docs</code> directory are pages in the default language. If you need to add documents in other languages, you need to create a separate folder named with the multilingual <code>key</code>, such as the contents of the following <code>en-us</code> folder will be automatically generated into English documents, including channels, categories and pages.</p>
+<pre><code><div>├── en<span class="token operator">-</span>us
+│   ├── guides
+│   │   ├── index<span class="token punctuation">.</span>md
+│   │   └── intro
+│   │       ├── getting<span class="token operator">-</span>started<span class="token punctuation">.</span>md
+│   │       ├── index<span class="token punctuation">.</span>md
+│   │       └── motivation<span class="token punctuation">.</span>md
+│   └── index<span class="token punctuation">.</span>md</div></code></pre>
+        <h1 id="multilingual-configuration-items" class="docs-header-link">
+          <span header-link="multilingual-configuration-items"></span>
+          Multilingual configuration items
+        </h1>
+      <p>All configuration item fields are the default language. You need to add a property with a multi-language key as the name under <code>locales</code> to configure other languages and related multi-language fields, such as:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    navs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'Components'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'components'</span><span class="token punctuation">,</span>
+            lib<span class="token punctuation">:</span> <span class="token string">'alib'</span><span class="token punctuation">,</span>
+            locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              <span class="token string">'en-us'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                title<span class="token punctuation">:</span> <span class="token string">'Components'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token operator">...</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="multilingual-components" class="docs-header-link">
+          <span header-link="multilingual-components"></span>
+          Multilingual components
+        </h1>
+      <p>The documentation and API of the component are stored in the <code>doc</code> and <code>api</code> directories by default, named after the multilingual <code>key</code>.</p>
+<pre><code><div>button
+├── doc
+│   ├── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>md
+│   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>md
+├── api
+│   ├── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>js
+│   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>js</div></code></pre>
