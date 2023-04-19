@@ -1,0 +1,492 @@
+<div class="dg-paragraph"><code>Docgeni</code> will dynamically identify the first-level subfolders under the root directory (<code>rootDir</code>) of each library. Each first-level subfolder is equivalent to a component, and each component contains corresponding documents, APIs and examples. Please check the <a href="configuration/lib#include">include</a> configuration item to configure a multi-level folder.
+The folder structure of the component is as follows:</div>
+<pre><code><div>├── button
+│   ├── button<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   ├── button<span class="token punctuation">.</span>module<span class="token punctuation">.</span>ts
+│   ├── doc
+│   │   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>md
+│   │   └── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>md
+│   ├── api
+│   │   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>js
+│   │   └── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>js
+│   ├── examples
+│   │   ├── advance
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   ├── basic
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   │   └── index<span class="token punctuation">.</span>md
+│   │   └── module<span class="token punctuation">.</span>ts
+│   ├── index<span class="token punctuation">.</span>ts</div></code></pre>
+        <h1 id="overview-document" class="docs-header-link">
+          <span header-link="overview-document"></span>
+          Overview document
+        </h1>
+      <p>The component documents corresponding to each multi-language are stored in the default <code>doc</code> folder, which will be displayed in the component overview. Please check the <a href="configuration/lib#docDir">docDir</a> configuration item to configure a different directory.</p>
+
+        <h2 id="component-configurations" class="docs-header-link">
+          <span header-link="component-configurations"></span>
+          Component Configurations
+        </h2>
+      <pre class="language-markdown"><code class="language-markdown"><div><span class="token hr punctuation">---</span>
+category: general
+title: Button
+subtitle: Button
+name: 'a-button'
+<span class="token title important">order: 1
+<span class="token punctuation">---</span></span></div></code></pre>
+<ul>
+<li><code>category</code>: The category of the current component module needs to be set to the id property in the <code>categories</code> of the corresponding lib configuration</li>
+<li><code>title</code>: The title of the current component module</li>
+<li><code>subtitle</code>: The subtitle of the current component module</li>
+<li><code>name</code>: The name of the current component module, which is the name of the folder by default. The naming rules of the example module and the example component will use <code>name</code> as the splicing, and it will be configured only when the folder name does not represent the meaning of the component</li>
+<li><code>order</code>: Ordering of components</li>
+</ul>
+<div class="dg-paragraph"><code>category</code> and <code>order</code> are global configuration, which do not follow multiple languages. The global configuration items are stored in the <code>FrontMatter</code> of the default language document.</div>
+
+        <h1 id="component-example" class="docs-header-link">
+          <span header-link="component-example"></span>
+          Component Example
+        </h1>
+      <p>Docgeni will scan all subfolders under the example folder by default. Each subfolder is equivalent to a type of example. Docgeni will identify the example components according to the conventional naming. Please check the <a href="configuration/lib#examplesDir">examplesDir</a> configuration item to configure the directory.</p>
+<p>The file structure is as follows:</p>
+<pre><code><div>├── button
+│   ├── examples
+│   │   ├── basic
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   ├── advance
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   └── module<span class="token punctuation">.</span>ts</div></code></pre>
+        <h2 id="naming-rules" class="docs-header-link">
+          <span header-link="naming-rules"></span>
+          Naming Rules
+        </h2>
+      <ul>
+<li>Example file name: <code>{take the name of the folder and split it with - }.component.ts</code> (e.e. <code>basic.component.ts</code> and <code>advance-title.component.ts</code>)</li>
+<li>Example component name: <code>{library abbreviation} + {component name} + {example name} + ExampleComponent</code> (for example: <code>AlibButtonExamplesModule</code>, the component name supports customization after version &#39;1.2&#39;, and docgeni will dynamically read the exported component name)</li>
+<li><code>module</code> name: <code>{library abbreviation}+{component name} + ExamplesModule</code> (e.g. <code>AlibButtonExamplesModule</code>). After version ` 1.2&#39;, the module name supports customization and dynamic generation</li>
+<li><label type="success">Recommended</label>Version <code>2.1.0</code> supports standalone components in the examples. If all examples are standalone components, No need to define module.ts file, and it is recommended to use standalone components</li>
+</ul>
+
+        <h2 id="configuration-module" class="docs-header-link">
+          <span header-link="configuration-module"></span>
+          Configuration module
+        </h2>
+      <div class="dg-paragraph"><alert>All examples is that non standalone components need to be configured. it is recommended not to define module.ts if it is an standalone components.</alert></div>
+<div class="dg-paragraph"><code>module.ts</code> is the entry module for all examples of the current component. from version <code>1.2</code>, docgeni will automatically generate a complete NgModule. You only need to configure the imported modules and other metadata through <code>export default {}</code>, without the need to manually import each example components. The configuration example is as follows:</div>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// module.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CommonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/common'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AlibButtonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@docgeni/alib/button'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span> CommonModule<span class="token punctuation">,</span> AlibButtonModule <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+<p>Docgeni will resolve the objects exported by <code>default</code> in <code>module.ts</code>, dynamically parsed all example components and combine metadata to automatically generate <code>AlibButtonExamplesModule</code>. The generated code is as follows:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// module.ts</span>
+<span class="token operator">...</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      AlibButtonBasicExampleComponent<span class="token punctuation">,</span> 
+      AlibButtonAdvanceExampleComponent 
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    entryComponents<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      AlibButtonBasicExampleComponent<span class="token punctuation">,</span> 
+      AlibButtonAdvanceExampleComponent 
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span> CommonModule<span class="token punctuation">,</span> AlibButtonModule <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exports<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      AlibButtonBasicExampleComponent<span class="token punctuation">,</span> 
+      AlibButtonAdvanceExampleComponent 
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonExamplesModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+<div class="dg-paragraph"><alert type="info">To maintain compatibility, if there is angular module defined in <code>module.ts</code> are mainly user-defined module, and will not be generated api automatically by comments.</alert></div>
+
+        <h2 id="import-configuration-(tsconfig-paths%EF%BC%89" class="docs-header-link">
+          <span header-link="import-configuration-(tsconfig-paths%EF%BC%89"></span>
+          Import configuration (tsconfig paths）
+        </h2>
+      <p>When Docgeni runs, it will copy all the example files under <code>examples</code> to the site to start. In the component examples, relative paths cannot be used to import component modules. It is recommended to import directly through the package path. At the same time, you need to configure paths in tsconfig.json to point to the source code path of the library, so that you can directly copy the example code to use. For example, the component library is called <code>alib</code>, and the components are configured and imported in the following way:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// button/examples/module.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AlibButtonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@docgeni/alib/button'</span><span class="token punctuation">;</span>
+
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>AlibButtonBasicExampleComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>CommonModule<span class="token punctuation">,</span> AlibButtonModule<span class="token punctuation">,</span> FormsModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    entryComponents<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exports<span class="token punctuation">:</span> <span class="token punctuation">[</span>AlibButtonBasicExampleComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonExamplesModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+<pre class="language-json"><code class="language-json"><div>// tsconfig.json
+ <span class="token punctuation">{</span>
+   <span class="token property">"paths"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"@docgeni/alib"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"packages/alib/public-api.ts"</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"@docgeni/alib/*"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"packages/alib/*"</span>
+      <span class="token punctuation">]</span>
+ <span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="use-examples-in-the-documentation" class="docs-header-link">
+          <span header-link="use-examples-in-the-documentation"></span>
+          Use examples in the documentation
+        </h2>
+      <div class="dg-paragraph"><code>Docgeni</code> generates a unique Key for each example, the naming rule is: <code>library abbreviation-component name-example name-example</code>, such as: <code>alib-button-basic-example</code></div>
+<p>You can introduce an example in Markdown according to the following code in both a common page document and a component overview document, and <code>name</code> is the unique identifier of the example.</p>
+<pre class="language-html"><code class="language-html"><div><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>example</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alib-button-basic-example<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></div></code></pre>
+<p>Running result:
+<example name="alib-button-basic-example" ></example></p>
+<p>The default example is wrapped in an example container, and you can view the source code of the example. If you need to remove the wrapped container, you can introduce the example through the <code>inline</code> mode:</p>
+<pre class="language-html"><code class="language-html"><div><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>example</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alib-button-basic-example<span class="token punctuation">"</span></span> <span class="token attr-name">inline</span> <span class="token punctuation">/></span></span></div></code></pre>
+<p>Running result:
+<example name="alib-button-basic-example" inline></example></p>
+
+        <h2 id="example-configuration" class="docs-header-link">
+          <span header-link="example-configuration"></span>
+          Example configuration
+        </h2>
+      <p>There may be many examples under a certain component. Each example has fields such as title and sort. If you need to customize the configuration, you need to create an <code>index.md</code> file in the corresponding example folder and configure FrontMatter:</p>
+<pre class="language-markdown"><code class="language-markdown"><div><span class="token hr punctuation">---</span>
+title: Button Base
+<span class="token title important">order: 1
+<span class="token punctuation">---</span></span></div></code></pre>
+
+        <h2 id="create-a-new-example" class="docs-header-link">
+          <span header-link="create-a-new-example"></span>
+          Create a new example
+        </h2>
+      <p>Here&#39;s how to add an example showing the state of <code>loading</code> to the button:</p>
+<ol>
+<li>Add a <code>loading</code> folder under the <code>button/examples</code> folder, and add the corresponding example component</li>
+</ol>
+<pre><code><div>├── button
+│   ├── examples
+│   │   ├── loading
+│   │   │   ├── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   └── module<span class="token punctuation">.</span>ts</div></code></pre><ol start="2">
+<li>The code of the <code>loading.component.ts</code> file is as follows:</li>
+</ol>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">'alib-button-loading-example'</span><span class="token punctuation">,</span>
+    templateUrl<span class="token punctuation">:</span> <span class="token string">'./loading.component.html'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonLoadingExampleComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</div></code></pre>
+<ol start="3">
+<li>Custom module needs to be modified <code>button/examples/module.ts</code> and import <code>AlibButtonLoadingExampleComponent</code> component, after the <code>1.2</code> version, the module is automatically generated. there is no need to add the example component manually</li>
+</ol>
+<pre class="language-ts"><code class="language-ts"><div><span class="token operator">...</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AlibButtonLoadingExampleComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./loading/loading.component'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> COMPONENTS <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token operator">...</span>
+  AlibButtonLoadingExampleComponent
+<span class="token punctuation">]</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    declarations<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>CommonModule<span class="token punctuation">,</span> AlibButtonModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    entryComponents<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    exports<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonExamplesModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</div></code></pre>
+<p>Pay attention: all examples are dynamically loaded at runtime, and need to be imported in <code>entryComponents</code> when the Ivy rendering engine is not turned on.</p>
+
+        <h2 id="stackblitz-live-example-%3Clabel%3E2-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="stackblitz-live-example-%3Clabel%3E2-0+%3C/label%3E"></span>
+          StackBlitz Live Example <label>2.0+</label>
+        </h2>
+      <p>Docgeni supports component examples to be displayed directly on the StackBlitz platform. StackBlitz online examples need to configure the dependencies, styles and <code>angular.json</code>, through in <code>.docgeni/public/assets/stack-blitz</code> folder configuration. The file structure is as follows:</p>
+<pre><code><div><span class="token punctuation">.</span>docgeni
+├── public
+│   ├── assets
+│   │   ├── <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+│   │   └── stack<span class="token operator">-</span>blitz
+│   │       ├── angular<span class="token punctuation">.</span>json
+│   │       ├── package<span class="token punctuation">.</span>json
+│   │       └── src
+│   │           └── styles<span class="token punctuation">.</span>scss
+│   ├── <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></div></code></pre><ul>
+<li><code>angular.json</code>: Configuration file for Angular runtime，you can copy <a target="_blank" href="https://github.com/docgeni/docgeni-template/blob/master/.docgeni/public/assets/stack-blitz/angular.json">angular.json</a> file</li>
+<li><code>src/styles.scss</code>: The styles that the example components depends on, generally need to be imported into the component library</li>
+<li><code>package.json</code>: The dependencies of the example run, you only need to configure <code>dependencies</code>, e.g.</li>
+</ul>
+<pre class="language-json"><code class="language-json"><div><span class="token punctuation">{</span>
+    <span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span> 
+        <span class="token property">"@angular/animations"</span><span class="token operator">:</span> <span class="token string">"~10.2.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/cdk"</span><span class="token operator">:</span> <span class="token string">"^10.2.7"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/common"</span><span class="token operator">:</span> <span class="token string">"~10.2.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/compiler"</span><span class="token operator">:</span> <span class="token string">"~10.2.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/core"</span><span class="token operator">:</span> <span class="token string">"~10.2.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/forms"</span><span class="token operator">:</span> <span class="token string">"~10.2.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/platform-browser"</span><span class="token operator">:</span> <span class="token string">"~10.2.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/platform-browser-dynamic"</span><span class="token operator">:</span> <span class="token string">"~10.2.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"rxjs"</span><span class="token operator">:</span> <span class="token string">"~6.5.4"</span><span class="token punctuation">,</span>
+        <span class="token property">"zone.js"</span><span class="token operator">:</span> <span class="token string">"~0.10.2"</span><span class="token punctuation">,</span>
+        <span class="token property">"@docgeni/alib"</span><span class="token operator">:</span> <span class="token string">"0.0.1"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="component-api" class="docs-header-link">
+          <span header-link="component-api"></span>
+          Component API
+        </h1>
+      <p>The docgeni component API supports three modes: <code>&#39;compatible&#39; | &#39;manual&#39; | &#39;automatic&#39;</code>， how to configure the reference library <a href="configuration/lib#apimode-%3Clabel%3E1-2-0+%3C/label%3E">apiMode</a></p>
+<ul>
+<li><code>manual</code>: Manual mode, defining component API in the json of configuration file, default mode</li>
+<li><code>automatic</code>: Automatic generation mode, the API is automatically generated through the comments of the component, directive and service</li>
+<li><code>compatible</code>: Compatibility mode. when there is <a href="configuration/lib#apidir">API configuration file</a> takes precedence. otherwise, it is automatically generated through comments</li>
+</ul>
+
+        <h2 id="automatic-generate-api" class="docs-header-link">
+          <span header-link="automatic-generate-api"></span>
+          Automatic generate API
+        </h2>
+      <p>In <code>automatic</code> or <code>compatible</code> mode，Docgeni will load all typescript files of components, dynamically read angular components/directives/services, and generate corresponding API documents through JS Doc comments, Detailed configuration reference: <a href="configuration/api">API Comment</a>。</p>
+<p>For example, define the following component:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * General Button Component description.
+ */</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">'thy-button'</span><span class="token punctuation">,</span>
+    templateUrl<span class="token punctuation">:</span> <span class="token string">'./button.component.html'</span><span class="token punctuation">,</span>
+    styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'./button.component.scss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exportAs<span class="token punctuation">:</span> <span class="token string">'thyButton'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ButtonComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * Button Type
+     * @description Button Type for Description
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> thyType<span class="token punctuation">:</span> <span class="token string">'primary'</span> <span class="token operator">|</span> <span class="token string">'info'</span> <span class="token operator">|</span> <span class="token string">'success'</span> <span class="token operator">=</span> <span class="token string">'primary'</span><span class="token punctuation">;</span>
+
+     <span class="token comment" spellcheck="true">/**
+     * Button Size
+     * @deprecated
+     * @default md
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> thySize<span class="token punctuation">:</span> LoadingComponent<span class="token punctuation">;</span>
+
+     <span class="token comment" spellcheck="true">/**
+     * Button loading status
+     * @default false
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">set</span> <span class="token function">thyLoading</span><span class="token punctuation">(</span>loading<span class="token punctuation">:</span> <span class="token keyword">boolean</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> loading<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * Loading Event
+     */</span>
+    @<span class="token function">Output</span><span class="token punctuation">(</span><span class="token punctuation">)</span> thyLoadingEvent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token operator">&lt;</span><span class="token keyword">boolean</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></code></pre>
+<p>The generated API is defined as:</p>
+<pre class="language-js"><code class="language-js"><div><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"component"</span><span class="token punctuation">,</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"ButtonComponent"</span><span class="token punctuation">,</span>
+    <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"General Button Component description."</span><span class="token punctuation">,</span>
+    <span class="token string">"selector"</span><span class="token punctuation">:</span> <span class="token string">"thy-button"</span><span class="token punctuation">,</span>
+    <span class="token string">"templateUrl"</span><span class="token punctuation">:</span> <span class="token string">"./button.component.html"</span><span class="token punctuation">,</span>
+    <span class="token string">"template"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token string">"styleUrls"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"./button.component.scss"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"styles"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token string">"exportAs"</span><span class="token punctuation">:</span> <span class="token string">"thyButton"</span><span class="token punctuation">,</span>
+    <span class="token string">"properties"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Input"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thyType"</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"\"primary\" | \"info\" | \"success\""</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"primary"</span><span class="token punctuation">,</span>
+            <span class="token string">"info"</span><span class="token punctuation">,</span>
+            <span class="token string">"success"</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token string">"kindName"</span><span class="token punctuation">:</span> <span class="token string">"UnionType"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Button Type for Description"</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token string">"primary"</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"description"</span><span class="token punctuation">,</span>
+            <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"Button Type for Description"</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Input"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thySize"</span><span class="token punctuation">,</span>
+        <span class="token string">"aliasName"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"any"</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">"kindName"</span><span class="token punctuation">:</span> <span class="token string">"TypeReference"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Button Size"</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token string">"md"</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"deprecated"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"deprecated"</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"default"</span><span class="token punctuation">,</span>
+            <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"md"</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Input"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thyLoading"</span><span class="token punctuation">,</span>
+        <span class="token string">"aliasName"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"boolean"</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Output"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thyLoadingEvent"</span><span class="token punctuation">,</span>
+        <span class="token string">"aliasName"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"EventEmitter&lt;boolean>"</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Loading Event"</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span></div></code></pre>
+<p>To generate API doc for exported interfaces or classes declarations, you need to manually add a <code>@public</code> or <code>@publicApi</code> tag to the comments:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * Dialog Config
+ * @public
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">DialogConfig</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/**
+   * param1 description
+   */</span>
+  param1<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="configuration-definition-api" class="docs-header-link">
+          <span header-link="configuration-definition-api"></span>
+          Configuration definition API
+        </h2>
+      <div class="dg-paragraph"><label type="warning">Not Recommended</label></div>
+<p>In <code>manual</code> or <code>compatible</code> mode, Docgeni will scan the configuration files in the <code>api</code> folder by default. The file name is the <code>Key</code> of multi-language, such as <code>zh-cn.js</code>. Please check the <a href="configuration/lib#apiDir">apiDir</a> configuration item to configure the directory.</p>
+<p>The configuration file naming rule is: <code>{localeKey}.&lt;json|yaml|yml|js|config.js&gt;</code>, currently supports the following three formats:</p>
+<ul>
+<li><code>json</code> format, named after <code>.json</code> suffix</li>
+<li><code>yaml</code> format, named after <code>.yaml</code> or <code>yml</code> suffix</li>
+<li><code>js</code> format, named after <code>.js</code> or <code>.config.js</code> suffix</li>
+</ul>
+
+        <h3 id="api-configuration" class="docs-header-link">
+          <span header-link="api-configuration"></span>
+          API configuration
+        </h3>
+      <p>A component module may contain multiple components or directives whatever the format, so the configuration of the API is an array. Each item in the array represents a component, a directive, a service, an interface, etc.</p>
+<p>JS format example is as follows:</p>
+<pre class="language-js"><code class="language-js"><div>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token string">'directive'</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">'alibButton'</span><span class="token punctuation">,</span>
+    description<span class="token punctuation">:</span> <span class="token string">'Button component, supports two forms: alibButton directive and alib-button component'</span><span class="token punctuation">,</span>
+    properties<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alibType'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+            <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'primary'</span><span class="token punctuation">,</span>
+            description<span class="token punctuation">:</span> <span class="token string">'The type of button, support \`primary | info | warning | danger\`'</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alibSize'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+            <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'null'</span><span class="token punctuation">,</span> 
+            description<span class="token punctuation">:</span> <span class="token string">'The size of button, support \`sm | md | lg\`'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</div></code></pre>
+<p>YAML format example is as follows:</p>
+<pre class="language-yaml"><code class="language-yaml"><div><span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> directive
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> alibButton
+  <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'Button component, supports two forms: alibButton directive and alib-button component'</span>
+  <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> alibType
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> The type of button<span class="token punctuation">,</span> support `primary <span class="token punctuation">|</span> info <span class="token punctuation">|</span> warning <span class="token punctuation">|</span> danger`
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> primary
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> alibSize
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> The size of button<span class="token punctuation">,</span> support `sm <span class="token punctuation">|</span> md <span class="token punctuation">|</span> lg`
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> md</div></code></pre>
+<p>JSON format example is as follows:</p>
+<pre class="language-json"><code class="language-json"><div><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"directive"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibButton"</span><span class="token punctuation">,</span>
+    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Button component, supports two forms: alibButton directive and alib-button component"</span><span class="token punctuation">,</span>
+    <span class="token property">"properties"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibType"</span><span class="token punctuation">,</span>
+        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+        <span class="token property">"default"</span><span class="token operator">:</span> <span class="token string">"primary"</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> "The type of button<span class="token punctuation">,</span> support `primary | info | warning | danger`"
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibSize"</span><span class="token punctuation">,</span>
+        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+        <span class="token property">"default"</span><span class="token operator">:</span> <span class="token string">"null"</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> "The size of button<span class="token punctuation">,</span> support `sm | md | lg`"
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span></div></code></pre>
+
+        <h3 id="parameter-description" class="docs-header-link">
+          <span header-link="parameter-description"></span>
+          Parameter description
+        </h3>
+      <ul>
+<li><code>type</code>: The type of the component, support <code>directive</code>, <code>component</code>, <code>class</code>, <code>interface</code></li>
+<li><code>name</code>: The name of the component</li>
+<li><code>description</code>: The description of the component, support Markdown syntax</li>
+<li><code>properties</code>: The property list of the component</li>
+<li><code>properties.name</code>: The name of the property</li>
+<li><code>properties.type</code>:  The type of the property</li>
+<li><code>properties.default</code>: The default value of the property</li>
+<li><code>properties.description</code>: The description of the property, support Markdown syntax</li>
+</ul>

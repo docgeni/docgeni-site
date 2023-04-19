@@ -1,0 +1,160 @@
+
+        <h1 id="basic-concepts" class="docs-header-link">
+          <span header-link="basic-concepts"></span>
+          Basic concepts
+        </h1>
+      <p>In <code>Docgeni</code>, whether it is the head navigation, the left menu, or a specific page document, unified called <code>NavigationItem</code> and stored in a tree structure. For a better understanding, we have made a slight distinction between these objects.</p>
+<ul>
+<li><code>Channel</code>: First-level navigation, head navigation bar in <code>full</code> mode, each channel will have an independent routing</li>
+<li><code>Category</code>: In the left menu, it will be displayed as a group, no content</li>
+<li><code>DocItem</code>: Common page document, belonging to a <code>Channel</code> or <code>Category</code>, with independent routing and content</li>
+<li><code>ComponentDocItem</code>: Component document, similar to <code>DocItem</code>, but show different form and properties</li>
+</ul>
+<p>The example below, <code>guides</code> is a <code>Channel</code>, <code>intro</code> is a <code>Category</code>, and <code>getting-started</code> is a common page document <code>DocItem</code>.</p>
+<pre class="language-json"><code class="language-json"><div>...
+<span class="token punctuation">{</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"guides"</span><span class="token punctuation">,</span>
+  <span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"guides"</span><span class="token punctuation">,</span>
+  <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Guides"</span><span class="token punctuation">,</span>
+  <span class="token property">"items"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"intro"</span><span class="token punctuation">,</span>
+      <span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"guides/intro"</span><span class="token punctuation">,</span>
+      <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Intro"</span><span class="token punctuation">,</span>
+      <span class="token property">"items"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"getting-started"</span><span class="token punctuation">,</span>
+          <span class="token property">"path"</span><span class="token operator">:</span> <span class="token string">"guides/getting-started"</span><span class="token punctuation">,</span>
+          <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Getting Started"</span><span class="token punctuation">,</span>
+          <span class="token property">"contentPath"</span><span class="token operator">:</span> <span class="token string">"/docs/guides/intro/getting-started.html"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        ...
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    ...
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="conventional-routing-and-menu" class="docs-header-link">
+          <span header-link="conventional-routing-and-menu"></span>
+          Conventional routing and menu
+        </h1>
+      <div class="dg-paragraph"><code>Docgeni</code> will automatically generate corresponding document navigation, menus and routes based on the <code>docs</code> directory structure and FrontMatter.</div>
+<ul>
+<li>The first-level directories generate channels in <code>full</code> mode, which is the head navigation</li>
+<li>Non-first-level directories in <code>full</code> mode and all directories in <code>lite</code> mode generate categories,  which is the grouping of the left menu, without routing</li>
+<li>All <code>.md</code> files generate their own common page document</li>
+</ul>
+
+        <h2 id="default-route-generation-rules" class="docs-header-link">
+          <span header-link="default-route-generation-rules"></span>
+          Default route generation rules
+        </h2>
+      <ul>
+<li>The channel takes the folder name and converts it to Param Case name, such as: <code>GettingStarted</code> =&gt; <code>getting-started</code></li>
+<li>Take the file name of the page document, remove the <code>.md</code> suffix, convert it to Param Case name, then add the route of the channel and category to which it belongs, such as: <code>GettingStarted.md</code> =&gt; <code>/guides/intro/getting-started</code></li>
+</ul>
+
+        <h2 id="default-title-generation-rules" class="docs-header-link">
+          <span header-link="default-title-generation-rules"></span>
+          Default title generation rules
+        </h2>
+      <ul>
+<li>Channels and categories take the name of the directory and convert it to a title, such as: <code>Guide</code>, <code>Intro</code></li>
+<li>The page document takes the file name, removes the <code>.md</code> suffix, then converts it to a title, such as: <code>Getting Started</code>, <code>Motivation</code></li>
+</ul>
+
+        <h2 id="file-path-example" class="docs-header-link">
+          <span header-link="file-path-example"></span>
+          File path example
+        </h2>
+      <p>The file paths correspond to the navigation, categories and pages generated in the two modes as follows:</p>
+<table>
+<thead>
+<tr>
+<th>file path</th>
+<th>full mode</th>
+<th>lite mode</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/docs/index.md</td>
+<td>- Channel: none <br > - Category: none <br > - Page routing: /</td>
+<td>- Channel: none <br > - Category: none <br > - Page routing: /</td>
+</tr>
+<tr>
+<td>/docs/getting-started.md</td>
+<td>- Channel: none <br > - Category: none <br > - Page routing: /getting-started</td>
+<td>- Channel: none <br > - Category: none <br > - Page routing: /getting-started</td>
+</tr>
+<tr>
+<td>/docs/guide/index.md</td>
+<td>- Channel: guide <br > - Category: none <br > - Page routing: /guide</td>
+<td>- Channel: none <br > - Category: guide <br > - Page routing: /guide</td>
+</tr>
+<tr>
+<td>/docs/guide/hello.md</td>
+<td>- Channel: guide <br > - Category: none <br > - Page routing: /guide/hello</td>
+<td>- Channel: none <br > - Category: guide <br > - Page routing: /guide/hello</td>
+</tr>
+<tr>
+<td>/docs/guide/basic/hello.md</td>
+<td>- Channel: guide <br > - Category: basic <br > - Page routing: /guide/basic/hello</td>
+<td>- Channel: none <br > - Category: basic <br > - Page routing: /guide/basic/hello</td>
+</tr>
+</tbody></table>
+
+        <h1 id="customize-configuration" class="docs-header-link">
+          <span header-link="customize-configuration"></span>
+          Customize configuration
+        </h1>
+      <p>For common page documents, if you want to customize the route and set the title, you can use the <code>FrontMatter</code> named <code>path</code> and <code>title</code> to configure.</p>
+<pre class="language-markdown"><code class="language-markdown"><div><span class="token hr punctuation">---</span>
+path: getting-stared
+<span class="token title important">title: Getting Started
+<span class="token punctuation">---</span></span></div></code></pre>
+<p>For channels and categories, the configuration information is stored in the <code>index.md</code> under the current folder. Customize the configuration by modifying the <code>FrontMatter</code> of the file. If the <code>index.md</code> also has content, a page which title is the same as its channel or category will be generated, if you want to set different configurations separately, please re-create a non-<code>index.md</code> page file.</p>
+
+        <h1 id="channel-generation" class="docs-header-link">
+          <span header-link="channel-generation"></span>
+          Channel generation
+        </h1>
+      <p>Channels only exist in <code>full</code> mode in <code>Docgeni</code>, and there are two forms:</p>
+<ul>
+<li>The first-level data in the configuration file <code>navs</code> array</li>
+<li>The first-level folder automatically identified under the <code>docs</code> folder</li>
+</ul>
+<p>It should be noted here that the automatically recognized channel under the <code>docs</code> folder will be inserted at the bottom of the configured <code>navs</code> array by default. If you want to control the display position, you can insert a <code>null</code> as a placeholder, as shown below example, the automatically generated channel will be inserted at the top of the navigation.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    navs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'Components'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'components'</span><span class="token punctuation">,</span>
+            lib<span class="token punctuation">:</span> <span class="token string">'alib'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'GitHub'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'https://github.com/docgeni/docgeni'</span><span class="token punctuation">,</span>
+            isExternal<span class="token punctuation">:</span> <span class="token keyword">true</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="sorting-of-channels,-categories-and-pages" class="docs-header-link">
+          <span header-link="sorting-of-channels,-categories-and-pages"></span>
+          Sorting of channels, categories and pages
+        </h1>
+      <p>The file names of folders and files are used as sorting rules by default.</p>
+<p>It can be configured by <code>FrontMatter</code> named <code>order</code>, in ascending order of number.</p>
+<pre class="language-markdown"><code class="language-markdown"><div><span class="token hr punctuation">---</span>
+<span class="token title important">order: 10
+<span class="token punctuation">---</span></span></div></code></pre>
+
+        <h1 id="more-configuration" class="docs-header-link">
+          <span header-link="more-configuration"></span>
+          More configuration
+        </h1>
+      <p>For more configuration, please refer to <a href="configuration/front-matter">Front Matter</a></p>
