@@ -1,0 +1,249 @@
+
+        <h2 id="mode" class="docs-header-link">
+          <span header-link="mode"></span>
+          mode
+        </h2>
+      <ul>
+<li>Type: <code>lite</code>｜<code>full</code></li>
+<li>Default: <code>lite</code></li>
+</ul>
+<p>It&#39;s used to set the document display mode. The default is lite mode(left menu + right content), <code>full</code> is site mode, including: homepage + head nav + left menu + right content.</p>
+
+        <h2 id="theme" class="docs-header-link">
+          <span header-link="theme"></span>
+          theme
+        </h2>
+      <ul>
+<li>Type: <code>default</code>｜<code>angular</code></li>
+<li>Default: <code>default</code></li>
+</ul>
+<p>Theme settings:</p>
+<ul>
+<li><code>default</code>: default theme, navigation background color is white</li>
+<li><code>angular</code>：<code>Angular</code> official website style, default navigation background color is: <code style="color: #3f51b5">#3f51b5</code>, SCSS color variables can be modified to change the navigation background color</li>
+</ul>
+
+        <h2 id="title" class="docs-header-link">
+          <span header-link="title"></span>
+          title
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>package.name</code></li>
+</ul>
+<p>The title of the document. Usually the name of the component library, such as <code>Docgeni</code>.</p>
+
+        <h2 id="logourl" class="docs-header-link">
+          <span header-link="logourl"></span>
+          logoUrl
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: the Logo Url of Docgeni</li>
+</ul>
+<p>Logo URL of the library.</p>
+
+        <h2 id="repourl" class="docs-header-link">
+          <span header-link="repourl"></span>
+          repoUrl
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>Github repository URL of the library.</p>
+
+        <h2 id="docsdir" class="docs-header-link">
+          <span header-link="docsdir"></span>
+          docsDir
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>docs</code></li>
+</ul>
+<p>Markdown document directory URL, Docgeni will scan the folders and Markdown files in this directory, and generate channels, menus and page documents according to certain rules.</p>
+
+        <h2 id="sitedir" class="docs-header-link">
+          <span header-link="sitedir"></span>
+          siteDir
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>.docgeni/site</code></li>
+</ul>
+<p>Automatically generated site directory. Docgeni will copy the generated component examples and documents to the site. After <code>siteProjectName</code> is set, the directory of the custom site is the main one. This configuration is invalid.</p>
+
+        <h2 id="outputdir" class="docs-header-link">
+          <span header-link="outputdir"></span>
+          outputDir
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>dist/docgeni-site</code></li>
+</ul>
+<p>The output directory of site construction. When the <code>siteProjectName</code> is set, the output directory of the custom site is the main one. This configuration is invalid.</p>
+
+        <h2 id="publicdir" class="docs-header-link">
+          <span header-link="publicdir"></span>
+          publicDir
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>.docgeni/public</code></li>
+</ul>
+<p>The configuration directory of the document site, Docgeni will copy the <code>index.html</code>, <code>favicon.ico</code>, <code>styles.scss</code>, <code>assets</code>, <code>.browserslistrc</code> and <code>tsconfig.json</code> files in the folder and overwrite the site directory to implement custom configuration features. For more configuration, please refer to <a href="/guides/advance/customize">Customize Site</a>.</p>
+
+        <h2 id="componentsdir-%3Clabel%3E1-1-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="componentsdir-%3Clabel%3E1-1-0+%3C/label%3E"></span>
+          componentsDir <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>.docgeni/components</code></li>
+</ul>
+<p>Storage directory for built-in components, see <a href="/guides/basic/built-in-components#custom-built-in-components">Custom Built-in Components</a> to add custom built-in components.</p>
+
+        <h2 id="siteprojectname" class="docs-header-link">
+          <span header-link="siteprojectname"></span>
+          siteProjectName
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>The project name of Angular custom site. In addition to the default documentation and examples to presentation features, component library development may also need to do some custom features. You can create a new site project in the repository, and then configure the name of the project, Docgeni will copy the generated documents and examples to the project.</p>
+
+        <h2 id="toc-%3Clabel%3E1-1-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="toc-%3Clabel%3E1-1-0+%3C/label%3E"></span>
+          toc <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>Type: <code>content | menu | false | hidden</code></li>
+<li>Default: <code>content</code></li>
+</ul>
+<p>Display mode of table of content, <code>content</code> indicates display on the right side of the content area, <code>menu</code> indicates that toc will be displayed in the left menu, other values indicate that the toc is not displayed.</p>
+
+        <h2 id="footer-%3Clabel%3E1-1-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="footer-%3Clabel%3E1-1-0+%3C/label%3E"></span>
+          footer <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>Site footer content, such as:<code>Open-source MIT Licensed | Copyright © 2020-present Powered by PingCode</code>, support HTML tags.</p>
+
+        <h2 id="defaultlocale" class="docs-header-link">
+          <span header-link="defaultlocale"></span>
+          defaultLocale
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>en-us</code></li>
+</ul>
+<p>Default multi-language.</p>
+
+        <h2 id="locales" class="docs-header-link">
+          <span header-link="locales"></span>
+          locales
+        </h2>
+      <ul>
+<li>Type: <code>Array&lt;{key: string, name: string}&gt;</code></li>
+<li>Default: <code>[]</code></li>
+</ul>
+<p>Supported multi-language, if you don&#39;t need to support multiple languages, no configuration, only the <code>defaultLocale</code> language will be generated.</p>
+
+        <h2 id="navs" class="docs-header-link">
+          <span header-link="navs"></span>
+          navs
+        </h2>
+      <ul>
+<li>Type: <code>Array&lt;NavigationItem&gt;</code></li>
+<li>Default: <code>[]</code></li>
+</ul>
+<p>This configuration item is used to customize the display of the navigation bar and menu, and generally configure some external links and library channels, such as:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    navs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'GitHub'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'https://github.com/docgeni/docgeni'</span><span class="token punctuation">,</span>
+            isExternal<span class="token punctuation">:</span> <span class="token keyword">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'Components'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'components'</span><span class="token punctuation">,</span>
+            lib<span class="token punctuation">:</span> <span class="token string">'alib'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+<blockquote>
+<p>Here are some things to note, the automatically recognized channel under the <code>docs</code> folder will be inserted at the bottom of the configured <code>navs</code> array by default. If you want to control the display position, you can insert a <code>null</code> as a placeholder. As the above example, the automatically generated channel will be inserted to the top navigation.</p>
+</blockquote>
+
+        <h2 id="libs" class="docs-header-link">
+          <span header-link="libs"></span>
+          libs
+        </h2>
+      <ul>
+<li>Type: <code>Array&lt;DocgeniLibrary&gt;</code></li>
+<li>Default: <code>[]</code></li>
+</ul>
+<p>Component library configuration, see <a href="configuration/lib">configuration/lib</a> for the configuration of each library.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    libs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alib'</span><span class="token punctuation">,</span>
+            rootDir<span class="token punctuation">:</span> <span class="token string">'./packages/a-lib'</span><span class="token punctuation">,</span>
+            categories<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    id<span class="token punctuation">:</span> <span class="token string">'general'</span><span class="token punctuation">,</span>
+                    title<span class="token punctuation">:</span> <span class="token string">'通用'</span><span class="token punctuation">,</span>
+                    locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        <span class="token string">'en-us'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                            title<span class="token punctuation">:</span> <span class="token string">'General'</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="sitemap--%3Clabel%3E2-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="sitemap--%3Clabel%3E2-0+%3C/label%3E"></span>
+          sitemap  <label>2.0+</label>
+        </h2>
+      <ul>
+<li>Type: <code>{host?: string;}</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>Enable the automatic generation of <code>sitemap.xml</code>, <code>hostname</code> is configuration of url prefix.</p>
+
+        <h2 id="algolia-%3Clabel%3E2-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="algolia-%3Clabel%3E2-0+%3C/label%3E"></span>
+          algolia <label>2.0+</label>
+        </h2>
+      <ul>
+<li>Type: <code>DocgeniAlgoliaConfig</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>Configure Algolia&#39;s [DocSearch]（ <a target="_blank" href="https://docsearch.algolia.com">https://docsearch.algolia.com</a> ）Service, you need to configure <code>apikey</code> and <code>indexname</code>.</p>
+<pre class="language-js"><code class="language-js"><div><span class="token punctuation">{</span>
+  algolia<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    apiKey<span class="token punctuation">:</span> <span class="token string">'Your api key'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// A unique key will be configured for the site in the mail received after the DocSearch service passes the application</span>
+    indexName<span class="token punctuation">:</span> <span class="token string">'docgeni'</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// name of index </span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
+<p>If your website does not meet DocSearch&#39;s <a target="_blank" href="https://docsearch.algolia.com/docs/who-can-apply">Free Standard</a>, you can <a target="_blank" href="https://docsearch.algolia.com/docs/legacy/run-your-own/">deploy crawler</a> yourself and grab the website information and upload it to the algolia application. You need to provide <code>appid</code> for crawling.</p>
+<pre class="language-js"><code class="language-js"><div><span class="token punctuation">{</span>
+  algolia<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    appId<span class="token punctuation">:</span> <span class="token string">'Your app id'</span><span class="token punctuation">,</span>
+    apiKey<span class="token punctuation">:</span> <span class="token string">'Your api key'</span><span class="token punctuation">,</span>
+    indexName<span class="token punctuation">:</span> <span class="token string">'docgeni'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>

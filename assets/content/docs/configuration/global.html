@@ -1,0 +1,249 @@
+
+        <h2 id="mode" class="docs-header-link">
+          <span header-link="mode"></span>
+          mode
+        </h2>
+      <ul>
+<li>类型：<code>lite</code>｜<code>full</code></li>
+<li>默认：<code>lite</code></li>
+</ul>
+<p>用于设定文档的展现模式，默认为简易模式（左侧菜单 + 右侧内容），<code>full</code> 为站点模式，包含：首页 + 头部导航 + 左侧菜单 + 右侧内容。</p>
+
+        <h2 id="theme" class="docs-header-link">
+          <span header-link="theme"></span>
+          theme
+        </h2>
+      <ul>
+<li>类型：<code>default</code>｜<code>angular</code></li>
+<li>默认：<code>default</code></li>
+</ul>
+<p>主题设置：</p>
+<ul>
+<li><code>default</code>: 默认主题，导航背景色为白色</li>
+<li><code>angular</code>：<code>Angular</code>官网风格，默认导航背景色为: <code style="color: #3f51b5">#3f51b5</code>，可以修改 SCSS 颜色变量修改</li>
+</ul>
+
+        <h2 id="title" class="docs-header-link">
+          <span header-link="title"></span>
+          title
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>package.name</code></li>
+</ul>
+<p>文档的标题，通常为类库名，比如<code>Docgeni</code>。</p>
+
+        <h2 id="logourl" class="docs-header-link">
+          <span header-link="logourl"></span>
+          logoUrl
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：Docgeni 的 Logo Url</li>
+</ul>
+<p>类库 Logo 地址。</p>
+
+        <h2 id="repourl" class="docs-header-link">
+          <span header-link="repourl"></span>
+          repoUrl
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>类库 GitHub 仓储地址。</p>
+
+        <h2 id="docsdir" class="docs-header-link">
+          <span header-link="docsdir"></span>
+          docsDir
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>docs</code></li>
+</ul>
+<p>Markdown 文档目录地址，Docgeni 会扫描该目录下的文件夹和 Markdown 文件，按照一定的规则生成频道、菜单和页面文档。</p>
+
+        <h2 id="sitedir" class="docs-header-link">
+          <span header-link="sitedir"></span>
+          siteDir
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>.docgeni/site</code></li>
+</ul>
+<p>自动生成的站点目录，Docgeni 会把生成的组件示例和文档拷贝到该站点下，当<code>siteProjectName</code>设置后以自定义站点的所在目录为主，此配置无效。</p>
+
+        <h2 id="outputdir" class="docs-header-link">
+          <span header-link="outputdir"></span>
+          outputDir
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>dist/docgeni-site</code></li>
+</ul>
+<p>站点构建输出目录，当<code>siteProjectName</code>设置后以自定义站点的输出目录为主，此配置无效。</p>
+
+        <h2 id="publicdir" class="docs-header-link">
+          <span header-link="publicdir"></span>
+          publicDir
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>.docgeni/public</code></li>
+</ul>
+<p>文档站点的配置目录，Docgeni会把该文件夹下的<code>index.html</code>、<code>favicon.ico</code>、<code>styles.scss</code>、<code>assets</code>、<code>.browserslistrc</code>和<code>tsconfig.json</code>文件拷贝并覆盖站点目录实现自定义配置功能，更多配置参考 <a href="/guides/advance/customize">自定义站点</a>。</p>
+
+        <h2 id="componentsdir-%3Clabel%3E1-1-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="componentsdir-%3Clabel%3E1-1-0+%3C/label%3E"></span>
+          componentsDir <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>.docgeni/components</code></li>
+</ul>
+<p>内置组件的存储目录，可以参考：<a href="/guides/basic/built-in-components#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6">自定义内置组件</a> 文档添加内置组件。</p>
+
+        <h2 id="siteprojectname" class="docs-header-link">
+          <span header-link="siteprojectname"></span>
+          siteProjectName
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>Angular 自定义站点的项目名称，组件库开发除了默认的文档和示例展示功能外，可能还需要做一些自定义的功能，那么可以在仓储中新建一个 site 项目，然后配置此项目的名字，Docgeni 会把生成的文档和示例拷贝到该项目下，自定义站点的更多配置参考 <a href="/guides/advance/customize">自定义站点</a>。</p>
+
+        <h2 id="toc-%3Clabel%3E1-1-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="toc-%3Clabel%3E1-1-0+%3C/label%3E"></span>
+          toc <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>类型：<code>content | menu | false | hidden</code></li>
+<li>默认：<code>content</code></li>
+</ul>
+<p>文档目录显示方式，值为<code>content</code>表示在内容区域右侧显示，值为<code>menu</code>时会将当前路由的目录展示在左侧菜单中，其他值表示不显示目录。</p>
+
+        <h2 id="footer-%3Clabel%3E1-1-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="footer-%3Clabel%3E1-1-0+%3C/label%3E"></span>
+          footer <label>1.1.0+</label>
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>文档站点底部内容，可以填写如 <code>Open-source MIT Licensed | Copyright © 2020-present Powered by PingCode</code> 等内容，支持 HTML。</p>
+
+        <h2 id="defaultlocale" class="docs-header-link">
+          <span header-link="defaultlocale"></span>
+          defaultLocale
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>en-us</code></li>
+</ul>
+<p>默认多语言。</p>
+
+        <h2 id="locales" class="docs-header-link">
+          <span header-link="locales"></span>
+          locales
+        </h2>
+      <ul>
+<li>类型：<code>Array&lt;{key: string, name: string}&gt;</code></li>
+<li>默认：<code>[]</code></li>
+</ul>
+<p>支持的多语言，如果不需要支持多种语言，无需配置，会只生成 <code>defaultLocale</code> 的语言。</p>
+
+        <h2 id="navs" class="docs-header-link">
+          <span header-link="navs"></span>
+          navs
+        </h2>
+      <ul>
+<li>类型：<code>Array&lt;NavigationItem&gt;</code></li>
+<li>默认：<code>[]</code></li>
+</ul>
+<p>该配置项用于自定义导航栏和菜单的展示，一般会配置一些外部的链接和类库频道，如：</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    navs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'GitHub'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'https://github.com/docgeni/docgeni'</span><span class="token punctuation">,</span>
+            isExternal<span class="token punctuation">:</span> <span class="token keyword">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'组件'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'components'</span><span class="token punctuation">,</span>
+            lib<span class="token punctuation">:</span> <span class="token string">'alib'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+<blockquote>
+<p>这里需要注意的是，<code>docs</code>文件夹下自动识别的频道会默认插入到配置的<code>navs</code>数组的底部，如果想要控制展示的位置，可以插入一个<code>null</code>进行占位，如上示例，自动生成的频道会插入到导航的顶部。</p>
+</blockquote>
+
+        <h2 id="libs" class="docs-header-link">
+          <span header-link="libs"></span>
+          libs
+        </h2>
+      <ul>
+<li>类型：<code>Array&lt;DocgeniLibrary&gt;</code></li>
+<li>默认：<code>[]</code></li>
+</ul>
+<p>组件类库配置，每个类库的配置查看 <a href="configuration/lib">configuration/lib</a></p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    libs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alib'</span><span class="token punctuation">,</span>
+            rootDir<span class="token punctuation">:</span> <span class="token string">'./packages/a-lib'</span><span class="token punctuation">,</span>
+            categories<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    id<span class="token punctuation">:</span> <span class="token string">'general'</span><span class="token punctuation">,</span>
+                    title<span class="token punctuation">:</span> <span class="token string">'通用'</span><span class="token punctuation">,</span>
+                    locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        <span class="token string">'en-us'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                            title<span class="token punctuation">:</span> <span class="token string">'General'</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="sitemap-%3Clabel%3E2-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="sitemap-%3Clabel%3E2-0+%3C/label%3E"></span>
+          sitemap <label>2.0+</label>
+        </h2>
+      <ul>
+<li>类型：<code>{host?: string;}</code></li>
+<li>默认： <code>null</code></li>
+</ul>
+<p>开启自动生成<code>sitemap.xml</code>的功能，<code>hostname</code>配置生成的 URL 前缀。</p>
+
+        <h2 id="algolia-%3Clabel%3E2-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="algolia-%3Clabel%3E2-0+%3C/label%3E"></span>
+          algolia <label>2.0+</label>
+        </h2>
+      <ul>
+<li>类型：<code>DocgeniAlgoliaConfig</code></li>
+<li>默认： <code>null</code></li>
+</ul>
+<p>配置 Algolia&#39;s <a target="_blank" href="https://docsearch.algolia.com">DocSearch</a> 服务，需要配置<code>apiKey</code>和<code>indexName</code>。</p>
+<pre class="language-js"><code class="language-js"><div><span class="token punctuation">{</span>
+  algolia<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    apiKey<span class="token punctuation">:</span> <span class="token string">'Your api key'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// DocSearch 服务通过申请后接受的邮件中会为站点配置一个唯一 Key</span>
+    indexName<span class="token punctuation">:</span> <span class="token string">'docgeni'</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// 索引名称</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
+<p>如果网站不符合 DocSearch 的<a target="_blank" href="https://docsearch.algolia.com/docs/who-can-apply/">免费标准</a>，可以自己<a target="_blank" href="https://docsearch.algolia.com/docs/legacy/run-your-own/">部署爬虫</a> 抓取网站信息并上传到 Algolia 应用中，自己爬取需要提供<code>appId</code>。</p>
+<pre class="language-js"><code class="language-js"><div><span class="token punctuation">{</span>
+  algolia<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    appId<span class="token punctuation">:</span> <span class="token string">'Your app id'</span><span class="token punctuation">,</span>
+    apiKey<span class="token punctuation">:</span> <span class="token string">'Your api key'</span><span class="token punctuation">,</span>
+    indexName<span class="token punctuation">:</span> <span class="token string">'docgeni'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
