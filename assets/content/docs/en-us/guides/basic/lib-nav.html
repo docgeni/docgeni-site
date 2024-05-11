@@ -1,0 +1,66 @@
+<p>The component documentation is presented as follows, including overview, examples, and API. At the same time, the left menu shows its category, which belongs to a channel in <code>full</code> mode.</p>
+<div class="dg-paragraph"><img src="assets/images/lib-component.png" alt="Lib Component"></div>
+
+        <h1 id="library-navigation" class="docs-header-link">
+          <span header-link="library-navigation"></span>
+          Library navigation
+        </h1>
+      <p>The library is usually the component library of <code>Angular</code>. <code>Docgeni</code> will strictly distinguish the document of the component from the common page document, and the presentation form will be very different.
+For library documents, the channel must be manually configured through <code>navs</code>:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    navs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'Components'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'components'</span><span class="token punctuation">,</span>
+            lib<span class="token punctuation">:</span> <span class="token string">'alib'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    libs<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> <span class="token string">'alib'</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span><span class="token punctuation">.</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">]</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="library-configuration" class="docs-header-link">
+          <span header-link="library-configuration"></span>
+          Library configuration
+        </h1>
+      <div class="dg-paragraph"><code>Docgeni</code> can support multiple libraries at the same time. For example, the official Angular <a target="_blank" href="https://material.angular.io/">Material</a> actually contains two libraries <code>CDK</code> and <code>Components</code>, so the configuration of the multiple libraries is stored in the <code>libs</code> array.</div>
+<div class="dg-paragraph"><code>Docgeni</code> will automatically scan the <code>rootDir</code> of the library configuration. Each folder in the root directory is identified as a component module, and each component module will generate a component document. For more configuration, please refer to <a href="configuration/lib">Lab Configuration</a>.</div>
+<pre class="language-json"><code class="language-json"><div>...
+<span class="token punctuation">{</span>
+    name<span class="token operator">:</span> 'alib'<span class="token punctuation">,</span>
+    rootDir<span class="token operator">:</span> './packages/a-lib'
+    ...
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="component-category" class="docs-header-link">
+          <span header-link="component-category"></span>
+          Component category
+        </h1>
+      <p>For the component library, the category which displayed as a menu is needed to distinguish components if there are many components. Common page documents are classified by folders, but it is not a good choice for component libraries to distinguish by folders. <code>Docgeni</code> provides a custom way to configure categories, you should configure the id of the category by setting the <code>FrontMatter</code> named <code>category</code> in the corresponding component document.</p>
+<pre class="language-json"><code class="language-json"><div>...
+<span class="token punctuation">{</span>
+    name<span class="token operator">:</span> 'alib'<span class="token punctuation">,</span>
+    rootDir<span class="token operator">:</span> './packages/a-lib'<span class="token punctuation">,</span>
+    categories<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> 'general'<span class="token punctuation">,</span>
+        title<span class="token operator">:</span> 'General'
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> 'layout'<span class="token punctuation">,</span>
+        title<span class="token operator">:</span> 'Layout'
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+<p>Component overview document <code>/../../button/doc/en-us.md</code></p>
+<pre class="language-md"><code class="language-md"><div><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+category<span class="token punctuation">:</span> general
+title<span class="token punctuation">:</span> Button
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span></div></code></pre>

@@ -1,0 +1,72 @@
+<div class="dg-paragraph"><code>mode</code>为<code>full</code>模式时包含首页，首页包含三部分内容，分别为：</div>
+<ul>
+<li>Hero 区域: 展示当前站点的标题和一句话描述以及快速操作链接，同时支持<code>banner</code>图设置</li>
+<li>功能区域: 展示有哪些特性，每个特性包含名称、描述和图标</li>
+<li>内容区域: 和普通的文档一样，展示 Markdown 内容</li>
+</ul>
+<p>根目录下的<code>index.md</code>为首页的 Markdown 内容，通过首页文档的<code>FrontMatter</code>配置 Hero 和特性。</p>
+
+        <h2 id="%E9%A6%96%E9%A1%B5%E9%A2%84%E8%A7%88" class="docs-header-link">
+          <span header-link="%E9%A6%96%E9%A1%B5%E9%A2%84%E8%A7%88"></span>
+          首页预览
+        </h2>
+      <div class="dg-paragraph"><img src="assets/images/home-preview.png" alt=""></div>
+
+        <h2 id="hero" class="docs-header-link">
+          <span header-link="hero"></span>
+          Hero
+        </h2>
+      <ul>
+<li><code>title:</code> 标题</li>
+<li><code>description:</code> 描述</li>
+<li><code>banner:</code> 背景图，标题和描述默认居中，如果遮住了背景图，可以通过自定义样式修改位置</li>
+<li><code>backgroundColor</code>: 背景色，默认为<code>#dae6f3</code></li>
+<li><code>actions:</code> 快捷按钮列表</li>
+<li><code>actions.text:</code> 按钮文字</li>
+<li><code>actions.link:</code> 按钮链接</li>
+<li><code>actions.btnShape:</code> 按钮形状，可以设置为<code>round | square</code>，默认为<code>square</code></li>
+<li><code>actions.btnType:</code> 按钮类型，可以设置为<code>primary | primary-light | success | danger</code>，默认为<code>primary-light</code>, 线框按钮需要加前缀 <code>outline</code>, 比如 <code>outline-primary-light</code></li>
+</ul>
+<p>示例:</p>
+<pre><code><div><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+hero<span class="token punctuation">:</span>
+  title<span class="token punctuation">:</span> Docgeni
+  description<span class="token punctuation">:</span> 开箱即用的 Angular 组件文档生成工具
+  banner<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>banner<span class="token punctuation">.</span>png
+  actions<span class="token punctuation">:</span>
+    <span class="token operator">-</span> text<span class="token punctuation">:</span> 快速上手
+      link<span class="token punctuation">:</span> <span class="token operator">/</span>guides<span class="token operator">/</span>intro<span class="token operator">/</span>getting<span class="token operator">-</span>started
+      btnShape<span class="token punctuation">:</span> round<span class="token punctuation">,</span>
+      btnType<span class="token punctuation">:</span> outline<span class="token operator">-</span>primary<span class="token operator">-</span>light
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span></div></code></pre>
+        <h2 id="%E7%89%B9%E6%80%A7" class="docs-header-link">
+          <span header-link="%E7%89%B9%E6%80%A7"></span>
+          特性
+        </h2>
+      <ul>
+<li><code>title:</code> 特性标题</li>
+<li><code>description:</code> 特性描述</li>
+<li><code>icon:</code> 特性图标地址</li>
+</ul>
+<p>示例:</p>
+<pre><code><div><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+features<span class="token punctuation">:</span>
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature1<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Out of the box
+    description<span class="token punctuation">:</span> Automatically generate navigation <span class="token operator">and</span> menus according <span class="token keyword">to</span> the directory structure<span class="token punctuation">,</span> <span class="token operator">and</span> help developers get started at zero cost through command<span class="token operator">-</span>line tools<span class="token punctuation">,</span> so that you can quickly start  writing document <span class="token operator">and</span> development component
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature2<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Born <span class="token keyword">for</span> Angular Component Development
+    description<span class="token punctuation">:</span> Independent angular component preview experience that contains component overview<span class="token punctuation">,</span> examples<span class="token punctuation">,</span> APIs <span class="token operator">and</span> rich markdown extensions make it easier <span class="token keyword">to</span> write documents <span class="token operator">and</span> support multiple libraries at one site
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature3<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Two modes <span class="token operator">and</span> multiple styles support
+    description<span class="token punctuation">:</span> Full <span class="token operator">and</span> Lite modes are supported <span class="token keyword">to</span> meet different needs<span class="token punctuation">.</span> At the same time<span class="token punctuation">,</span> <span class="token keyword">default</span> <span class="token operator">and</span> angular styles are supported <span class="token keyword">to</span> allow users <span class="token keyword">to</span> choose their own themes
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature4<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Powerful Customization
+    description<span class="token punctuation">:</span> It provides publicDir <span class="token keyword">to</span> realize features such as custom HTML<span class="token punctuation">,</span> resources <span class="token operator">and</span> styles<span class="token punctuation">,</span> <span class="token operator">and</span> supports fully customized site
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature5<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Automatic Generation of Component API <span class="token punctuation">(</span>WIP<span class="token punctuation">)</span>
+    description<span class="token punctuation">:</span> Automatically generate component APIs based on typescript type definitions <span class="token operator">and</span> comments<span class="token punctuation">,</span> <span class="token operator">and</span> maintain the consistency of code <span class="token operator">and</span> documents
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature6<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Multilingual
+    description<span class="token punctuation">:</span> Support flexible multilingual configuration
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span></div></code></pre>

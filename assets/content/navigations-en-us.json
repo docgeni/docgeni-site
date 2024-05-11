@@ -1,0 +1,2091 @@
+{
+  "navs": [
+    {
+      "id": "guides",
+      "path": "guides",
+      "channelPath": "guides",
+      "title": "Guides",
+      "items": [
+        {
+          "id": "guides/intro",
+          "path": "guides/intro",
+          "channelPath": "guides",
+          "title": "Introduce",
+          "items": [
+            {
+              "id": "index",
+              "path": "intro",
+              "channelPath": "guides",
+              "title": "Introduce",
+              "order": 10,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "what-is-docgeni%EF%BC%9F",
+                  "name": "What is Docgeni？",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "motivation",
+                  "name": "Motivation",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "categories-of-documentation-tools",
+                  "name": "Categories of documentation tools",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "contributing",
+                  "name": "Contributing",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/intro/index.html",
+              "originPath": "docs/en-us/guides/intro/index.md"
+            },
+            {
+              "id": "getting-started",
+              "path": "intro/getting-started",
+              "channelPath": "guides",
+              "title": "Getting Started",
+              "order": 30,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "environment-setup",
+                  "name": "Environment setup",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "scaffold-initialization",
+                  "name": "Scaffold initialization",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "template-repository-initialization",
+                  "name": "Template repository initialization",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "manual-initialization",
+                  "name": "Manual initialization",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "installation",
+                  "name": "Installation",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "configuration",
+                  "name": "Configuration",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "start-writing-docs",
+                  "name": "Start writing docs",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "-gitignore-add-%3Ccode%3E-docgeni/site%3C/code%3E",
+                  "name": ".gitignore add <code>.docgeni/site</code>",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "component-documentation",
+                  "name": "Component documentation",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/intro/getting-started.html",
+              "originPath": "docs/en-us/guides/intro/getting-started.md"
+            }
+          ],
+          "order": 10
+        },
+        {
+          "id": "guides/basic",
+          "path": "guides/basic",
+          "channelPath": "guides",
+          "title": "Basic",
+          "items": [
+            {
+              "id": "route-nav-menu",
+              "path": "basic/route-nav-menu",
+              "channelPath": "guides",
+              "title": "Route Navigation & Menu",
+              "order": 20,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "basic-concepts",
+                  "name": "Basic concepts",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "conventional-routing-and-menu",
+                  "name": "Conventional routing and menu",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "default-route-generation-rules",
+                  "name": "Default route generation rules",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "default-title-generation-rules",
+                  "name": "Default title generation rules",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "file-path-example",
+                  "name": "File path example",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "customize-configuration",
+                  "name": "Customize configuration",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "channel-generation",
+                  "name": "Channel generation",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "sorting-of-channels,-categories-and-pages",
+                  "name": "Sorting of channels, categories and pages",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "more-configuration",
+                  "name": "More configuration",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/basic/route-nav-menu.html",
+              "originPath": "docs/en-us/guides/basic/route-nav-menu.md"
+            },
+            {
+              "id": "lib-nav",
+              "path": "basic/lib-nav",
+              "channelPath": "guides",
+              "title": "Library Navigation & Menu",
+              "order": 30,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "library-navigation",
+                  "name": "Library navigation",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "library-configuration",
+                  "name": "Library configuration",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "component-category",
+                  "name": "Component category",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/basic/lib-nav.html",
+              "originPath": "docs/en-us/guides/basic/lib-nav.md"
+            },
+            {
+              "id": "component",
+              "path": "basic/component",
+              "channelPath": "guides",
+              "title": "Overview & API & Examples",
+              "order": 40,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "overview-document",
+                  "name": "Overview document",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "component-configurations",
+                  "name": "Component Configurations",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "component-example",
+                  "name": "Component Example",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "naming-rules",
+                  "name": "Naming Rules",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "configuration-module",
+                  "name": "Configuration module",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "import-configuration-(tsconfig-paths%EF%BC%89",
+                  "name": "Import configuration (tsconfig paths）",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "use-examples-in-the-documentation",
+                  "name": "Use examples in the documentation",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "example-configuration",
+                  "name": "Example configuration",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "create-a-new-example",
+                  "name": "Create a new example",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "stackblitz-live-example-%3Clabel%3E2-0+%3C/label%3E",
+                  "name": "StackBlitz Live Example <label>2.0+</label>",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "component-api",
+                  "name": "Component API",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "automatic-generate-api",
+                  "name": "Automatic generate API",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "configuration-definition-api",
+                  "name": "Configuration definition API",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "api-configuration",
+                  "name": "API configuration",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "parameter-description",
+                  "name": "Parameter description",
+                  "level": 3,
+                  "type": "h3"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/basic/component.html",
+              "originPath": "docs/en-us/guides/basic/component.md"
+            },
+            {
+              "id": "built-in-components",
+              "path": "basic/built-in-components",
+              "channelPath": "guides",
+              "title": "Built-in Components",
+              "order": 50,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "label",
+                  "name": "Label",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "alert",
+                  "name": "Alert",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "embed",
+                  "name": "Embed",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "custom-built-in-components",
+                  "name": "Custom Built-in Components",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/basic/built-in-components.html",
+              "originPath": "docs/en-us/guides/basic/built-in-components.md"
+            }
+          ],
+          "order": 15
+        },
+        {
+          "id": "guides/advance",
+          "path": "guides/advance",
+          "channelPath": "guides",
+          "title": "Advanced",
+          "items": [
+            {
+              "id": "customize",
+              "path": "advance/customize",
+              "channelPath": "guides",
+              "title": "Customize Site",
+              "order": 20,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "customize-public-dir",
+                  "name": "Customize public dir",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "custom-appmodule-metadata-%3Clabel%3E2-0+%3C/label%3E",
+                  "name": "Custom AppModule Metadata <label>2.0+</label>",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "customize-site",
+                  "name": "Customize site",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "step-1",
+                  "name": "Step 1",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "step-2",
+                  "name": "Step 2",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "step-3",
+                  "name": "Step 3",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "step-4",
+                  "name": "Step 4",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/advance/customize.html",
+              "originPath": "docs/en-us/guides/advance/customize.md"
+            },
+            {
+              "id": "home",
+              "path": "advance/home",
+              "channelPath": "guides",
+              "title": "Customize Home",
+              "order": 30,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "preview",
+                  "name": "Preview",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "hero",
+                  "name": "Hero",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/advance/home.html",
+              "originPath": "docs/en-us/guides/advance/home.md"
+            },
+            {
+              "id": "locales",
+              "path": "advance/locales",
+              "channelPath": "guides",
+              "title": "Multi-language",
+              "order": 100,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "configure-multi-languages",
+                  "name": "Configure multi-languages",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "multilingual-documentation",
+                  "name": "Multilingual documentation",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "multilingual-configuration-items",
+                  "name": "Multilingual configuration items",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "multilingual-components",
+                  "name": "Multilingual components",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/en-us/guides/advance/locales.html",
+              "originPath": "docs/en-us/guides/advance/locales.md"
+            }
+          ],
+          "order": 40
+        },
+        {
+          "id": "faq",
+          "path": "faq",
+          "channelPath": "guides",
+          "title": "FAQ",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [
+            {
+              "id": "how-to-deploy-to-a-non-root-directory-of-domain-",
+              "name": "How to deploy to a non-root directory of domain?",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "does-docgeni-support-other-frameworks-",
+              "name": "Does Docgeni support other frameworks?",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "a-new-%3Ccode%3Ezh-cn-md%3C/code%3E-is-created-under-the-component-%3Ccode%3Edoc%3C/code%3E-folder,-but-the-component-does-not-show-in-the-document-",
+              "name": "A new <code>zh-cn.md</code> is created under the component <code>doc</code> folder, but the component does not show in the document?",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/en-us/guides/faq.html",
+          "originPath": "docs/en-us/guides/faq.md"
+        }
+      ],
+      "order": 20
+    },
+    {
+      "id": "configuration",
+      "path": "configuration",
+      "channelPath": "configuration",
+      "title": "Configuration",
+      "items": [
+        {
+          "id": "global",
+          "path": "global",
+          "channelPath": "configuration",
+          "title": "Global Configuration",
+          "order": 10,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "mode",
+              "name": "mode",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "theme",
+              "name": "theme",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "title",
+              "name": "title",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "logourl",
+              "name": "logoUrl",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "repourl",
+              "name": "repoUrl",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "docsdir",
+              "name": "docsDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "sitedir",
+              "name": "siteDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "outputdir",
+              "name": "outputDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "publicdir",
+              "name": "publicDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "componentsdir-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "componentsDir <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "siteprojectname",
+              "name": "siteProjectName",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "toc <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "footer-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "footer <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "defaultlocale",
+              "name": "defaultLocale",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "locales",
+              "name": "locales",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "navs",
+              "name": "navs",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "libs",
+              "name": "libs",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "sitemap--%3Clabel%3E2-0+%3C/label%3E",
+              "name": "sitemap  <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "algolia-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "algolia <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/en-us/configuration/global.html",
+          "originPath": "docs/en-us/configuration/global.md"
+        },
+        {
+          "id": "lib",
+          "path": "lib",
+          "channelPath": "configuration",
+          "title": "Library Configuration",
+          "order": 20,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "name",
+              "name": "name",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "abbrname",
+              "name": "abbrName",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "rootdir",
+              "name": "rootDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "include",
+              "name": "include",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "exclude",
+              "name": "exclude",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "labels-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "labels <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "docdir",
+              "name": "docDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "apidir",
+              "name": "apiDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "examplesdir",
+              "name": "examplesDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "categories",
+              "name": "categories",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "apimode-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "apiMode <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/en-us/configuration/lib.html",
+          "originPath": "docs/en-us/configuration/lib.md"
+        },
+        {
+          "id": "front-matter",
+          "path": "front-matter",
+          "channelPath": "configuration",
+          "title": "Front Matter",
+          "order": 40,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "title",
+              "name": "title",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "subtitle",
+              "name": "subtitle",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "order",
+              "name": "order",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "path",
+              "name": "path",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "hidden",
+              "name": "hidden",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "name",
+              "name": "name",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "category",
+              "name": "category",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "toc <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "label-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "label <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "background-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "background <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "compact-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "compact <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "classname-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "className <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/en-us/configuration/front-matter.html",
+          "originPath": "docs/en-us/configuration/front-matter.md"
+        },
+        {
+          "id": "api",
+          "path": "api",
+          "channelPath": "configuration",
+          "title": "API Comment",
+          "order": 50,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "@name",
+              "name": "@name",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@description",
+              "name": "@description",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@order",
+              "name": "@order",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@private",
+              "name": "@private",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@public",
+              "name": "@public",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@default",
+              "name": "@default",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@type",
+              "name": "@type",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@param",
+              "name": "@param",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/en-us/configuration/api.html",
+          "originPath": "docs/en-us/configuration/api.md"
+        }
+      ],
+      "order": 30
+    },
+    {
+      "title": "Components",
+      "path": "components",
+      "lib": "alib",
+      "items": [
+        {
+          "id": "general",
+          "title": "General",
+          "items": [
+            {
+              "id": "button",
+              "title": "Button",
+              "subtitle": "",
+              "path": "button",
+              "importSpecifier": "alib/button",
+              "examples": [
+                "alib-button-basic-example",
+                "alib-button-advance-example",
+                "alib-button-advance-title-example"
+              ],
+              "overview": true,
+              "api": true,
+              "order": 1,
+              "category": "general",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "packages/a-lib/button/doc/en-us.md",
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "definition",
+                  "name": "Definition",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "when-to-use",
+                  "name": "When to use",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "channelPath": "components"
+            },
+            {
+              "id": "foo",
+              "title": "Foo",
+              "subtitle": "测试",
+              "path": "foo",
+              "importSpecifier": "alib/foo",
+              "examples": [
+                "alib-foo-advance-example",
+                "alib-foo-basic-example"
+              ],
+              "overview": false,
+              "api": true,
+              "order": 10,
+              "category": "general",
+              "originPath": "packages/a-lib/foo/doc/en-us.md",
+              "toc": "content",
+              "headings": [],
+              "channelPath": "components"
+            }
+          ],
+          "order": 0
+        },
+        {
+          "id": "layout",
+          "title": "Layout",
+          "items": [
+            {
+              "id": "layout",
+              "title": "Layout",
+              "subtitle": "布局",
+              "path": "layout",
+              "importSpecifier": "alib/layout",
+              "examples": [
+                "alib-layout-advance-example",
+                "alib-layout-basic-example"
+              ],
+              "overview": true,
+              "api": true,
+              "order": 1,
+              "category": "layout",
+              "originPath": "packages/a-lib/layout/doc/zh-cn.md",
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+                  "name": "何时使用",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "channelPath": "components"
+            }
+          ],
+          "order": 0
+        },
+        {
+          "id": "dialog",
+          "title": "Dialog",
+          "subtitle": "",
+          "path": "dialog",
+          "importSpecifier": "alib/dialog",
+          "examples": [],
+          "overview": false,
+          "api": true,
+          "order": 2,
+          "originPath": "packages/a-lib/dialog/doc/en-us.md",
+          "toc": "content",
+          "headings": [],
+          "channelPath": "components"
+        },
+        {
+          "id": "bar",
+          "title": "Bar",
+          "subtitle": "",
+          "path": "bar",
+          "importSpecifier": "alib/bar",
+          "examples": [
+            "alib-bar-basic-example"
+          ],
+          "overview": false,
+          "api": false,
+          "order": 9007199254740991,
+          "originPath": "packages/a-lib/bar/doc/zh-cn.md",
+          "toc": "content",
+          "headings": [],
+          "channelPath": "components"
+        },
+        {
+          "id": "zoo",
+          "title": "Zoo",
+          "subtitle": "",
+          "path": "zoo",
+          "importSpecifier": "alib/zoo",
+          "examples": [
+            "alib-zoo-basic-example"
+          ],
+          "overview": true,
+          "api": false,
+          "order": 9007199254740991,
+          "originPath": "packages/a-lib/common/zoo/doc/zh-cn.md",
+          "toc": "content",
+          "headings": [
+            {
+              "id": "zoo",
+              "name": "Zoo",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "channelPath": "components"
+        }
+      ]
+    },
+    {
+      "title": "GitHub",
+      "path": "https://github.com/docgeni/docgeni",
+      "isExternal": true
+    },
+    {
+      "title": "Changelog",
+      "path": "https://github.com/docgeni/docgeni/blob/master/CHANGELOG.md",
+      "isExternal": true
+    }
+  ],
+  "docs": [
+    {
+      "id": "api",
+      "path": "api",
+      "channelPath": "configuration",
+      "title": "API Comment",
+      "order": 50,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "@name",
+          "name": "@name",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@description",
+          "name": "@description",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@order",
+          "name": "@order",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@private",
+          "name": "@private",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@public",
+          "name": "@public",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@default",
+          "name": "@default",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@type",
+          "name": "@type",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@param",
+          "name": "@param",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/configuration/api.html",
+      "originPath": "docs/en-us/configuration/api.md"
+    },
+    {
+      "id": "front-matter",
+      "path": "front-matter",
+      "channelPath": "configuration",
+      "title": "Front Matter",
+      "order": 40,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "title",
+          "name": "title",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "order",
+          "name": "order",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "path",
+          "name": "path",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "hidden",
+          "name": "hidden",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "name",
+          "name": "name",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "category",
+          "name": "category",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "toc <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "label-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "label <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "background-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "background <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "compact-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "compact <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "classname-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "className <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/configuration/front-matter.html",
+      "originPath": "docs/en-us/configuration/front-matter.md"
+    },
+    {
+      "id": "global",
+      "path": "global",
+      "channelPath": "configuration",
+      "title": "Global Configuration",
+      "order": 10,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "mode",
+          "name": "mode",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "theme",
+          "name": "theme",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "logourl",
+          "name": "logoUrl",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "repourl",
+          "name": "repoUrl",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "docsdir",
+          "name": "docsDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "sitedir",
+          "name": "siteDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "outputdir",
+          "name": "outputDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "publicdir",
+          "name": "publicDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "componentsdir-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "componentsDir <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "siteprojectname",
+          "name": "siteProjectName",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "toc <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "footer-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "footer <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "defaultlocale",
+          "name": "defaultLocale",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "locales",
+          "name": "locales",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "navs",
+          "name": "navs",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "libs",
+          "name": "libs",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "sitemap--%3Clabel%3E2-0+%3C/label%3E",
+          "name": "sitemap  <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "algolia-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "algolia <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/configuration/global.html",
+      "originPath": "docs/en-us/configuration/global.md"
+    },
+    {
+      "id": "lib",
+      "path": "lib",
+      "channelPath": "configuration",
+      "title": "Library Configuration",
+      "order": 20,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "name",
+          "name": "name",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "abbrname",
+          "name": "abbrName",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "rootdir",
+          "name": "rootDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "include",
+          "name": "include",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "exclude",
+          "name": "exclude",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "labels-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "labels <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "docdir",
+          "name": "docDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "apidir",
+          "name": "apiDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "examplesdir",
+          "name": "examplesDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "categories",
+          "name": "categories",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "apimode-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "apiMode <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/configuration/lib.html",
+      "originPath": "docs/en-us/configuration/lib.md"
+    },
+    {
+      "id": "customize",
+      "path": "advance/customize",
+      "channelPath": "guides",
+      "title": "Customize Site",
+      "order": 20,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "customize-public-dir",
+          "name": "Customize public dir",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "custom-appmodule-metadata-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "Custom AppModule Metadata <label>2.0+</label>",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "customize-site",
+          "name": "Customize site",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "step-1",
+          "name": "Step 1",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "step-2",
+          "name": "Step 2",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "step-3",
+          "name": "Step 3",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "step-4",
+          "name": "Step 4",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/advance/customize.html",
+      "originPath": "docs/en-us/guides/advance/customize.md"
+    },
+    {
+      "id": "home",
+      "path": "advance/home",
+      "channelPath": "guides",
+      "title": "Customize Home",
+      "order": 30,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "preview",
+          "name": "Preview",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "hero",
+          "name": "Hero",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "features",
+          "name": "Features",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/advance/home.html",
+      "originPath": "docs/en-us/guides/advance/home.md"
+    },
+    {
+      "id": "locales",
+      "path": "advance/locales",
+      "channelPath": "guides",
+      "title": "Multi-language",
+      "order": 100,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "configure-multi-languages",
+          "name": "Configure multi-languages",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "multilingual-documentation",
+          "name": "Multilingual documentation",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "multilingual-configuration-items",
+          "name": "Multilingual configuration items",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "multilingual-components",
+          "name": "Multilingual components",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/advance/locales.html",
+      "originPath": "docs/en-us/guides/advance/locales.md"
+    },
+    {
+      "id": "built-in-components",
+      "path": "basic/built-in-components",
+      "channelPath": "guides",
+      "title": "Built-in Components",
+      "order": 50,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "label",
+          "name": "Label",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "alert",
+          "name": "Alert",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "embed",
+          "name": "Embed",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "custom-built-in-components",
+          "name": "Custom Built-in Components",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/basic/built-in-components.html",
+      "originPath": "docs/en-us/guides/basic/built-in-components.md"
+    },
+    {
+      "id": "component",
+      "path": "basic/component",
+      "channelPath": "guides",
+      "title": "Overview & API & Examples",
+      "order": 40,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "overview-document",
+          "name": "Overview document",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "component-configurations",
+          "name": "Component Configurations",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "component-example",
+          "name": "Component Example",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "naming-rules",
+          "name": "Naming Rules",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "configuration-module",
+          "name": "Configuration module",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "import-configuration-(tsconfig-paths%EF%BC%89",
+          "name": "Import configuration (tsconfig paths）",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "use-examples-in-the-documentation",
+          "name": "Use examples in the documentation",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "example-configuration",
+          "name": "Example configuration",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "create-a-new-example",
+          "name": "Create a new example",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "stackblitz-live-example-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "StackBlitz Live Example <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "component-api",
+          "name": "Component API",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "automatic-generate-api",
+          "name": "Automatic generate API",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "configuration-definition-api",
+          "name": "Configuration definition API",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "api-configuration",
+          "name": "API configuration",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "parameter-description",
+          "name": "Parameter description",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/basic/component.html",
+      "originPath": "docs/en-us/guides/basic/component.md"
+    },
+    {
+      "id": "lib-nav",
+      "path": "basic/lib-nav",
+      "channelPath": "guides",
+      "title": "Library Navigation & Menu",
+      "order": 30,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "library-navigation",
+          "name": "Library navigation",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "library-configuration",
+          "name": "Library configuration",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "component-category",
+          "name": "Component category",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/basic/lib-nav.html",
+      "originPath": "docs/en-us/guides/basic/lib-nav.md"
+    },
+    {
+      "id": "route-nav-menu",
+      "path": "basic/route-nav-menu",
+      "channelPath": "guides",
+      "title": "Route Navigation & Menu",
+      "order": 20,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "basic-concepts",
+          "name": "Basic concepts",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "conventional-routing-and-menu",
+          "name": "Conventional routing and menu",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "default-route-generation-rules",
+          "name": "Default route generation rules",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "default-title-generation-rules",
+          "name": "Default title generation rules",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "file-path-example",
+          "name": "File path example",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "customize-configuration",
+          "name": "Customize configuration",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "channel-generation",
+          "name": "Channel generation",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "sorting-of-channels,-categories-and-pages",
+          "name": "Sorting of channels, categories and pages",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "more-configuration",
+          "name": "More configuration",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/basic/route-nav-menu.html",
+      "originPath": "docs/en-us/guides/basic/route-nav-menu.md"
+    },
+    {
+      "id": "faq",
+      "path": "faq",
+      "channelPath": "guides",
+      "title": "FAQ",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "how-to-deploy-to-a-non-root-directory-of-domain-",
+          "name": "How to deploy to a non-root directory of domain?",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "does-docgeni-support-other-frameworks-",
+          "name": "Does Docgeni support other frameworks?",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "a-new-%3Ccode%3Ezh-cn-md%3C/code%3E-is-created-under-the-component-%3Ccode%3Edoc%3C/code%3E-folder,-but-the-component-does-not-show-in-the-document-",
+          "name": "A new <code>zh-cn.md</code> is created under the component <code>doc</code> folder, but the component does not show in the document?",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/faq.html",
+      "originPath": "docs/en-us/guides/faq.md"
+    },
+    {
+      "id": "getting-started",
+      "path": "intro/getting-started",
+      "channelPath": "guides",
+      "title": "Getting Started",
+      "order": 30,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "environment-setup",
+          "name": "Environment setup",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "scaffold-initialization",
+          "name": "Scaffold initialization",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "template-repository-initialization",
+          "name": "Template repository initialization",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "manual-initialization",
+          "name": "Manual initialization",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "installation",
+          "name": "Installation",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "configuration",
+          "name": "Configuration",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "start-writing-docs",
+          "name": "Start writing docs",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "-gitignore-add-%3Ccode%3E-docgeni/site%3C/code%3E",
+          "name": ".gitignore add <code>.docgeni/site</code>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "component-documentation",
+          "name": "Component documentation",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/intro/getting-started.html",
+      "originPath": "docs/en-us/guides/intro/getting-started.md"
+    },
+    {
+      "id": "index",
+      "path": "intro",
+      "channelPath": "guides",
+      "title": "Introduce",
+      "order": 10,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "what-is-docgeni%EF%BC%9F",
+          "name": "What is Docgeni？",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "features",
+          "name": "Features",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "motivation",
+          "name": "Motivation",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "categories-of-documentation-tools",
+          "name": "Categories of documentation tools",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "contributing",
+          "name": "Contributing",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/en-us/guides/intro/index.html",
+      "originPath": "docs/en-us/guides/intro/index.md"
+    },
+    {
+      "id": "bar",
+      "title": "Bar",
+      "subtitle": "",
+      "path": "bar",
+      "importSpecifier": "alib/bar",
+      "examples": [
+        "alib-bar-basic-example"
+      ],
+      "overview": false,
+      "api": false,
+      "order": 9007199254740991,
+      "originPath": "packages/a-lib/bar/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [],
+      "channelPath": "components"
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "subtitle": "",
+      "path": "button",
+      "importSpecifier": "alib/button",
+      "examples": [
+        "alib-button-basic-example",
+        "alib-button-advance-example",
+        "alib-button-advance-title-example"
+      ],
+      "overview": true,
+      "api": true,
+      "order": 1,
+      "category": "general",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "packages/a-lib/button/doc/en-us.md",
+      "toc": "content",
+      "headings": [
+        {
+          "id": "definition",
+          "name": "Definition",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "when-to-use",
+          "name": "When to use",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "channelPath": "components"
+    },
+    {
+      "id": "dialog",
+      "title": "Dialog",
+      "subtitle": "",
+      "path": "dialog",
+      "importSpecifier": "alib/dialog",
+      "examples": [],
+      "overview": false,
+      "api": true,
+      "order": 2,
+      "originPath": "packages/a-lib/dialog/doc/en-us.md",
+      "toc": "content",
+      "headings": [],
+      "channelPath": "components"
+    },
+    {
+      "id": "foo",
+      "title": "Foo",
+      "subtitle": "测试",
+      "path": "foo",
+      "importSpecifier": "alib/foo",
+      "examples": [
+        "alib-foo-advance-example",
+        "alib-foo-basic-example"
+      ],
+      "overview": false,
+      "api": true,
+      "order": 10,
+      "category": "general",
+      "originPath": "packages/a-lib/foo/doc/en-us.md",
+      "toc": "content",
+      "headings": [],
+      "channelPath": "components"
+    },
+    {
+      "id": "layout",
+      "title": "Layout",
+      "subtitle": "布局",
+      "path": "layout",
+      "importSpecifier": "alib/layout",
+      "examples": [
+        "alib-layout-advance-example",
+        "alib-layout-basic-example"
+      ],
+      "overview": true,
+      "api": true,
+      "order": 1,
+      "category": "layout",
+      "originPath": "packages/a-lib/layout/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+          "name": "何时使用",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "channelPath": "components"
+    },
+    {
+      "id": "zoo",
+      "title": "Zoo",
+      "subtitle": "",
+      "path": "zoo",
+      "importSpecifier": "alib/zoo",
+      "examples": [
+        "alib-zoo-basic-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 9007199254740991,
+      "originPath": "packages/a-lib/common/zoo/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [
+        {
+          "id": "zoo",
+          "name": "Zoo",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "channelPath": "components"
+    }
+  ],
+  "homeMeta": {
+    "hero": {
+      "title": "Docgeni",
+      "description": "Out of the box Angular Component Document Generator",
+      "banner": "./assets/images/home/banner.png",
+      "actions": [
+        {
+          "text": "Getting Started",
+          "link": "/guides/intro/getting-started",
+          "btnShape": "round"
+        },
+        {
+          "text": "Introduction",
+          "link": "/guides/intro",
+          "btnShape": "square",
+          "btnType": "outline-primary-light"
+        }
+      ]
+    },
+    "features": [
+      {
+        "icon": "./assets/images/home/feature1.png",
+        "title": "Out of the box",
+        "description": "Automatically generate navigation and menus according to the directory structure, and help developers get started at zero cost through command-line tools, so that you can quickly start  writing document and development component"
+      },
+      {
+        "icon": "./assets/images/home/feature2.png",
+        "title": "Born for Angular Component Development",
+        "description": "Independent angular component preview experience that contains component overview, examples, APIs and rich markdown extensions make it easier to write documents and support multiple libraries at one site"
+      },
+      {
+        "icon": "./assets/images/home/feature3.png",
+        "title": "Two modes and multiple styles support",
+        "description": "Full and Lite modes are supported to meet different needs. At the same time, default and angular styles are supported to allow users to choose their own themes"
+      },
+      {
+        "icon": "./assets/images/home/feature4.png",
+        "title": "Powerful Customization",
+        "description": "It provides publicDir to realize features such as custom HTML, resources and styles, and supports AppModule metadata and fully customized site"
+      },
+      {
+        "icon": "./assets/images/home/feature5.png",
+        "title": "Automatic Generation of Component API",
+        "description": "Automatically generate component APIs based on typescript type definitions and comments, and maintain the consistency of code and documents"
+      },
+      {
+        "icon": "./assets/images/home/feature6.png",
+        "title": "Multilingual",
+        "description": "Support flexible multilingual configuration"
+      }
+    ],
+    "contentPath": "docs/en-us/index.html"
+  }
+}

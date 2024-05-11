@@ -1,0 +1,72 @@
+<p>when <code>mode</code> is <code>full</code>, it includes the home page, which includes three parts:</p>
+<ul>
+<li>Hero area: show the title, one sentence description and quick operation links of the current site, and supports the setting of banner</li>
+<li>Feature area: show what features are available, each with a name, description, and icon </li>
+<li>Content area: show markdown content like markdown doc</li>
+</ul>
+<div class="dg-paragraph"><code>index.md</code> file on root directory is the markdown content of the home page, and the hero and features are configured through the <code>FrontMatter</code> of the home page.</div>
+
+        <h2 id="preview" class="docs-header-link">
+          <span header-link="preview"></span>
+          Preview
+        </h2>
+      <div class="dg-paragraph"><img src="assets/images/home-preview.png" alt=""></div>
+
+        <h2 id="hero" class="docs-header-link">
+          <span header-link="hero"></span>
+          Hero
+        </h2>
+      <ul>
+<li><code>title:</code> title of site</li>
+<li><code>description:</code> description of site</li>
+<li><code>banner:</code> the background image, title and description are centered by default. If the background image is obscured, the position can be modified through custom styles</li>
+<li><code>backgroundColor</code>: background color, default is <code>#dae6f3</code></li>
+<li><code>actions:</code> shortcut button actions</li>
+<li><code>actions.text:</code> button text for every action</li>
+<li><code>actions.link:</code> button link for every action</li>
+<li><code>actions.btnShape:</code> button shape，can be set to <code>round | square</code>，default is <code>square</code></li>
+<li><code>actions.btnType:</code> button type for every action, can be set to <code>primary | primary-light | success | danger</code>，default is <code>primary-light</code>, outline style needs add prefix <code>outline</code>, e.g. <code>outline-primary-light</code></li>
+</ul>
+<p>Example:</p>
+<pre><code><div><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+hero<span class="token punctuation">:</span>
+  title<span class="token punctuation">:</span> Docgeni
+  description<span class="token punctuation">:</span> Out of the box angular component document generation tool
+  banner<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>banner<span class="token punctuation">.</span>png
+  actions<span class="token punctuation">:</span>
+    <span class="token operator">-</span> text<span class="token punctuation">:</span> Getting Started
+      link<span class="token punctuation">:</span> <span class="token operator">/</span>guides<span class="token operator">/</span>intro<span class="token operator">/</span>getting<span class="token operator">-</span>started
+      btnShape<span class="token punctuation">:</span> round<span class="token punctuation">,</span>
+      btnType<span class="token punctuation">:</span> outline<span class="token operator">-</span>primary<span class="token operator">-</span>light
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span></div></code></pre>
+        <h2 id="features" class="docs-header-link">
+          <span header-link="features"></span>
+          Features
+        </h2>
+      <ul>
+<li><code>title:</code> title of feature</li>
+<li><code>description:</code> description of feature</li>
+<li><code>icon:</code> icon url of feature</li>
+</ul>
+<p>Example:</p>
+<pre><code><div><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+features<span class="token punctuation">:</span>
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature1<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Out of the box
+    description<span class="token punctuation">:</span> Automatically generate navigation <span class="token operator">and</span> menus according <span class="token keyword">to</span> the directory structure<span class="token punctuation">,</span> <span class="token operator">and</span> help developers get started at zero cost through command<span class="token operator">-</span>line tools<span class="token punctuation">,</span> so that you can quickly start  writing document <span class="token operator">and</span> development component
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature2<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Born <span class="token keyword">for</span> Angular Component Development
+    description<span class="token punctuation">:</span> Independent angular component preview experience that contains component overview<span class="token punctuation">,</span> examples<span class="token punctuation">,</span> APIs <span class="token operator">and</span> rich markdown extensions make it easier <span class="token keyword">to</span> write documents <span class="token operator">and</span> support multiple libraries at one site
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature3<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Two modes <span class="token operator">and</span> multiple styles support
+    description<span class="token punctuation">:</span> Full <span class="token operator">and</span> Lite modes are supported <span class="token keyword">to</span> meet different needs<span class="token punctuation">.</span> At the same time<span class="token punctuation">,</span> <span class="token keyword">default</span> <span class="token operator">and</span> angular styles are supported <span class="token keyword">to</span> allow users <span class="token keyword">to</span> choose their own themes
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature4<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Powerful Customization
+    description<span class="token punctuation">:</span> It provides publicDir <span class="token keyword">to</span> realize features such as custom HTML<span class="token punctuation">,</span> resources <span class="token operator">and</span> styles<span class="token punctuation">,</span> <span class="token operator">and</span> supports fully customized site
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature5<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Automatic Generation of Component API <span class="token punctuation">(</span>WIP<span class="token punctuation">)</span>
+    description<span class="token punctuation">:</span> Automatically generate component APIs based on typescript type definitions <span class="token operator">and</span> comments<span class="token punctuation">,</span> <span class="token operator">and</span> maintain the consistency of code <span class="token operator">and</span> documents
+  <span class="token operator">-</span> icon<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span>assets<span class="token operator">/</span>images<span class="token operator">/</span>home<span class="token operator">/</span>feature6<span class="token punctuation">.</span>png
+    title<span class="token punctuation">:</span> Multilingual
+    description<span class="token punctuation">:</span> Support flexible multilingual configuration
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span></div></code></pre>
