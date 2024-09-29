@@ -1,0 +1,155 @@
+<p>Generate API docs by adding comments to classes, interfaces, properties and methods for Component/Directive/Service/Class/Interface.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * General Button Component description.
+ * @name alib-button
+ * @order 1
+ */</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">'alib-button,[alibButton]'</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> <span class="token string">'&lt;ng-content>&lt;/ng-content>'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Base</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * Button Type: `'primary' | 'secondary' | 'danger'`
+     * @description 按钮类型
+     * @default primary
+     * @type 'primary' | 'secondary' | 'danger'
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">set</span> <span class="token function">alibButton</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>alibType <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</div></code></pre>
+
+        <h2 id="@name" class="docs-header-link">
+          <span header-link="@name"></span>
+          @name
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>{ClassName}</code></li>
+</ul>
+<p>The name of the Component/Directive, which defaults to the class name.</p>
+
+        <h2 id="@description" class="docs-header-link">
+          <span header-link="@description"></span>
+          @description
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>Description. If there is a <code>@description</code> tag, it is main, otherwise the default comment content will be used as the description.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * Default description.
+ * @name alib-button
+ * @description This is description
+ * @order 1
+ */</span></div></code></pre>
+
+        <h2 id="@order" class="docs-header-link">
+          <span header-link="@order"></span>
+          @order
+        </h2>
+      <ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>Sorting of API docs.</p>
+
+        <h2 id="@private" class="docs-header-link">
+          <span header-link="@private"></span>
+          @private
+        </h2>
+      <ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+<li>Alias: <code>internal</code></li>
+</ul>
+<p>The default API document generation includes：</p>
+<ul>
+<li>All Component/Directive/Service</li>
+<li>Properties of @Input and @Output in Component/Directive</li>
+<li>Public methods in Component/Directive/Service</li>
+</ul>
+<p>If the above Component/Directive/Service/Property/Methods are internal and do not need to generate API documents, you need to add <code>@private</code> or <code>@internal</code>.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * General Button Component description.
+ * @private 
+ */</span></div></code></pre>
+
+        <h2 id="@public" class="docs-header-link">
+          <span header-link="@public"></span>
+          @public
+        </h2>
+      <ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+<li>Alias: <code>publicApi</code></li>
+</ul>
+<p>By default, all Classes and Interfaces will not generate API documents. If a certain class and interface needs to generate API documents, it is necessary to add <code>@public</code> or <code>@publicApi</code>.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * Some Class description.
+ * @public 
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="@default" class="docs-header-link">
+          <span header-link="@default"></span>
+          @default
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>The default value of the property will automatically read the TypeScript assignment statement and be manually set by <code>@default</code>.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonComponent</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/**
+  * Button Type
+  * @default primary
+  */</span>
+  @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> alibType <span class="token operator">=</span> <span class="token string">'primary'</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="@type" class="docs-header-link">
+          <span header-link="@type"></span>
+          @type
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>The type of the attribute will automatically read the TypeScript type definition and manually set the default value through <code>@type</code>.</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonComponent</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/**
+  * Button Type
+  * @type 'primary' | 'success'
+  */</span>
+  @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> alibType <span class="token operator">=</span> <span class="token string">'primary'</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="@param" class="docs-header-link">
+          <span header-link="@param"></span>
+          @param
+        </h2>
+      <ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>null</code></li>
+</ul>
+<p>The description of parameter for methods</p>
+<pre class="language-ts"><code class="language-ts"><div>@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    providedIn<span class="token punctuation">:</span> <span class="token string">'root'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">DialogService</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+     * Open a dialog
+     * @param {string} pram1 pram1 desc
+     * @param {number} pram2 pram2 desc
+     * @returns DialogRef
+     */</span>
+    <span class="token function">open</span><span class="token punctuation">(</span>pram1<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span> pram2<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span><span class="token punctuation">:</span> DialogRef <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>

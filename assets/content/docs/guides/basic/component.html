@@ -1,0 +1,496 @@
+<div class="dg-paragraph"><code>Docgeni</code>会动态识别每个类库根目录(<code>rootDir</code>)下的一级子文件夹，每个一级子文件夹相当于一个组件模块，每个组件包含对应的文档、API和示例，如需配置某个多级文件夹，请查看 <a href="configuration/lib#include">include</a> 配置项。
+组件的文件夹结构如下：</div>
+<pre><code><div>├── button
+│   ├── button<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   ├── button<span class="token punctuation">.</span>module<span class="token punctuation">.</span>ts
+│   ├── doc
+│   │   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>md
+│   │   └── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>md
+│   ├── api
+│   │   ├── en<span class="token operator">-</span>us<span class="token punctuation">.</span>js
+│   │   └── zh<span class="token operator">-</span>cn<span class="token punctuation">.</span>js
+│   ├── examples
+│   │   ├── advance
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   ├── basic
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   │   └── index<span class="token punctuation">.</span>md
+│   │   └── module<span class="token punctuation">.</span>ts
+│   ├── index<span class="token punctuation">.</span>ts</div></code></pre>
+        <h1 id="%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3" class="docs-header-link">
+          <span header-link="%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3"></span>
+          概览文档
+        </h1>
+      <p>默认<code>doc</code>文件夹下存放每种多语言对应的组件文档，会展示在组件的概览中，概览文档就是一个普通的 Markdown 文档，如需配置不同目录，请查看 <a href="configuration/lib#docDir">docDir</a> 配置项。</p>
+
+        <h1 id="%E7%BB%84%E4%BB%B6%E9%85%8D%E7%BD%AE%E9%A1%B9" class="docs-header-link">
+          <span header-link="%E7%BB%84%E4%BB%B6%E9%85%8D%E7%BD%AE%E9%A1%B9"></span>
+          组件配置项
+        </h1>
+      <p>在概览文档中，通过定义 FrontMatter 设置组件的参数配置。  </p>
+<pre class="language-markdown"><code class="language-markdown"><div><span class="token hr punctuation">---</span>
+category: general
+title: Button
+subtitle: 按钮
+name: 'a-button'
+<span class="token title important">order: 1
+<span class="token punctuation">---</span></span></div></code></pre>
+<ul>
+<li><code>category</code>: 当前组件模块的所属类别，需要设置为对应<code>lib</code>配置的<code>categories</code>中的<code>id</code>属性</li>
+<li><code>title</code>: 当前组件模块的标题</li>
+<li><code>subtitle</code>: 当前组件模块的子标题</li>
+<li><code>name</code>: 当前组件模块的名称，默认取文件夹的名称，示例模块以及示例组件的命名规则会使用<code>name</code>作为拼接，只有文件夹名称代表不了组件的含义时才会配置</li>
+<li><code>order</code>: 组件的排序</li>
+</ul>
+<p>对于<code>category</code>和<code>order</code>是全局配置，不跟随多语言，全局配置项是存放在默认语言文档的<code>FrontMatter</code>中。</p>
+
+        <h1 id="%E7%BB%84%E4%BB%B6%E7%A4%BA%E4%BE%8B" class="docs-header-link">
+          <span header-link="%E7%BB%84%E4%BB%B6%E7%A4%BA%E4%BE%8B"></span>
+          组件示例
+        </h1>
+      <p>Docgeni 默认会扫描<code>examples</code>文件夹下的所有子文件夹，每个子文件夹相当一种类型的示例，Docgeni 会按照约定的命名识别示例组件。如需配置目录，请查看 <a href="configuration/lib#examplesDir">examplesDir</a> 配置项。</p>
+<p>文件结构如下：</p>
+<pre><code><div>├── button
+│   ├── examples
+│   │   ├── basic
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── basic<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   ├── advance
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── advance<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   └── module<span class="token punctuation">.</span>ts</div></code></pre>
+        <h2 id="%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99" class="docs-header-link">
+          <span header-link="%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"></span>
+          命名规则
+        </h2>
+      <ul>
+<li>示例组件文件名: <code>{取文件夹的名称，并以 - 分割}.component.ts</code> (如: <code>basic.component.ts</code>、<code>advance-title.component.ts</code>)</li>
+<li>示例组件名: <code>{类库缩写}+{组件名}+{示例名}+ExampleComponent</code> (如: <code>AlibButtonBasicExampleComponent</code>, <code>1.2</code>版本后组件名支持自定义，Docgeni 会动态读取导出的组件名称)</li>
+<li><code>module</code>模块名: <code>{类库缩写}+{组件名}+ExamplesModule</code>(如: <code>AlibButtonExamplesModule</code>)，<code>1.2</code>版本后模块支持动态生成</li>
+<li><label type="success">推荐</label><code>2.1.0</code>版本示例支持独立组件，如果所有示例都是独立组件，module.ts 可以无需定义，推荐使用独立组件</li>
+</ul>
+
+        <h2 id="%E9%85%8D%E7%BD%AE-module" class="docs-header-link">
+          <span header-link="%E9%85%8D%E7%BD%AE-module"></span>
+          配置 module
+        </h2>
+      <div class="dg-paragraph"><alert>示例为非独立组件需要配置，如果是独立组件建议不要配置 module.ts，当然配置也没有问题。</alert>
+<code>module.ts</code>为当前组件所有示例的入口模块，从<code>1.2</code>版本开始 Docgeni 会自动生成完整的 NgModule，只需要通过<code>export default {}</code>配置导入的模块和其他模块元数据即可，无需手写 NgModule 模块导入每个示例组件，配置示例如下:</div>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// module.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CommonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/common'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AlibButtonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@docgeni/alib/button'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span> CommonModule<span class="token punctuation">,</span> AlibButtonModule <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+<p>Docgeni 会解析<code>module.ts</code>中<code>default</code>导出的对象并动态解析所有示例组件自动生成<code>AlibButtonExamplesModule</code>并组合元数据，生成后的代码如下：</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// module.ts</span>
+<span class="token operator">...</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      AlibButtonBasicExampleComponent<span class="token punctuation">,</span> 
+      AlibButtonAdvanceExampleComponent 
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span> CommonModule<span class="token punctuation">,</span> AlibButtonModule <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exports<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      AlibButtonBasicExampleComponent<span class="token punctuation">,</span> 
+      AlibButtonAdvanceExampleComponent 
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonExamplesModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+<div class="dg-paragraph"><alert type="info">为了保持兼容性，如果<code>module.ts</code>中有定义 Angular 的模块以自定义的模块为主，不会自动生成模块。</alert></div>
+
+        <h2 id="%E5%BC%95%E7%94%A8%E9%85%8D%E7%BD%AE%EF%BC%88tsconfig-paths%EF%BC%89" class="docs-header-link">
+          <span header-link="%E5%BC%95%E7%94%A8%E9%85%8D%E7%BD%AE%EF%BC%88tsconfig-paths%EF%BC%89"></span>
+          引用配置（tsconfig paths）
+        </h2>
+      <p>Docgeni 运行时会把<code>examples</code>下的所有示例文件拷贝到站点下启动，在组件示例中不能采用相对路径引入组件模块源文件，建议直接通过包路径引用，同时需要在 tsconfig.json 配置<code>paths</code>指向类库源代码路径，这样可以直接复制示例代码使用，比如：组件库叫<code>@docgeni/alib</code>，采用如下的方式配置和引入组件：</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">// button/examples/module.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AlibButtonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@docgeni/alib/button'</span><span class="token punctuation">;</span>
+
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>AlibButtonBasicExampleComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>CommonModule<span class="token punctuation">,</span> AlibButtonModule<span class="token punctuation">,</span> FormsModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exports<span class="token punctuation">:</span> <span class="token punctuation">[</span>AlibButtonBasicExampleComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonExamplesModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+<p>tsconfig 配置如下，如何配置参考: <a href="guides/advance/customize#%E8%87%AA%E5%AE%9A%E4%B9%89-public">自定义配置 tsconfig.json</a></p>
+<pre class="language-json"><code class="language-json"><div>// tsconfig.json
+ <span class="token punctuation">{</span>
+   <span class="token property">"paths"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"@docgeni/alib"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"packages/alib/public-api.ts"</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"@docgeni/alib/*"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"packages/alib/*"</span>
+      <span class="token punctuation">]</span>
+ <span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" class="docs-header-link">
+          <span header-link="%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"></span>
+          在文档中使用示例
+        </h2>
+      <div class="dg-paragraph"><code>Docgeni</code>为每个示例生成一个唯一的 Key，命名规则为：<code>类库缩写-组件名-示例名-example</code>，如：<code>alib-button-basic-example</code></div>
+<p>那么不管是在普通的页面文档还是在组件的概览文档中，都可以按照下面的语法在 Markdown 中引入某个示例，<code>name</code>为示例的唯一标识。</p>
+<pre class="language-html"><code class="language-html"><div><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>example</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alib-button-basic-example<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></div></code></pre>
+<p>运行效果：</p>
+<div class="dg-paragraph"><example name="alib-button-basic-example"></example></div>
+<p>默认的示例是包裹在一个示例容器中，并可以查看示例的源代码，如需要去除包裹的容器，通过<code>inline</code>模式引入示例：</p>
+<pre class="language-html"><code class="language-html"><div><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>example</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alib-button-basic-example<span class="token punctuation">"</span></span> <span class="token attr-name">inline</span> <span class="token punctuation">/></span></span></div></code></pre>
+<p>运行效果：</p>
+<example name="alib-button-basic-example" inline></example>
+
+
+        <h2 id="%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BC%95%E5%85%A5%E6%89%80%E6%9C%89%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BC%95%E5%85%A5%E6%89%80%E6%9C%89%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E"></span>
+          概览文档中引入所有示例 <label>2.0+</label>
+        </h2>
+      <p>在概览文档中通过<code>&lt;examples /&gt;</code>语法会在相应位置按顺序插入当前组件所有的示例，同时会在 Toc 中展示。</p>
+<div class="dg-paragraph"><img src="assets/images/overview-examples.png" alt=""></div>
+
+        <h2 id="%E7%A4%BA%E4%BE%8B%E7%9A%84%E9%85%8D%E7%BD%AE" class="docs-header-link">
+          <span header-link="%E7%A4%BA%E4%BE%8B%E7%9A%84%E9%85%8D%E7%BD%AE"></span>
+          示例的配置
+        </h2>
+      <p>某个组件下可能有很多示例，每个示例会有标题和排序等字段，如果需要自定义配置，需要在对应的示例文件夹下创建一个<code>index.md</code>文件，并配置 FrontMatter：</p>
+<pre class="language-markdown"><code class="language-markdown"><div><span class="token hr punctuation">---</span>
+title: Button Base
+name: basic
+<span class="token title important">order: 1
+<span class="token punctuation">---</span></span></div></code></pre>
+
+        <h2 id="%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B" class="docs-header-link">
+          <span header-link="%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B"></span>
+          新建一个示例
+        </h2>
+      <p>下面介绍一下如何为按钮新增一个展示<code>loading</code>状态的示例：</p>
+<ol>
+<li>在<code>button/examples</code>文件夹下新增一个<code>loading</code>文件夹，并新增相应的示例组件</li>
+</ol>
+<pre><code><div>├── button
+│   ├── examples
+│   │   ├── loading
+│   │   │   ├── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>html
+│   │   │   ├── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>scss
+│   │   │   └── loading<span class="token punctuation">.</span>component<span class="token punctuation">.</span>ts
+│   │   └── module<span class="token punctuation">.</span>ts</div></code></pre><ol start="2">
+<li><code>loading.component.ts</code> 文件的代码如下：</li>
+</ol>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">'alib-button-loading-example'</span><span class="token punctuation">,</span>
+    templateUrl<span class="token punctuation">:</span> <span class="token string">'./loading.component.html'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonLoadingExampleComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</div></code></pre>
+<ol start="3">
+<li>自定义模块需要修改 <code>button/examples/module.ts</code> 引入<code>AlibButtonLoadingExampleComponent</code>组件，<code>1.2</code>版本后自动生成模块引入示例组件，无需手动添加</li>
+</ol>
+<pre><code><div><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+import { AlibButtonLoadingExampleComponent } from <span class="token string">'./loading/loading.component'</span><span class="token comment" spellcheck="true">;</span>
+
+<span class="token keyword">const</span> COMPONENTS <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  AlibButtonLoadingExampleComponent
+<span class="token punctuation">]</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span>{
+    declarations<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>CommonModule<span class="token punctuation">,</span> AlibButtonModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exports<span class="token punctuation">:</span> COMPONENTS<span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+}<span class="token punctuation">)</span>
+export class AlibButtonExamplesModule {}
+</div></code></pre>
+        <h2 id="stackblitz-%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E" class="docs-header-link">
+          <span header-link="stackblitz-%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E"></span>
+          StackBlitz 示例 <label>2.0+</label>
+        </h2>
+      <p>Docgeni 支持组件示例直接在 StackBlitz 平台展示，StackBlitz 在线示例需要配置示例的依赖，样式和<code>angular.json</code>，通过在 <code>.docgeni/public/assets/stack-blitz</code> 文件夹配置，文件结构如下：</p>
+<pre><code><div><span class="token punctuation">.</span>docgeni
+├── public
+│   ├── assets
+│   │   ├── <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+│   │   └── stack<span class="token operator">-</span>blitz
+│   │       ├── angular<span class="token punctuation">.</span>json
+│   │       ├── package<span class="token punctuation">.</span>json
+│   │       └── src
+│   │           └── styles<span class="token punctuation">.</span>scss
+│   ├── <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></div></code></pre><ul>
+<li><code>angular.json</code>: Angular 运行的配置文件，无特殊配置可以拷贝 <a target="_blank" href="https://github.com/docgeni/docgeni-template/blob/master/.docgeni/public/assets/stack-blitz/angular.json">angular.json</a> 文件</li>
+<li><code>src/styles.scss</code>: 示例组件依赖的样式，一般需要引入组件库的样式</li>
+<li><code>package.json</code>: 示例运行的依赖，只需配置<code>dependencies</code>即可，比如:</li>
+</ul>
+<pre class="language-json"><code class="language-json"><div><span class="token punctuation">{</span>
+    <span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span> 
+        <span class="token property">"@angular/animations"</span><span class="token operator">:</span> <span class="token string">"~18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/cdk"</span><span class="token operator">:</span> <span class="token string">"^18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/common"</span><span class="token operator">:</span> <span class="token string">"~18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/compiler"</span><span class="token operator">:</span> <span class="token string">"~18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/core"</span><span class="token operator">:</span> <span class="token string">"~18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/forms"</span><span class="token operator">:</span> <span class="token string">"~18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/platform-browser"</span><span class="token operator">:</span> <span class="token string">"~18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"@angular/platform-browser-dynamic"</span><span class="token operator">:</span> <span class="token string">"~18.2.0"</span><span class="token punctuation">,</span>
+        <span class="token property">"rxjs"</span><span class="token operator">:</span> <span class="token string">"~7.8.1"</span><span class="token punctuation">,</span>
+        <span class="token property">"zone.js"</span><span class="token operator">:</span> <span class="token string">"~0.14.10"</span><span class="token punctuation">,</span>
+        <span class="token property">"@docgeni/alib"</span><span class="token operator">:</span> <span class="token string">"0.0.1"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="%E7%BB%84%E4%BB%B6-api" class="docs-header-link">
+          <span header-link="%E7%BB%84%E4%BB%B6-api"></span>
+          组件 API
+        </h1>
+      <p>Docgeni 组件 API 支持三种模式，分别为: <code>&#39;compatible&#39; | &#39;manual&#39; | &#39;automatic&#39;</code>，如何配置参考类库 <a href="configuration/lib#apimode-%3Clabel%3E1-2-0+%3C/label%3E">apiMode</a></p>
+<ul>
+<li><code>manual</code>: 手动模式，以配置的形式定义组件 API，默认模式</li>
+<li><code>automatic</code>: 自动模式，通过组件的注释自动生成 API</li>
+<li><code>compatible</code>: 兼容模式，如果存在 API 定义文件配置优先，否则通过注释自动生成</li>
+</ul>
+
+        <h2 id="%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-api" class="docs-header-link">
+          <span header-link="%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-api"></span>
+          自动生成 API
+        </h2>
+      <div class="dg-paragraph"><code>automatic</code>或者<code>compatible</code>模式下，Docgeni 会加载组件所有的 TypeScript 文件，动态读取 Angular 组件/指令/服务/管道以及标记为公开的类/接口，并通过 JS Doc 注释生成对应的 API 文档。
+详细配置参考：<a href="configuration/api">API 注释</a>。</div>
+<p>比如定义如下组件:</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * General Button Component description.
+ */</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">'thy-button'</span><span class="token punctuation">,</span>
+    templateUrl<span class="token punctuation">:</span> <span class="token string">'./button.component.html'</span><span class="token punctuation">,</span>
+    styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'./button.component.scss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    exportAs<span class="token punctuation">:</span> <span class="token string">'thyButton'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ButtonComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * Button Type
+     * @description Button Type for Description
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> thyType<span class="token punctuation">:</span> <span class="token string">'primary'</span> <span class="token operator">|</span> <span class="token string">'info'</span> <span class="token operator">|</span> <span class="token string">'success'</span> <span class="token operator">=</span> <span class="token string">'primary'</span><span class="token punctuation">;</span>
+
+     <span class="token comment" spellcheck="true">/**
+     * Button Size
+     * @deprecated
+     * @default md
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> thySize<span class="token punctuation">:</span> LoadingComponent<span class="token punctuation">;</span>
+
+     <span class="token comment" spellcheck="true">/**
+     * Button loading status
+     * @default false
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">set</span> <span class="token function">thyLoading</span><span class="token punctuation">(</span>loading<span class="token punctuation">:</span> <span class="token keyword">boolean</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> loading<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * Loading Event
+     */</span>
+    @<span class="token function">Output</span><span class="token punctuation">(</span><span class="token punctuation">)</span> thyLoadingEvent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token operator">&lt;</span><span class="token keyword">boolean</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></code></pre>
+<p>生成的 API 定义为:</p>
+<pre class="language-js"><code class="language-js"><div><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"component"</span><span class="token punctuation">,</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"ButtonComponent"</span><span class="token punctuation">,</span>
+    <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"General Button Component description."</span><span class="token punctuation">,</span>
+    <span class="token string">"selector"</span><span class="token punctuation">:</span> <span class="token string">"thy-button"</span><span class="token punctuation">,</span>
+    <span class="token string">"templateUrl"</span><span class="token punctuation">:</span> <span class="token string">"./button.component.html"</span><span class="token punctuation">,</span>
+    <span class="token string">"template"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token string">"styleUrls"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"./button.component.scss"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"styles"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token string">"exportAs"</span><span class="token punctuation">:</span> <span class="token string">"thyButton"</span><span class="token punctuation">,</span>
+    <span class="token string">"properties"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Input"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thyType"</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"\"primary\" | \"info\" | \"success\""</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"primary"</span><span class="token punctuation">,</span>
+            <span class="token string">"info"</span><span class="token punctuation">,</span>
+            <span class="token string">"success"</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token string">"kindName"</span><span class="token punctuation">:</span> <span class="token string">"UnionType"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Button Type for Description"</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token string">"primary"</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"description"</span><span class="token punctuation">,</span>
+            <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"Button Type for Description"</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Input"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thySize"</span><span class="token punctuation">,</span>
+        <span class="token string">"aliasName"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"any"</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token string">"kindName"</span><span class="token punctuation">:</span> <span class="token string">"TypeReference"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Button Size"</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token string">"md"</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"deprecated"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"deprecated"</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"default"</span><span class="token punctuation">,</span>
+            <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"md"</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Input"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thyLoading"</span><span class="token punctuation">,</span>
+        <span class="token string">"aliasName"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"boolean"</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"Output"</span><span class="token punctuation">,</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"thyLoadingEvent"</span><span class="token punctuation">,</span>
+        <span class="token string">"aliasName"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"EventEmitter&lt;boolean>"</span><span class="token punctuation">,</span>
+          <span class="token string">"options"</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Loading Event"</span><span class="token punctuation">,</span>
+        <span class="token string">"default"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token string">"tags"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span></div></code></pre>
+<p>对于导出的接口或者类声明如需生成 API 文档，需要在声明的注释手动添加<code>@public</code>或者<code>@publicApi</code>标签：</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * Dialog Config
+ * @public
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">DialogConfig</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/**
+   * param1 description
+   */</span>
+  param1<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="%E9%85%8D%E7%BD%AE%E5%AE%9A%E4%B9%89-api" class="docs-header-link">
+          <span header-link="%E9%85%8D%E7%BD%AE%E5%AE%9A%E4%B9%89-api"></span>
+          配置定义 API
+        </h2>
+      <div class="dg-paragraph"><label type="warning">不推荐使用</label></div>
+<div class="dg-paragraph"><code>manual</code>或者<code>compatible</code>模式下，Docgeni 默认会扫描组件<code>api</code>文件夹下的配置文件，文件名为多语言的<code>Key</code>（比如：<code>zh-cn.js</code>、<code>en-us.js</code>），读取文件并生成 API 文档，如需配置目录，请查看 <a href="configuration/lib#apiDir">apiDir</a> 配置项。</div>
+<p>配置文件命名规则为：<code>{localeKey}.&lt;json|yaml|yml|js|config.js&gt;</code>，目前支持以下三种格式：</p>
+<ul>
+<li><code>json</code>格式，以<code>.json</code>后缀命名</li>
+<li><code>yaml</code>格式，以<code>.yaml</code>或者<code>yml</code>后缀命名</li>
+<li><code>js</code>格式，以<code>.js</code>或者<code>.config.js</code>后缀命名</li>
+</ul>
+
+        <h3 id="api-%E6%A0%BC%E5%BC%8F" class="docs-header-link">
+          <span header-link="api-%E6%A0%BC%E5%BC%8F"></span>
+          API 格式
+        </h3>
+      <p>不管是哪种格式，一个组件模块可能会包含多个组件或者指令，所以 API 的配置是一个数组，数组中的每一项代表一个组件、一个指令、一个服务或者一个接口等。</p>
+<p>JS 格式示例如下：</p>
+<pre class="language-js"><code class="language-js"><div>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token string">'directive'</span> <span class="token operator">|</span> <span class="token string">'component'</span> <span class="token operator">|</span> <span class="token string">'service'</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">'alibButton'</span><span class="token punctuation">,</span>
+    description<span class="token punctuation">:</span> <span class="token string">'按钮组件，支持 alibButton 指令和 alib-button 组件两种形式'</span><span class="token punctuation">,</span>
+    properties<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alibType'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+            <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'primary'</span><span class="token punctuation">,</span>
+            description<span class="token punctuation">:</span> <span class="token string">'按钮的类型，支持 \`primary | info | warning | danger\`'</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'alibSize'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+            <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'null'</span><span class="token punctuation">,</span> 
+            description<span class="token punctuation">:</span> <span class="token string">'按钮的大小，支持 \`sm | md | lg\`'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</div></code></pre>
+<p>YAML 格式示例如下：</p>
+<pre class="language-yaml"><code class="language-yaml"><div><span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> directive
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> alibButton
+  <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'按钮组件，支持 alibButton 指令和 alib-button 组件两种形式'</span>
+  <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> alibType
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> 按钮的类型，支持 `primary <span class="token punctuation">|</span> info <span class="token punctuation">|</span> warning <span class="token punctuation">|</span> danger`
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> primary
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> alibSize
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> 按钮的大小，支持 `sm <span class="token punctuation">|</span> md <span class="token punctuation">|</span> lg`
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> md</div></code></pre>
+<p>JSON格式示例如下：</p>
+<pre class="language-json"><code class="language-json"><div><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"directive"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibButton"</span><span class="token punctuation">,</span>
+    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"按钮组件，支持 alibButton 指令和 alib-button 组件两种形式"</span><span class="token punctuation">,</span>
+    <span class="token property">"properties"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibType"</span><span class="token punctuation">,</span>
+        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+        <span class="token property">"default"</span><span class="token operator">:</span> <span class="token string">"primary"</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> "按钮的类型，支持 `primary | info | warning | danger`"
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"alibSize"</span><span class="token punctuation">,</span>
+        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"string"</span><span class="token punctuation">,</span>
+        <span class="token property">"default"</span><span class="token operator">:</span> <span class="token string">"null"</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> "按钮的大小，支持 `sm | md | lg`"
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span></div></code></pre>
+
+        <h3 id="%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E" class="docs-header-link">
+          <span header-link="%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"></span>
+          参数说明
+        </h3>
+      <ul>
+<li><code>type</code>: 组件的类型，支持<code>directive</code>、<code>component</code>、<code>class</code>、<code>interface</code></li>
+<li><code>name</code>: 组件的名称</li>
+<li><code>description</code>: 组件的描述，支持 Markdown 语法</li>
+<li><code>properties</code>: 组件的属性列表</li>
+<li><code>properties.name</code>: 属性名称</li>
+<li><code>properties.type</code>: 属性类型</li>
+<li><code>properties.default</code>: 属性的默认值</li>
+<li><code>properties.description</code>: 属性的描述，支持 Markdown 语法</li>
+</ul>

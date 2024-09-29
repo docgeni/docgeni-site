@@ -1,0 +1,155 @@
+<p>通过给组件/指令/服务/管道/类/接口/属性/函数添加注释生成 API 文档。</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * General Button Component description.
+ * @name alib-button
+ * @order 1
+ */</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">'alib-button,[alibButton]'</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> <span class="token string">'&lt;ng-content>&lt;/ng-content>'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Base</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * Button Type: `'primary' | 'secondary' | 'danger'`
+     * @description 按钮类型
+     * @default primary
+     * @type 'primary' | 'secondary' | 'danger'
+     */</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">set</span> <span class="token function">alibButton</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>alibType <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</div></code></pre>
+
+        <h2 id="@name" class="docs-header-link">
+          <span header-link="@name"></span>
+          @name
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>{ClassName}</code></li>
+</ul>
+<p>组件/指令/服务/管道/类/接口的名称，默认 Class 类名，管道默认 name 名。</p>
+
+        <h2 id="@description" class="docs-header-link">
+          <span header-link="@description"></span>
+          @description
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>组件/指令/服务/管道/类/接口的描述，如果有<code>@description</code> Tag 以此为主，否则以默认注释内容为描述。</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * Default description.
+ * @name alib-button
+ * @description This is description
+ * @order 1
+ */</span></div></code></pre>
+
+        <h2 id="@order" class="docs-header-link">
+          <span header-link="@order"></span>
+          @order
+        </h2>
+      <ul>
+<li>类型：<code>number</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>API 文档的排序。</p>
+
+        <h2 id="@private" class="docs-header-link">
+          <span header-link="@private"></span>
+          @private
+        </h2>
+      <ul>
+<li>类型：<code>boolean</code></li>
+<li>默认：<code>false</code></li>
+<li>别名：<code>internal</code></li>
+</ul>
+<p>默认生成 API 文档的有：</p>
+<ul>
+<li>所有的组件/指令/服务/管道</li>
+<li>组件/指令的 @Input 和 @Output 属性</li>
+<li>组件/指令/服务/管道的公开函数</li>
+</ul>
+<p>以上的组件/指令/服务/管道/属性/函数如果是内部的，不需要生成 API 文档，添加<code>@private</code>或者<code>@internal</code>标记。</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * General Button Component description.
+ * @private 
+ */</span></div></code></pre>
+
+        <h2 id="@public" class="docs-header-link">
+          <span header-link="@public"></span>
+          @public
+        </h2>
+      <ul>
+<li>类型：<code>boolean</code></li>
+<li>默认：<code>false</code></li>
+<li>别名：<code>publicApi</code></li>
+</ul>
+<p>默认所有的 Class 和 Interface 都不会生成 API 文档，如果某个 Class 和 Interface 需要生成 API 文档，需要添加<code>@public</code>或者<code>@publicApi</code>标记。</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token comment" spellcheck="true">/**
+ * Some Class description.
+ * @public 
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="@default" class="docs-header-link">
+          <span header-link="@default"></span>
+          @default
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>属性的默认值会自动读取 TypeScript 的赋值语句，通过<code>@default</code>手动设置默认值。</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonComponent</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/**
+  * Button Type
+  * @default primary
+  */</span>
+  @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> alibType <span class="token operator">=</span> <span class="token string">'primary'</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="@type" class="docs-header-link">
+          <span header-link="@type"></span>
+          @type
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>属性的类型会自动读取 TypeScript 的类型定义，通过<code>@type</code>手动设置默认值。</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AlibButtonComponent</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/**
+  * Button Type
+  * @type 'primary' | 'success'
+  */</span>
+  @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> alibType <span class="token operator">=</span> <span class="token string">'primary'</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h2 id="@param" class="docs-header-link">
+          <span header-link="@param"></span>
+          @param
+        </h2>
+      <ul>
+<li>类型：<code>string</code></li>
+<li>默认：<code>null</code></li>
+</ul>
+<p>函数参数描述。</p>
+<pre class="language-ts"><code class="language-ts"><div>@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    providedIn<span class="token punctuation">:</span> <span class="token string">'root'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">DialogService</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+     * Open a dialog
+     * @param {string} pram1 pram1 desc
+     * @param {number} pram2 pram2 desc
+     * @returns DialogRef
+     */</span>
+    <span class="token function">open</span><span class="token punctuation">(</span>pram1<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span> pram2<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">)</span><span class="token punctuation">:</span> DialogRef <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div></code></pre>
