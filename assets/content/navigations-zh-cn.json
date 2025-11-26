@@ -1,0 +1,2238 @@
+{
+  "navs": [
+    {
+      "id": "guides",
+      "path": "guides",
+      "channelPath": "guides",
+      "title": "指南",
+      "items": [
+        {
+          "id": "guides/intro",
+          "path": "guides/intro",
+          "channelPath": "guides",
+          "title": "介绍",
+          "items": [
+            {
+              "id": "index",
+              "path": "intro",
+              "channelPath": "guides",
+              "title": "介绍",
+              "order": 10,
+              "toc": "hidden",
+              "headings": [
+                {
+                  "id": "%E4%BB%80%E4%B9%88%E6%98%AF-docgeni%EF%BC%9F",
+                  "name": "什么是 Docgeni？",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%89%B9%E6%80%A7",
+                  "name": "特性",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%8A%A8%E6%9C%BA",
+                  "name": "动机",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E6%96%87%E6%A1%A3%E5%B7%A5%E5%85%B7%E7%9A%84%E5%9C%BA%E6%99%AF",
+                  "name": "文档工具的场景",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE",
+                  "name": "参与贡献",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/guides/intro/index.html",
+              "originPath": "docs/guides/intro/index.md"
+            },
+            {
+              "id": "getting-started",
+              "path": "intro/getting-started",
+              "channelPath": "guides",
+              "title": "快速上手",
+              "order": 30,
+              "toc": "menu",
+              "headings": [
+                {
+                  "id": "%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87",
+                  "name": "环境准备",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9D%E5%A7%8B%E5%8C%96",
+                  "name": "脚手架初始化",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E6%A8%A1%E6%9D%BF%E4%BB%93%E5%82%A8%E5%88%9D%E5%A7%8B%E5%8C%96",
+                  "name": "模板仓储初始化",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E6%89%8B%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96",
+                  "name": "手动初始化",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%AE%89%E8%A3%85",
+                  "name": "安装",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E9%85%8D%E7%BD%AE",
+                  "name": "配置",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%BC%80%E5%A7%8B%E5%86%99%E6%96%87%E6%A1%A3",
+                  "name": "开始写文档",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "-gitignore-%E5%BF%BD%E7%95%A5%3Ccode%3E-docgeni/site%3C/code%3E",
+                  "name": ".gitignore 忽略<code>.docgeni/site</code>",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%BB%84%E4%BB%B6%E6%96%87%E6%A1%A3",
+                  "name": "组件文档",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/guides/intro/getting-started.html",
+              "originPath": "docs/guides/intro/getting-started.md"
+            },
+            {
+              "id": "guides/intro/hello",
+              "path": "guides/intro/hello",
+              "channelPath": "guides",
+              "title": "Hello",
+              "items": [],
+              "order": 9007199254740991
+            }
+          ],
+          "order": 10
+        },
+        {
+          "id": "guides/basic",
+          "path": "guides/basic",
+          "channelPath": "guides",
+          "title": "基本用法",
+          "items": [
+            {
+              "id": "route-nav-menu",
+              "path": "basic/route-nav-menu",
+              "channelPath": "guides",
+              "title": "路由导航菜单",
+              "order": 20,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5",
+                  "name": "基本概念",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%BA%A6%E5%AE%9A%E8%B7%AF%E7%94%B1%E5%92%8C%E8%8F%9C%E5%8D%95",
+                  "name": "约定路由和菜单",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E9%BB%98%E8%AE%A4%E8%B7%AF%E7%94%B1%E7%94%9F%E6%88%90%E8%A7%84%E5%88%99",
+                  "name": "默认路由生成规则",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98%E7%94%9F%E6%88%90%E8%A7%84%E5%88%99",
+                  "name": "默认标题生成规则",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%A4%BA%E4%BE%8B",
+                  "name": "文件路径示例",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE",
+                  "name": "自定义配置",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E9%A2%91%E9%81%93%E7%9A%84%E7%94%9F%E6%88%90",
+                  "name": "频道的生成",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E9%A2%91%E9%81%93%E3%80%81%E7%B1%BB%E5%88%AB%E5%92%8C%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%8E%92%E5%BA%8F",
+                  "name": "频道、类别和页面的排序",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E6%9B%B4%E5%A4%9A%E9%85%8D%E7%BD%AE",
+                  "name": "更多配置",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/guides/basic/route-nav-menu.html",
+              "originPath": "docs/guides/basic/route-nav-menu.md"
+            },
+            {
+              "id": "lib-nav",
+              "path": "basic/lib-nav",
+              "channelPath": "guides",
+              "title": "类库导航和菜单",
+              "order": 30,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E7%B1%BB%E5%BA%93%E5%AF%BC%E8%88%AA",
+                  "name": "类库导航",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%B1%BB%E5%BA%93%E9%85%8D%E7%BD%AE",
+                  "name": "类库配置",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%BB%84%E4%BB%B6%E7%9A%84%E7%B1%BB%E5%88%AB",
+                  "name": "组件的类别",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/guides/basic/lib-nav.html",
+              "originPath": "docs/guides/basic/lib-nav.md"
+            },
+            {
+              "id": "component",
+              "path": "basic/component",
+              "channelPath": "guides",
+              "title": "组件文档、API和示例",
+              "order": 40,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3",
+                  "name": "概览文档",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%BB%84%E4%BB%B6%E9%85%8D%E7%BD%AE%E9%A1%B9",
+                  "name": "组件配置项",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%BB%84%E4%BB%B6%E7%A4%BA%E4%BE%8B",
+                  "name": "组件示例",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99",
+                  "name": "命名规则",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E9%85%8D%E7%BD%AE-module",
+                  "name": "配置 module",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%BC%95%E7%94%A8%E9%85%8D%E7%BD%AE%EF%BC%88tsconfig-paths%EF%BC%89",
+                  "name": "引用配置（tsconfig paths）",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B",
+                  "name": "在文档中使用示例",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BC%95%E5%85%A5%E6%89%80%E6%9C%89%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E",
+                  "name": "概览文档中引入所有示例 <label>2.0+</label>",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%A4%BA%E4%BE%8B%E7%9A%84%E9%85%8D%E7%BD%AE",
+                  "name": "示例的配置",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B",
+                  "name": "新建一个示例",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "stackblitz-%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E",
+                  "name": "StackBlitz 示例 <label>2.0+</label>",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%BB%84%E4%BB%B6-api",
+                  "name": "组件 API",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-api",
+                  "name": "自动生成 API",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E9%85%8D%E7%BD%AE%E5%AE%9A%E4%B9%89-api",
+                  "name": "配置定义 API",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "api-%E6%A0%BC%E5%BC%8F",
+                  "name": "API 格式",
+                  "level": 3,
+                  "type": "h3"
+                },
+                {
+                  "id": "%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E",
+                  "name": "参数说明",
+                  "level": 3,
+                  "type": "h3"
+                }
+              ],
+              "contentPath": "docs/guides/basic/component.html",
+              "originPath": "docs/guides/basic/component.md"
+            },
+            {
+              "id": "built-in-components",
+              "path": "basic/built-in-components",
+              "channelPath": "guides",
+              "title": "内置组件",
+              "order": 50,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "label",
+                  "name": "Label",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "alert",
+                  "name": "Alert",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "embed",
+                  "name": "Embed",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E8%87%AA%E5%AE%9A%E4%B9%89%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6",
+                  "name": "自定义内置组件",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "docs/guides/basic/built-in-components.html",
+              "originPath": "docs/guides/basic/built-in-components.md"
+            }
+          ],
+          "order": 15
+        },
+        {
+          "id": "guides/advance",
+          "path": "guides/advance",
+          "channelPath": "guides",
+          "title": "高级用法",
+          "items": [
+            {
+              "id": "customize",
+              "path": "advance/customize",
+              "channelPath": "guides",
+              "title": "自定义站点",
+              "order": 20,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E8%87%AA%E5%AE%9A%E4%B9%89-public-%E7%9B%AE%E5%BD%95",
+                  "name": "自定义 public 目录",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B9%E6%A8%A1%E5%9D%97%E5%85%83%E6%95%B0%E6%8D%AE-%3Clabel%3E2-0+%3C/label%3E",
+                  "name": "自定义根模块元数据 <label>2.0+</label>",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E5%AE%8C%E5%85%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AB%99%E7%82%B9",
+                  "name": "完全自定义站点",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%88%9B%E5%BB%BA%E7%AB%99%E7%82%B9%E9%A1%B9%E7%9B%AE",
+                  "name": "第一步：创建站点项目",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E4%BF%AE%E6%94%B9%E6%A0%B9%E6%A8%A1%E5%9D%97",
+                  "name": "第二步：修改根模块",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%BF%BD%E7%95%A5-content",
+                  "name": "第三步：忽略 content",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%85%A5%E5%8F%A3-html-%E5%92%8C%E6%A0%B7%E5%BC%8F",
+                  "name": "第四步：修改入口 HTML 和样式",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "docs/guides/advance/customize.html",
+              "originPath": "docs/guides/advance/customize.md"
+            },
+            {
+              "id": "home",
+              "path": "advance/home",
+              "channelPath": "guides",
+              "title": "自定义首页",
+              "order": 30,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E9%A6%96%E9%A1%B5%E9%A2%84%E8%A7%88",
+                  "name": "首页预览",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "hero",
+                  "name": "Hero",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E7%89%B9%E6%80%A7",
+                  "name": "特性",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "contentPath": "docs/guides/advance/home.html",
+              "originPath": "docs/guides/advance/home.md"
+            },
+            {
+              "id": "locales",
+              "path": "advance/locales",
+              "channelPath": "guides",
+              "title": "多语言",
+              "order": 100,
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E9%85%8D%E7%BD%AE%E5%A4%9A%E8%AF%AD%E8%A8%80",
+                  "name": "配置多语言",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E6%96%87%E6%A1%A3%E7%9A%84%E5%A4%9A%E8%AF%AD%E8%A8%80",
+                  "name": "文档的多语言",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9A%84%E5%A4%9A%E8%AF%AD%E8%A8%80",
+                  "name": "配置项的多语言",
+                  "level": 1,
+                  "type": "h1"
+                },
+                {
+                  "id": "%E7%BB%84%E4%BB%B6%E7%9A%84%E5%A4%9A%E8%AF%AD%E8%A8%80",
+                  "name": "组件的多语言",
+                  "level": 1,
+                  "type": "h1"
+                }
+              ],
+              "contentPath": "docs/guides/advance/locales.html",
+              "originPath": "docs/guides/advance/locales.md"
+            }
+          ],
+          "order": 40
+        },
+        {
+          "id": "faq",
+          "path": "faq",
+          "channelPath": "guides",
+          "title": "常见问题",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [
+            {
+              "id": "%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E5%88%B0%E5%9F%9F%E5%90%8D%E7%9A%84%E9%9D%9E%E6%A0%B9%E7%9B%AE%E5%BD%95-",
+              "name": "如何部署到域名的非根目录?",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "docgeni-%E6%94%AF%E6%8C%81%E5%85%B6%E4%BB%96%E6%A1%86%E6%9E%B6%E5%90%97%EF%BC%9F",
+              "name": "Docgeni 支持其他框架吗？",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "%E7%BB%84%E4%BB%B6%3Ccode%3Edoc%3C/code%3E%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%96%B0%E5%BB%BA%E4%BA%86%3Ccode%3Ezh-cn-md%3C/code%3E%EF%BC%8C%E4%BD%86%E6%98%AF%E7%BB%84%E4%BB%B6%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%B8%8D%E5%B1%95%E7%A4%BA%EF%BC%9F",
+              "name": "组件<code>doc</code>文件夹下新建了<code>zh-cn.md</code>，但是组件在文档中不展示？",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/guides/faq.html",
+          "originPath": "docs/guides/faq.md"
+        },
+        {
+          "id": "v2.1-migration",
+          "path": "v2-1-migration",
+          "channelPath": "guides",
+          "title": "v2.1 升级指栏",
+          "order": 9007199254740991,
+          "toc": "content",
+          "headings": [
+            {
+              "id": "api-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90",
+              "name": "API 自动生成",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "%E7%B1%BB%E5%BA%93-include-%E9%85%8D%E7%BD%AE",
+              "name": "类库 include 配置",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/guides/v2.1-migration.html",
+          "originPath": "docs/guides/v2.1-migration.md"
+        }
+      ],
+      "order": 20
+    },
+    {
+      "id": "configuration",
+      "path": "configuration",
+      "channelPath": "configuration",
+      "title": "配置",
+      "items": [
+        {
+          "id": "global",
+          "path": "global",
+          "channelPath": "configuration",
+          "title": "全局配置",
+          "order": 10,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "mode",
+              "name": "mode",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "theme",
+              "name": "theme",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "switchtheme",
+              "name": "switchTheme",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "title",
+              "name": "title",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "logourl",
+              "name": "logoUrl",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "repourl",
+              "name": "repoUrl",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "docsdir",
+              "name": "docsDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "sitedir",
+              "name": "siteDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "outputdir",
+              "name": "outputDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "publicdir",
+              "name": "publicDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "componentsdir-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "componentsDir <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "siteprojectname",
+              "name": "siteProjectName",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "toc <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "footer-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "footer <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "defaultlocale",
+              "name": "defaultLocale",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "locales",
+              "name": "locales",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "navs",
+              "name": "navs",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "libs",
+              "name": "libs",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "sitemap-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "sitemap <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "algolia-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "algolia <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/configuration/global.html",
+          "originPath": "docs/configuration/global.md"
+        },
+        {
+          "id": "lib",
+          "path": "lib",
+          "channelPath": "configuration",
+          "title": "类库配置",
+          "order": 20,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "name",
+              "name": "name",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "abbrname",
+              "name": "abbrName",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "rootdir",
+              "name": "rootDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "include",
+              "name": "include",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "exclude",
+              "name": "exclude",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "tsconfig",
+              "name": "tsConfig",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "labels-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "labels <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "docdir",
+              "name": "docDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "apidir",
+              "name": "apiDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "examplesdir",
+              "name": "examplesDir",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "categories",
+              "name": "categories",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "apimode-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "apiMode <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/configuration/lib.html",
+          "originPath": "docs/configuration/lib.md"
+        },
+        {
+          "id": "front-matter",
+          "path": "front-matter",
+          "channelPath": "configuration",
+          "title": "Front Matter",
+          "order": 40,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "title",
+              "name": "title",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "subtitle",
+              "name": "subtitle",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "order",
+              "name": "order",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "path",
+              "name": "path",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "hidden",
+              "name": "hidden",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "name",
+              "name": "name",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "category",
+              "name": "category",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "toc <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "label-%3Clabel%3E1-1-0+%3C/label%3E",
+              "name": "label <label>1.1.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "background-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "background <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "compact-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "compact <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "classname-%3Clabel%3E2-0+%3C/label%3E",
+              "name": "className <label>2.0+</label>",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/configuration/front-matter.html",
+          "originPath": "docs/configuration/front-matter.md"
+        },
+        {
+          "id": "api",
+          "path": "api",
+          "channelPath": "configuration",
+          "title": "API 注释",
+          "order": 50,
+          "toc": "menu",
+          "headings": [
+            {
+              "id": "@name",
+              "name": "@name",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@description",
+              "name": "@description",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@order",
+              "name": "@order",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@private",
+              "name": "@private",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@public",
+              "name": "@public",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@default",
+              "name": "@default",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@type",
+              "name": "@type",
+              "level": 2,
+              "type": "h2"
+            },
+            {
+              "id": "@param",
+              "name": "@param",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "contentPath": "docs/configuration/api.html",
+          "originPath": "docs/configuration/api.md"
+        }
+      ],
+      "order": 30
+    },
+    {
+      "title": "组件",
+      "path": "components",
+      "lib": "alib",
+      "items": [
+        {
+          "id": "general",
+          "title": "通用",
+          "items": [
+            {
+              "id": "button",
+              "title": "Button",
+              "subtitle": "按钮",
+              "path": "button",
+              "importSpecifier": "alib/button",
+              "examples": [
+                "alib-button-basic-example",
+                "alib-button-advance-example",
+                "alib-button-advance-title-example"
+              ],
+              "overview": true,
+              "api": true,
+              "order": 1,
+              "category": "general",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "packages/a-lib/button/doc/zh-cn.md",
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E5%AE%9A%E4%B9%89",
+                  "name": "定义",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+                  "name": "何时使用",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5",
+                  "name": "模块导入",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E6%8C%89%E9%92%AE%E7%A7%8D%E7%B1%BB",
+                  "name": "按钮种类",
+                  "level": 2,
+                  "type": "h2"
+                },
+                {
+                  "id": "%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8",
+                  "name": "如何使用",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "channelPath": "components"
+            },
+            {
+              "id": "foo",
+              "title": "Foo",
+              "subtitle": "测试",
+              "path": "foo",
+              "importSpecifier": "alib/foo",
+              "examples": [
+                "alib-foo-advance-example",
+                "alib-foo-basic-example"
+              ],
+              "overview": true,
+              "api": true,
+              "order": 10,
+              "category": "general",
+              "originPath": "packages/a-lib/foo/doc/zh-cn.md",
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+                  "name": "何时使用",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "channelPath": "components"
+            }
+          ],
+          "order": 0
+        },
+        {
+          "id": "layout",
+          "title": "布局",
+          "items": [
+            {
+              "id": "layout",
+              "title": "Layout",
+              "subtitle": "布局",
+              "path": "layout",
+              "importSpecifier": "alib/layout",
+              "examples": [
+                "alib-layout-advance-example",
+                "alib-layout-basic-example"
+              ],
+              "overview": true,
+              "api": true,
+              "order": 1,
+              "category": "layout",
+              "originPath": "packages/a-lib/layout/doc/zh-cn.md",
+              "toc": "content",
+              "headings": [
+                {
+                  "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+                  "name": "何时使用",
+                  "level": 2,
+                  "type": "h2"
+                }
+              ],
+              "channelPath": "components"
+            }
+          ],
+          "order": 0
+        },
+        {
+          "id": "dialog",
+          "title": "Dialog",
+          "subtitle": "",
+          "path": "dialog",
+          "importSpecifier": "alib/dialog",
+          "examples": [],
+          "overview": false,
+          "api": true,
+          "order": 0,
+          "originPath": "packages/a-lib/dialog/doc/zh-cn.md",
+          "toc": "content",
+          "headings": [],
+          "channelPath": "components"
+        },
+        {
+          "id": "bar",
+          "title": "Bar",
+          "subtitle": "",
+          "path": "bar",
+          "importSpecifier": "alib/bar",
+          "examples": [
+            "alib-bar-basic-example"
+          ],
+          "overview": false,
+          "api": true,
+          "order": 9007199254740991,
+          "originPath": "packages/a-lib/bar/doc/zh-cn.md",
+          "toc": "content",
+          "headings": [],
+          "channelPath": "components"
+        },
+        {
+          "id": "zoo",
+          "title": "Zoo",
+          "subtitle": "",
+          "path": "zoo",
+          "importSpecifier": "alib/zoo",
+          "examples": [
+            "alib-zoo-basic-example"
+          ],
+          "overview": true,
+          "api": false,
+          "order": 9007199254740991,
+          "originPath": "packages/a-lib/common/zoo/doc/zh-cn.md",
+          "toc": "content",
+          "headings": [
+            {
+              "id": "zoo",
+              "name": "Zoo",
+              "level": 2,
+              "type": "h2"
+            }
+          ],
+          "channelPath": "components"
+        }
+      ]
+    },
+    {
+      "title": "GitHub",
+      "path": "https://github.com/docgeni/docgeni",
+      "isExternal": true
+    },
+    {
+      "title": "更新日志",
+      "path": "https://github.com/docgeni/docgeni/blob/master/CHANGELOG.md",
+      "isExternal": true
+    }
+  ],
+  "docs": [
+    {
+      "id": "api",
+      "path": "api",
+      "channelPath": "configuration",
+      "title": "API 注释",
+      "order": 50,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "@name",
+          "name": "@name",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@description",
+          "name": "@description",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@order",
+          "name": "@order",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@private",
+          "name": "@private",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@public",
+          "name": "@public",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@default",
+          "name": "@default",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@type",
+          "name": "@type",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "@param",
+          "name": "@param",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/configuration/api.html",
+      "originPath": "docs/configuration/api.md"
+    },
+    {
+      "id": "front-matter",
+      "path": "front-matter",
+      "channelPath": "configuration",
+      "title": "Front Matter",
+      "order": 40,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "title",
+          "name": "title",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "subtitle",
+          "name": "subtitle",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "order",
+          "name": "order",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "path",
+          "name": "path",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "hidden",
+          "name": "hidden",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "name",
+          "name": "name",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "category",
+          "name": "category",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "toc <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "label-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "label <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "background-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "background <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "compact-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "compact <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "classname-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "className <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/configuration/front-matter.html",
+      "originPath": "docs/configuration/front-matter.md"
+    },
+    {
+      "id": "global",
+      "path": "global",
+      "channelPath": "configuration",
+      "title": "全局配置",
+      "order": 10,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "mode",
+          "name": "mode",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "theme",
+          "name": "theme",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "switchtheme",
+          "name": "switchTheme",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "title",
+          "name": "title",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "logourl",
+          "name": "logoUrl",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "repourl",
+          "name": "repoUrl",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "docsdir",
+          "name": "docsDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "sitedir",
+          "name": "siteDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "outputdir",
+          "name": "outputDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "publicdir",
+          "name": "publicDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "componentsdir-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "componentsDir <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "siteprojectname",
+          "name": "siteProjectName",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "toc-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "toc <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "footer-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "footer <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "defaultlocale",
+          "name": "defaultLocale",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "locales",
+          "name": "locales",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "navs",
+          "name": "navs",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "libs",
+          "name": "libs",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "sitemap-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "sitemap <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "algolia-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "algolia <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/configuration/global.html",
+      "originPath": "docs/configuration/global.md"
+    },
+    {
+      "id": "lib",
+      "path": "lib",
+      "channelPath": "configuration",
+      "title": "类库配置",
+      "order": 20,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "name",
+          "name": "name",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "abbrname",
+          "name": "abbrName",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "rootdir",
+          "name": "rootDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "include",
+          "name": "include",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "exclude",
+          "name": "exclude",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "tsconfig",
+          "name": "tsConfig",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "labels-%3Clabel%3E1-1-0+%3C/label%3E",
+          "name": "labels <label>1.1.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "docdir",
+          "name": "docDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "apidir",
+          "name": "apiDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "examplesdir",
+          "name": "examplesDir",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "categories",
+          "name": "categories",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "apimode-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "apiMode <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/configuration/lib.html",
+      "originPath": "docs/configuration/lib.md"
+    },
+    {
+      "id": "customize",
+      "path": "advance/customize",
+      "channelPath": "guides",
+      "title": "自定义站点",
+      "order": 20,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E8%87%AA%E5%AE%9A%E4%B9%89-public-%E7%9B%AE%E5%BD%95",
+          "name": "自定义 public 目录",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B9%E6%A8%A1%E5%9D%97%E5%85%83%E6%95%B0%E6%8D%AE-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "自定义根模块元数据 <label>2.0+</label>",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%AE%8C%E5%85%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AB%99%E7%82%B9",
+          "name": "完全自定义站点",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%88%9B%E5%BB%BA%E7%AB%99%E7%82%B9%E9%A1%B9%E7%9B%AE",
+          "name": "第一步：创建站点项目",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E4%BF%AE%E6%94%B9%E6%A0%B9%E6%A8%A1%E5%9D%97",
+          "name": "第二步：修改根模块",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%BF%BD%E7%95%A5-content",
+          "name": "第三步：忽略 content",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%85%A5%E5%8F%A3-html-%E5%92%8C%E6%A0%B7%E5%BC%8F",
+          "name": "第四步：修改入口 HTML 和样式",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/guides/advance/customize.html",
+      "originPath": "docs/guides/advance/customize.md"
+    },
+    {
+      "id": "home",
+      "path": "advance/home",
+      "channelPath": "guides",
+      "title": "自定义首页",
+      "order": 30,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%A6%96%E9%A1%B5%E9%A2%84%E8%A7%88",
+          "name": "首页预览",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "hero",
+          "name": "Hero",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%89%B9%E6%80%A7",
+          "name": "特性",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/guides/advance/home.html",
+      "originPath": "docs/guides/advance/home.md"
+    },
+    {
+      "id": "locales",
+      "path": "advance/locales",
+      "channelPath": "guides",
+      "title": "多语言",
+      "order": 100,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E9%85%8D%E7%BD%AE%E5%A4%9A%E8%AF%AD%E8%A8%80",
+          "name": "配置多语言",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%96%87%E6%A1%A3%E7%9A%84%E5%A4%9A%E8%AF%AD%E8%A8%80",
+          "name": "文档的多语言",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9A%84%E5%A4%9A%E8%AF%AD%E8%A8%80",
+          "name": "配置项的多语言",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%BB%84%E4%BB%B6%E7%9A%84%E5%A4%9A%E8%AF%AD%E8%A8%80",
+          "name": "组件的多语言",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/guides/advance/locales.html",
+      "originPath": "docs/guides/advance/locales.md"
+    },
+    {
+      "id": "built-in-components",
+      "path": "basic/built-in-components",
+      "channelPath": "guides",
+      "title": "内置组件",
+      "order": 50,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "label",
+          "name": "Label",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "alert",
+          "name": "Alert",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "embed",
+          "name": "Embed",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%87%AA%E5%AE%9A%E4%B9%89%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6",
+          "name": "自定义内置组件",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/guides/basic/built-in-components.html",
+      "originPath": "docs/guides/basic/built-in-components.md"
+    },
+    {
+      "id": "component",
+      "path": "basic/component",
+      "channelPath": "guides",
+      "title": "组件文档、API和示例",
+      "order": 40,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3",
+          "name": "概览文档",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%BB%84%E4%BB%B6%E9%85%8D%E7%BD%AE%E9%A1%B9",
+          "name": "组件配置项",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%BB%84%E4%BB%B6%E7%A4%BA%E4%BE%8B",
+          "name": "组件示例",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99",
+          "name": "命名规则",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%85%8D%E7%BD%AE-module",
+          "name": "配置 module",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%BC%95%E7%94%A8%E9%85%8D%E7%BD%AE%EF%BC%88tsconfig-paths%EF%BC%89",
+          "name": "引用配置（tsconfig paths）",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B",
+          "name": "在文档中使用示例",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%A6%82%E8%A7%88%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BC%95%E5%85%A5%E6%89%80%E6%9C%89%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "概览文档中引入所有示例 <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%A4%BA%E4%BE%8B%E7%9A%84%E9%85%8D%E7%BD%AE",
+          "name": "示例的配置",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B",
+          "name": "新建一个示例",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "stackblitz-%E7%A4%BA%E4%BE%8B-%3Clabel%3E2-0+%3C/label%3E",
+          "name": "StackBlitz 示例 <label>2.0+</label>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BB%84%E4%BB%B6-api",
+          "name": "组件 API",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-api",
+          "name": "自动生成 API",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%85%8D%E7%BD%AE%E5%AE%9A%E4%B9%89-api",
+          "name": "配置定义 API",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "api-%E6%A0%BC%E5%BC%8F",
+          "name": "API 格式",
+          "level": 3,
+          "type": "h3"
+        },
+        {
+          "id": "%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E",
+          "name": "参数说明",
+          "level": 3,
+          "type": "h3"
+        }
+      ],
+      "contentPath": "docs/guides/basic/component.html",
+      "originPath": "docs/guides/basic/component.md"
+    },
+    {
+      "id": "lib-nav",
+      "path": "basic/lib-nav",
+      "channelPath": "guides",
+      "title": "类库导航和菜单",
+      "order": 30,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E7%B1%BB%E5%BA%93%E5%AF%BC%E8%88%AA",
+          "name": "类库导航",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%B1%BB%E5%BA%93%E9%85%8D%E7%BD%AE",
+          "name": "类库配置",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%BB%84%E4%BB%B6%E7%9A%84%E7%B1%BB%E5%88%AB",
+          "name": "组件的类别",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/guides/basic/lib-nav.html",
+      "originPath": "docs/guides/basic/lib-nav.md"
+    },
+    {
+      "id": "route-nav-menu",
+      "path": "basic/route-nav-menu",
+      "channelPath": "guides",
+      "title": "路由导航菜单",
+      "order": 20,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5",
+          "name": "基本概念",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%BA%A6%E5%AE%9A%E8%B7%AF%E7%94%B1%E5%92%8C%E8%8F%9C%E5%8D%95",
+          "name": "约定路由和菜单",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E9%BB%98%E8%AE%A4%E8%B7%AF%E7%94%B1%E7%94%9F%E6%88%90%E8%A7%84%E5%88%99",
+          "name": "默认路由生成规则",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98%E7%94%9F%E6%88%90%E8%A7%84%E5%88%99",
+          "name": "默认标题生成规则",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%A4%BA%E4%BE%8B",
+          "name": "文件路径示例",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE",
+          "name": "自定义配置",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E9%A2%91%E9%81%93%E7%9A%84%E7%94%9F%E6%88%90",
+          "name": "频道的生成",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E9%A2%91%E9%81%93%E3%80%81%E7%B1%BB%E5%88%AB%E5%92%8C%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%8E%92%E5%BA%8F",
+          "name": "频道、类别和页面的排序",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%9B%B4%E5%A4%9A%E9%85%8D%E7%BD%AE",
+          "name": "更多配置",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/guides/basic/route-nav-menu.html",
+      "originPath": "docs/guides/basic/route-nav-menu.md"
+    },
+    {
+      "id": "faq",
+      "path": "faq",
+      "channelPath": "guides",
+      "title": "常见问题",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E5%88%B0%E5%9F%9F%E5%90%8D%E7%9A%84%E9%9D%9E%E6%A0%B9%E7%9B%AE%E5%BD%95-",
+          "name": "如何部署到域名的非根目录?",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "docgeni-%E6%94%AF%E6%8C%81%E5%85%B6%E4%BB%96%E6%A1%86%E6%9E%B6%E5%90%97%EF%BC%9F",
+          "name": "Docgeni 支持其他框架吗？",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BB%84%E4%BB%B6%3Ccode%3Edoc%3C/code%3E%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%96%B0%E5%BB%BA%E4%BA%86%3Ccode%3Ezh-cn-md%3C/code%3E%EF%BC%8C%E4%BD%86%E6%98%AF%E7%BB%84%E4%BB%B6%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%B8%8D%E5%B1%95%E7%A4%BA%EF%BC%9F",
+          "name": "组件<code>doc</code>文件夹下新建了<code>zh-cn.md</code>，但是组件在文档中不展示？",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/guides/faq.html",
+      "originPath": "docs/guides/faq.md"
+    },
+    {
+      "id": "getting-started",
+      "path": "intro/getting-started",
+      "channelPath": "guides",
+      "title": "快速上手",
+      "order": 30,
+      "toc": "menu",
+      "headings": [
+        {
+          "id": "%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87",
+          "name": "环境准备",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9D%E5%A7%8B%E5%8C%96",
+          "name": "脚手架初始化",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%A8%A1%E6%9D%BF%E4%BB%93%E5%82%A8%E5%88%9D%E5%A7%8B%E5%8C%96",
+          "name": "模板仓储初始化",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%89%8B%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96",
+          "name": "手动初始化",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%AE%89%E8%A3%85",
+          "name": "安装",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E9%85%8D%E7%BD%AE",
+          "name": "配置",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%BC%80%E5%A7%8B%E5%86%99%E6%96%87%E6%A1%A3",
+          "name": "开始写文档",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "-gitignore-%E5%BF%BD%E7%95%A5%3Ccode%3E-docgeni/site%3C/code%3E",
+          "name": ".gitignore 忽略<code>.docgeni/site</code>",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%BB%84%E4%BB%B6%E6%96%87%E6%A1%A3",
+          "name": "组件文档",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/guides/intro/getting-started.html",
+      "originPath": "docs/guides/intro/getting-started.md"
+    },
+    {
+      "id": "index",
+      "path": "intro",
+      "channelPath": "guides",
+      "title": "介绍",
+      "order": 10,
+      "toc": "hidden",
+      "headings": [
+        {
+          "id": "%E4%BB%80%E4%B9%88%E6%98%AF-docgeni%EF%BC%9F",
+          "name": "什么是 Docgeni？",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E7%89%B9%E6%80%A7",
+          "name": "特性",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%8A%A8%E6%9C%BA",
+          "name": "动机",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E6%96%87%E6%A1%A3%E5%B7%A5%E5%85%B7%E7%9A%84%E5%9C%BA%E6%99%AF",
+          "name": "文档工具的场景",
+          "level": 1,
+          "type": "h1"
+        },
+        {
+          "id": "%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE",
+          "name": "参与贡献",
+          "level": 1,
+          "type": "h1"
+        }
+      ],
+      "contentPath": "docs/guides/intro/index.html",
+      "originPath": "docs/guides/intro/index.md"
+    },
+    {
+      "id": "v2.1-migration",
+      "path": "v2-1-migration",
+      "channelPath": "guides",
+      "title": "v2.1 升级指栏",
+      "order": 9007199254740991,
+      "toc": "content",
+      "headings": [
+        {
+          "id": "api-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90",
+          "name": "API 自动生成",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E7%B1%BB%E5%BA%93-include-%E9%85%8D%E7%BD%AE",
+          "name": "类库 include 配置",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "contentPath": "docs/guides/v2.1-migration.html",
+      "originPath": "docs/guides/v2.1-migration.md"
+    },
+    {
+      "id": "bar",
+      "title": "Bar",
+      "subtitle": "",
+      "path": "bar",
+      "importSpecifier": "alib/bar",
+      "examples": [
+        "alib-bar-basic-example"
+      ],
+      "overview": false,
+      "api": true,
+      "order": 9007199254740991,
+      "originPath": "packages/a-lib/bar/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [],
+      "channelPath": "components"
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "subtitle": "按钮",
+      "path": "button",
+      "importSpecifier": "alib/button",
+      "examples": [
+        "alib-button-basic-example",
+        "alib-button-advance-example",
+        "alib-button-advance-title-example"
+      ],
+      "overview": true,
+      "api": true,
+      "order": 1,
+      "category": "general",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "packages/a-lib/button/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E5%AE%9A%E4%B9%89",
+          "name": "定义",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+          "name": "何时使用",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5",
+          "name": "模块导入",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E6%8C%89%E9%92%AE%E7%A7%8D%E7%B1%BB",
+          "name": "按钮种类",
+          "level": 2,
+          "type": "h2"
+        },
+        {
+          "id": "%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8",
+          "name": "如何使用",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "channelPath": "components"
+    },
+    {
+      "id": "dialog",
+      "title": "Dialog",
+      "subtitle": "",
+      "path": "dialog",
+      "importSpecifier": "alib/dialog",
+      "examples": [],
+      "overview": false,
+      "api": true,
+      "order": 0,
+      "originPath": "packages/a-lib/dialog/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [],
+      "channelPath": "components"
+    },
+    {
+      "id": "foo",
+      "title": "Foo",
+      "subtitle": "测试",
+      "path": "foo",
+      "importSpecifier": "alib/foo",
+      "examples": [
+        "alib-foo-advance-example",
+        "alib-foo-basic-example"
+      ],
+      "overview": true,
+      "api": true,
+      "order": 10,
+      "category": "general",
+      "originPath": "packages/a-lib/foo/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+          "name": "何时使用",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "channelPath": "components"
+    },
+    {
+      "id": "layout",
+      "title": "Layout",
+      "subtitle": "布局",
+      "path": "layout",
+      "importSpecifier": "alib/layout",
+      "examples": [
+        "alib-layout-advance-example",
+        "alib-layout-basic-example"
+      ],
+      "overview": true,
+      "api": true,
+      "order": 1,
+      "category": "layout",
+      "originPath": "packages/a-lib/layout/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [
+        {
+          "id": "%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8",
+          "name": "何时使用",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "channelPath": "components"
+    },
+    {
+      "id": "zoo",
+      "title": "Zoo",
+      "subtitle": "",
+      "path": "zoo",
+      "importSpecifier": "alib/zoo",
+      "examples": [
+        "alib-zoo-basic-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 9007199254740991,
+      "originPath": "packages/a-lib/common/zoo/doc/zh-cn.md",
+      "toc": "content",
+      "headings": [
+        {
+          "id": "zoo",
+          "name": "Zoo",
+          "level": 2,
+          "type": "h2"
+        }
+      ],
+      "channelPath": "components"
+    }
+  ],
+  "homeMeta": {
+    "title": "首页",
+    "order": 10,
+    "hero": {
+      "title": "Docgeni",
+      "description": "开箱即用的 Angular 组件文档生成工具",
+      "banner": [
+        "./assets/images/home/banner.png",
+        "./assets/images/home/dark-banner.png"
+      ],
+      "actions": [
+        {
+          "text": "快速上手",
+          "link": "/guides/intro/getting-started",
+          "btnShape": "round"
+        },
+        {
+          "text": "介绍",
+          "link": "/guides/intro",
+          "btnType": "outline-primary-light",
+          "btnShape": "square"
+        }
+      ]
+    },
+    "features": [
+      {
+        "icon": "./assets/images/home/feature1.png",
+        "title": "开箱即用",
+        "description": "根据目录结构自动生成导航和菜单，同时通过命令行工具帮助开发者零成本上手，让你快速开始文档编写和组件开发"
+      },
+      {
+        "icon": "./assets/images/home/feature2.png",
+        "title": "为 Angular 组件开发而生",
+        "description": "独立的 Angular 组件预览体验，组件概览，示例，API，丰富的 Markdown 扩展，使文档编写起来更简单，支持同时存在多个类库"
+      },
+      {
+        "icon": "./assets/images/home/feature3.png",
+        "title": "两种模式和多种风格支持",
+        "description": "支持 full 和 lite 两种模式满足不同的需求，同时支持默认和 Angular 风格，让用户选择适合自己的主题"
+      },
+      {
+        "icon": "./assets/images/home/feature4.png",
+        "title": "强大的自定义能力",
+        "description": "提供了 publicDir 实现自定义 HTML，资源，样式等功能，同时还支持定义根模块元数据以及完全自定义的站点"
+      },
+      {
+        "icon": "./assets/images/home/feature5.png",
+        "title": "组件 API 自动生成",
+        "description": "基于 TypeScript 类型定义和注释自动生成组件 API，维护代码和文档始终如一"
+      },
+      {
+        "icon": "./assets/images/home/feature6.png",
+        "title": "多语言支持",
+        "description": "支持灵活的多语言配置"
+      }
+    ],
+    "contentPath": "docs/index.html"
+  }
+}

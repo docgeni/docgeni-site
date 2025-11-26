@@ -1,0 +1,24 @@
+
+        <h2 id="%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E5%88%B0%E5%9F%9F%E5%90%8D%E7%9A%84%E9%9D%9E%E6%A0%B9%E7%9B%AE%E5%BD%95-" class="docs-header-link">
+          <span header-link="%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E5%88%B0%E5%9F%9F%E5%90%8D%E7%9A%84%E9%9D%9E%E6%A0%B9%E7%9B%AE%E5%BD%95-"></span>
+          如何部署到域名的非根目录?
+        </h2>
+      <p>执行 build 命令的时候传入 <code>base-href</code> 即可实现自定义，或者在配置文件中配置<code>baseHref</code>属性。</p>
+<div class="dg-paragraph"><code>docgeni build --base-href=/xxx/</code></div>
+
+        <h2 id="docgeni-%E6%94%AF%E6%8C%81%E5%85%B6%E4%BB%96%E6%A1%86%E6%9E%B6%E5%90%97%EF%BC%9F" class="docs-header-link">
+          <span header-link="docgeni-%E6%94%AF%E6%8C%81%E5%85%B6%E4%BB%96%E6%A1%86%E6%9E%B6%E5%90%97%EF%BC%9F"></span>
+          Docgeni 支持其他框架吗？
+        </h2>
+      <p>不支持，Docgeni 目前是一款为 Angular 框架量身打造的文档生成工具。</p>
+
+        <h2 id="%E7%BB%84%E4%BB%B6%3Ccode%3Edoc%3C/code%3E%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%96%B0%E5%BB%BA%E4%BA%86%3Ccode%3Ezh-cn-md%3C/code%3E%EF%BC%8C%E4%BD%86%E6%98%AF%E7%BB%84%E4%BB%B6%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%B8%8D%E5%B1%95%E7%A4%BA%EF%BC%9F" class="docs-header-link">
+          <span header-link="%E7%BB%84%E4%BB%B6%3Ccode%3Edoc%3C/code%3E%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%96%B0%E5%BB%BA%E4%BA%86%3Ccode%3Ezh-cn-md%3C/code%3E%EF%BC%8C%E4%BD%86%E6%98%AF%E7%BB%84%E4%BB%B6%E5%9C%A8%E6%96%87%E6%A1%A3%E4%B8%AD%E4%B8%8D%E5%B1%95%E7%A4%BA%EF%BC%9F"></span>
+          组件<code>doc</code>文件夹下新建了<code>zh-cn.md</code>，但是组件在文档中不展示？
+        </h2>
+      <p>Docgeni 会扫描类库<code>rootDir</code>和<code>include</code>下的一级文件夹作为一个组件，每个组件下的<code>doc</code>文件夹存放了以多语言为key的组件文档，更多参考 <a href="configuration/lib#rootdir">类库配置</a>。</p>
+<ul>
+<li>确认该组件是否包含在<code>rootDir</code>或者<code>include</code>中</li>
+<li>确定 <a href="configuration/lib#docdir">docDir</a> 是否指定了其他文件夹</li>
+<li>确定 <a href="configuration/global#defaultlocale">defaultLocal</a>（默认语言）是否为<code>zh-cn</code></li>
+</ul>

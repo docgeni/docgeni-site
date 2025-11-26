@@ -1,0 +1,66 @@
+<p>组件文档的展现形式如下，包含概览、示例和API，同时左侧菜单展示所属类别，在<code>full</code>模式下属于某个频道。</p>
+<div class="dg-paragraph"><img src="assets/images/lib-component.png" alt="Lib Component"></div>
+
+        <h1 id="%E7%B1%BB%E5%BA%93%E5%AF%BC%E8%88%AA" class="docs-header-link">
+          <span header-link="%E7%B1%BB%E5%BA%93%E5%AF%BC%E8%88%AA"></span>
+          类库导航
+        </h1>
+      <p>类库通常就是<code>Angular</code>的组件库，<code>Docgeni</code>会把组件的文档和普通的页面文档严格区分开，展示形式也会有很大的不同。
+对于类库文档来说，所属频道必须要手动通过 <code>navs</code> 配置：</p>
+<pre class="language-ts"><code class="language-ts"><div><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    navs<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'组件'</span><span class="token punctuation">,</span>
+            path<span class="token punctuation">:</span> <span class="token string">'components'</span><span class="token punctuation">,</span>
+            lib<span class="token punctuation">:</span> <span class="token string">'alib'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    libs<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+      <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> <span class="token string">'alib'</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span><span class="token punctuation">.</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">]</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="%E7%B1%BB%E5%BA%93%E9%85%8D%E7%BD%AE" class="docs-header-link">
+          <span header-link="%E7%B1%BB%E5%BA%93%E9%85%8D%E7%BD%AE"></span>
+          类库配置
+        </h1>
+      <div class="dg-paragraph"><code>Docgeni</code> 可以同时支持多个类库，比如 Angular 官方的 <a target="_blank" href="https://material.angular.io/">Material</a> 其实就是包含 <code>CDK</code> 和<code>Components</code>两个类库的，所以多类库的配置存放在<code>libs</code>数组中。</div>
+<div class="dg-paragraph"><code>Docgeni</code>会自动扫描该类库配置的<code>rootDir</code>，根目录下的每个文件夹识别成一个组件模块，每个组件模块会生成一个组件文档，更多配置查看 <a href="configuration/lib">类库配置</a>。</div>
+<pre class="language-json"><code class="language-json"><div>...
+<span class="token punctuation">{</span>
+    name<span class="token operator">:</span> 'alib'<span class="token punctuation">,</span>
+    rootDir<span class="token operator">:</span> './packages/a-lib'
+    ...
+<span class="token punctuation">}</span></div></code></pre>
+
+        <h1 id="%E7%BB%84%E4%BB%B6%E7%9A%84%E7%B1%BB%E5%88%AB" class="docs-header-link">
+          <span header-link="%E7%BB%84%E4%BB%B6%E7%9A%84%E7%B1%BB%E5%88%AB"></span>
+          组件的类别
+        </h1>
+      <p>对于组件库来说，如果有很多组件，需要一个分类把这些组件区分开，每个类别展示成一个菜单，普通页面文档来是通过文件夹区分类别，对于组件库来说按照文件夹区分不是一个好的选择，所以<code>Docgeni</code>提供了自定义的方式配置类别，每个类别会设置一个唯一的 id 作为类别的 唯一标识，在对应的组件文档中通过设置名为<code>category</code>的<code>FrontMatter</code>配置上类别的id即可。</p>
+<pre class="language-json"><code class="language-json"><div>...
+<span class="token punctuation">{</span>
+    name<span class="token operator">:</span> 'alib'<span class="token punctuation">,</span>
+    rootDir<span class="token operator">:</span> './packages/a-lib'<span class="token punctuation">,</span>
+    categories<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> 'general'<span class="token punctuation">,</span>
+        title<span class="token operator">:</span> '通用'
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> 'layout'<span class="token punctuation">,</span>
+        title<span class="token operator">:</span> '布局'
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></div></code></pre>
+<p>组件概览文档 <code>/../../button/doc/en-us.md</code></p>
+<pre class="language-md"><code class="language-md"><div><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+category<span class="token punctuation">:</span> general
+title<span class="token punctuation">:</span> Button
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span></div></code></pre>
